@@ -68,29 +68,41 @@ const IndexPage = () => (
       <Col xs={24} sm={12} lg={6} className="col-colored-1">
         <div>
           <h1>Save the planet</h1>
-          <p>Join the movement</p>
-          <Button>Join</Button>
+          <p>
+            Promote healthy food produced by organic farming and contribute to
+            the ecological balance
+          </p>
+          <Button>Learn</Button>
         </div>
       </Col>
       <Col xs={24} sm={12} lg={6} className="col-colored-2">
         <div>
           <h1>Become a volunteer</h1>
-          <p>Join the movement</p>
+          <p>
+            Join the ecological movement by associating with KVM as Volunteer,
+            Intern, Supporter, Campaigner and Donor
+          </p>
           <Button>Join</Button>
         </div>
       </Col>
       <Col xs={24} sm={12} lg={6} className="col-colored-3">
         <div>
           <h1>Get Involved</h1>
-          <p>Join the movement</p>
-          <Button>Join</Button>
+          <p>
+            Learn more about organic farming by reading our publications and
+            attending Kudrati Kisan Haats in your city
+          </p>
+          <Button>Media</Button>
         </div>
       </Col>
       <Col xs={24} sm={12} lg={6} className="col-colored-4">
         <div>
           <h1>Donate Now</h1>
-          <p>Join the movement</p>
-          <Button>Join</Button>
+          <p>
+            Donate and contribute to a movement for ecological rejuvenation of
+            Punjab and its agricultural heritage
+          </p>
+          <Button>Donate</Button>
         </div>
       </Col>
     </Row>
