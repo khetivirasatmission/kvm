@@ -4,6 +4,7 @@ module.exports = {
     title: `Kheti Virasat Mission`,
     description: `A NGO with mission to promote organic farming in Punjab.`,
     author: "@shirishgoyal",
+    siteUrl: "https://shirishgoyal.github.io/kvm/",
   },
   plugins: [
     {
