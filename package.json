@@ -1,37 +1,62 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "kvm",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Kheti Virasat Mission Website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Shirish Goyal <shirish.goyal@gmail.com>",
   "dependencies": {
+    "antd": "^3.10.3",
+    "babel-plugin-import": "^1.11.2",
     "gatsby": "^2.7.1",
     "gatsby-image": "^2.1.1",
+    "gatsby-plugin-antd": "^2.0.2",
+    "gatsby-plugin-google-fonts": "^1.0.0",
+    "gatsby-plugin-google-tagmanager": "^2.0.13",
+    "gatsby-plugin-less": "^2.0.6",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-offline": "^2.1.1",
     "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sharp": "^2.1.1",
+    "gatsby-plugin-sitemap": "^2.1.0",
+    "gatsby-plugin-styled-components": "^3.0.7",
+    "gatsby-plugin-typescript": "^2.0.15",
     "gatsby-source-filesystem": "^2.0.37",
+    "gatsby-transformer-json": "^2.1.11",
     "gatsby-transformer-sharp": "^2.1.19",
+    "less": "^3.8.1",
+    "less-loader": "^5.0.0",
+    "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
-    "prettier": "^1.17.1"
+    "babel-plugin-styled-components": "^1.10.0",
+    "gh-pages": "^2.0.1",
+    "prettier": "^1.17.1",
+    "ts-node": "^8.2.0",
+    "tslint": "^5.16.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.4.5"
   },
   "keywords": [
-    "gatsby"
+    "NGO"
   ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "start": "gatsby develop",
+    "format": "prettier --write src/**/*.{ts,tsx,scss,md}",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "lint": "tslint --project .",
+    "lint:fix": "tslint --fix --project ."
   },
   "repository": {
     "type": "git",
