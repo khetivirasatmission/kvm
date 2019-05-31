@@ -15,14 +15,14 @@ class RightMenu extends Component<{
         </Menu.Item>
         <SubMenu title={<span>About us</span>}>
           <Menu.Item key="org">
-            <a href="/mission">Mission</a>
+            <a href="mission">Mission</a>
           </Menu.Item>
           <Menu.Item key="team">
-            <a href="/team">Team</a>
+            <a href="team">Team</a>
           </Menu.Item>
         </SubMenu>
         <Menu.Item key="initiatives">
-          <a href="/initiatives">Initiatives</a>
+          <a href="initiatives">Initiatives</a>
         </Menu.Item>
         {/* <Menu.Item key="volunteers">
           <a href="#">Volunteers</a>
@@ -41,7 +41,7 @@ class RightMenu extends Component<{
           <a href="#">FAQ</a>
         </Menu.Item> */}
         <Menu.Item key="contact">
-          <a href="/contact">Contact Us</a>
+          <a href="contact">Contact Us</a>
         </Menu.Item>
       </Menu>
     );

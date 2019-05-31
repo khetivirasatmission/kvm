@@ -34,10 +34,10 @@ const Layout = ({ children }) => (
           rights reserved.
           <Menu mode="horizontal" className="footer-menu">
             <Menu.Item key="faq">
-              <a href="/faq">FAQ</a>
+              <a href="faq">FAQ</a>
             </Menu.Item>
             <Menu.Item key="support">
-              <a href="#">Support</a>
+              <a href="support">Support</a>
             </Menu.Item>
           </Menu>
         </Footer>
