@@ -6,7 +6,7 @@ import t1 from "../images/t1.jpg";
 import t2 from "../images/t2.jpg";
 import t3 from "../images/t3.jpg";
 
-const FaqPage = () => (
+export default () => (
   <PageLayout>
     <SEO title="Mission" />
 
@@ -88,5 +88,3 @@ const FaqPage = () => (
     </Row>
   </PageLayout>
 );
-
-export default FaqPage;

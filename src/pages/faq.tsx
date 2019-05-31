@@ -3,7 +3,7 @@ import React from "react";
 import PageLayout from "../components/PageLayout";
 import SEO from "../components/seo";
 
-const FaqPage = () => (
+export default () => (
   <PageLayout>
     <SEO title="FAQ" />
 
@@ -222,10 +222,8 @@ const FaqPage = () => (
         ਫਸਲਾਂ ਨੂੰ ਕੀਟਾਂ ਅਤੇ ਬਿਮਾਰੀਆਂ ਤੋਂ ਬਚਾਉਣ ਲਈ ਹੇਠ ਦਿੱਤੇ ਨੁਕਤਿਆਂ ’ਤੇ ਅਮਲ ਕੀਤਾ
         ਜਾਵੇ:
         <ul>
-          <li>
-            ਹਰੇਕ ਫਸਲ ਸਮੇਂ ਸਿਰ ਬੀਜੀ ਜਾਵੇ। ਅ) ਬੀਜ ਅੰਮ੍ਰਿਤ ਆਦਿ ਨਾਲ ਬੀਜ ਸ਼ੋਧਣ ਲਾਜ਼ਮੀ
-            ਕੀਤਾ ਜਾਵੇ।
-          </li>
+          <li>ਹਰੇਕ ਫਸਲ ਸਮੇਂ ਸਿਰ ਬੀਜੀ ਜਾਵੇ।</li>
+          <li>ਬੀਜ ਅੰਮ੍ਰਿਤ ਆਦਿ ਨਾਲ ਬੀਜ ਸ਼ੋਧਣ ਲਾਜ਼ਮੀ ਕੀਤਾ ਜਾਵੇ।</li>
           <li>
             ਖੇਤ ਵਿਚ ਕੱਚੀ ਰੂੜੀ ਦੀ ਪਾਉਣ ਬਜਾਇ ਹਮੇਸ਼ਾ ਰੂੜੀ ਦੀ ਤਿਆਰ ਖਾਦ ਹੀ ਪਾਈ ਜਾਵੇ।
           </li>
@@ -246,5 +244,3 @@ const FaqPage = () => (
     </Card>
   </PageLayout>
 );
-
-export default FaqPage;
