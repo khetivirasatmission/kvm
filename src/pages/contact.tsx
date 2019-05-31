@@ -41,7 +41,7 @@ export default class Contact extends React.Component {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": form.getAttribute("name"),
+        "form-name": "contact",
         ...this.state,
       }),
     })
