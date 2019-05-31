@@ -7,6 +7,24 @@ h6 {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
 }
 
+h1 {
+  font-size: 54px;
+  line-height: 54px;
+  font-family: "Raleway";
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 44px;
+  font-family: "Raleway";
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+}
+
 p {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
@@ -97,7 +115,7 @@ p {
 .col-colored-4 {
   div {
     min-height: 180px;
-    padding: 15px;
+    padding: 20px;
 
     h1 {
       font-family: "Raleway";
@@ -109,7 +127,7 @@ p {
 
     p {
       font-family: "Open Sans";
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 400;
       color: white;
     }
@@ -129,8 +147,10 @@ p {
         line-height: 30px;
         font-weight: 400;
         font-family: "Open Sans";
+      }
 
-        &:hover {
+      &:hover {
+        span {
           color: black;
         }
       }
@@ -139,7 +159,7 @@ p {
 }
 
 .col-colored-1 {
-  background-color: #6ab43e !important;
+  background-color: #5a9935 !important;
 }
 
 .col-colored-2 {
@@ -157,6 +177,7 @@ p {
 .ant-layout-footer {
   background-color: #333333;
   color: #777777;
+  padding: 24px;
 
   .ant-menu.footer-menu {
     float: right;
@@ -173,4 +194,42 @@ p {
       }
     }
   }
+}
+
+.ant-card-head {
+  padding: 0 !important;
+}
+
+.ant-card-body {
+  padding: 12px 0 !important;
+  font-size: 16px;
+  line-height: 32px;
+  text-justify: auto;
+}
+
+.ant-card-head-title {
+  color: #72a230;
+  font-weight: 900;
+}
+
+// .ant-card.card-team {
+//   height: 100%;
+//   max-height: 350px;
+//   overflow: hidden;
+// }
+
+.custom-image img {
+  display: block;
+}
+.custom-card {
+  padding: 10px 10px;
+  // background-color: #f7f7f7;
+}
+
+.custom-card h3 {
+  font-weight: bold;
+}
+.custom-card p {
+  color: #999;
+  line-height: 20px;
 }

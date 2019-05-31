@@ -9,15 +9,22 @@ import { Layout as AntLayout, Menu } from "antd";
 import { graphql, StaticQuery } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
+import styled from "styled-components";
 import "./layout.less";
 import Navbar from "./Navbar";
 
 const { Footer, Content } = AntLayout;
 
-const Layout = ({ children }) => (
+const StyledContent = styled(Content)`
+  margin: 3rem auto;
+  width: 100%;
+  max-width: 900px;
+`;
+
+const PageLayout = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery {
+      query SiteQuery {
         site {
           siteMetadata {
             title
@@ -28,7 +35,7 @@ const Layout = ({ children }) => (
     render={data => (
       <AntLayout>
         <Navbar />
-        <Content>{children}</Content>
+        <StyledContent>{children}</StyledContent>
         <Footer>
           Copyright © {new Date().getFullYear()} Kheti Virasat Mission. All
           rights reserved.
@@ -46,8 +53,8 @@ const Layout = ({ children }) => (
   />
 );
 
-Layout.propTypes = {
+PageLayout.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Layout;
+export default PageLayout;
