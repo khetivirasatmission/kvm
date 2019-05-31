@@ -6,7 +6,7 @@
  */
 
 import { Layout as AntLayout, Menu } from "antd";
-import { graphql, StaticQuery } from "gatsby";
+import { graphql, Link, StaticQuery } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import "./layout.less";
@@ -34,10 +34,10 @@ const Layout = ({ children }) => (
           rights reserved.
           <Menu mode="horizontal" className="footer-menu">
             <Menu.Item key="faq">
-              <a href="faq">FAQ</a>
+              <Link to="/faq">FAQ</Link>
             </Menu.Item>
             <Menu.Item key="support">
-              <a href="support">Support</a>
+              <Link to="/support">Support</Link>
             </Menu.Item>
           </Menu>
         </Footer>

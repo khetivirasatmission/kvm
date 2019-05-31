@@ -1,4 +1,5 @@
 import { Menu } from "antd";
+import { Link } from "gatsby";
 import React, { Component } from "react";
 
 const SubMenu = Menu.SubMenu;
@@ -11,18 +12,18 @@ class RightMenu extends Component<{
     return (
       <Menu mode={this.props.mode}>
         <Menu.Item key="home">
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </Menu.Item>
         <SubMenu title={<span>About us</span>}>
           <Menu.Item key="org">
-            <a href="mission">Mission</a>
+            <Link to="/mission">Mission</Link>
           </Menu.Item>
           <Menu.Item key="team">
-            <a href="team">Team</a>
+            <Link to="/team">Team</Link>
           </Menu.Item>
         </SubMenu>
         <Menu.Item key="initiatives">
-          <a href="initiatives">Initiatives</a>
+          <Link to="/initiatives">Initiatives</Link>
         </Menu.Item>
         {/* <Menu.Item key="volunteers">
           <a href="#">Volunteers</a>
@@ -41,7 +42,7 @@ class RightMenu extends Component<{
           <a href="#">FAQ</a>
         </Menu.Item> */}
         <Menu.Item key="contact">
-          <a href="contact">Contact Us</a>
+          <Link to="/contact">Contact Us</Link>
         </Menu.Item>
       </Menu>
     );
