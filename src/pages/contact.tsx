@@ -1,7 +1,6 @@
 import { Col, notification, Row } from "antd";
 import { navigate } from "gatsby-link";
 import React from "react";
-import GoogleMap from "../components/GoogleMap";
 import PageLayout from "../components/PageLayout";
 import SEO from "../components/seo";
 
@@ -191,7 +190,19 @@ export default class Contact extends React.Component {
                 <strong>Email:</strong> info@khetivirasatmission.org
               </p>
 
-              <GoogleMap />
+              <div className="mapouter">
+                <div className="gmap_canvas">
+                  <iframe
+                    style={{ border: "0", width: "100%" }}
+                    width="400"
+                    height="400"
+                    id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=kheti%20virasat%20mission&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                  />
+                </div>
+              </div>
+
+              {/* <GoogleMap /> */}
             </Col>
           </Row>
         </div>
