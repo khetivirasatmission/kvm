@@ -28,7 +28,7 @@ module.exports = {
           "font-family": "Open Sans",
           "layout-header-background": "#f5f5f5",
           "layout-body-background": "#ffffff",
-          "border-radius-base": "0",
+          "border-radius-base": "18px",
         },
       },
     },
