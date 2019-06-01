@@ -105,7 +105,7 @@ export default () => (
         (PGS-Green and PGS Organic ).
       </p>
     </Card>
-    
+
     <Card title="Accreditation" bordered={false}>
       <Row gutter={18}>
         <Col xs={24} md={12} lg={8} />
@@ -220,5 +220,19 @@ export default () => (
       pagination={false}
       size="middle"
     />
+
+    <h3 style={{ marginTop: "40px" }}>Request PGS Application Form</h3>
+    <Row>
+      <Col xs={24} lg={16}>
+        <iframe
+          style={{ border: "0", width: "100%" }}
+          src="https://docs.google.com/forms/d/e/1FAIpQLSesNbymiUWCXhu60FcKV-K2S3dsY0doUL96aFN9N8uSzkLW9Q/viewform?embedded=true"
+          width="640"
+          height="929"
+        >
+          Loading...
+        </iframe>
+      </Col>
+    </Row>
   </PageLayout>
 );
