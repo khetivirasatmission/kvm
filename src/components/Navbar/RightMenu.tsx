@@ -22,24 +22,14 @@ class RightMenu extends Component<{
             <Link to="/team">Team</Link>
           </Menu.Item>
         </SubMenu>
-        <Menu.Item key="initiatives">
-          <Link to="/initiatives">Initiatives</Link>
-        </Menu.Item>
+        <SubMenu title={<span>Initiatives</span>}>
+          <Menu.Item key="setting:1">
+            <Link to="/wae">Women Action for Ecology</Link>
+          </Menu.Item>
+        </SubMenu>
+
         {/* <Menu.Item key="volunteers">
           <a href="#">Volunteers</a>
-        </Menu.Item> */}
-        {/* <SubMenu title={<span>Blogs</span>}>
-          <MenuItemGroup title="Item 1">
-            <Menu.Item key="setting:1">Option 1</Menu.Item>
-            <Menu.Item key="setting:2">Option 2</Menu.Item>
-          </MenuItemGroup>
-          <MenuItemGroup title="Item 2">
-            <Menu.Item key="setting:3">Option 3</Menu.Item>
-            <Menu.Item key="setting:4">Option 4</Menu.Item>
-          </MenuItemGroup>
-        </SubMenu> */}
-        {/* <Menu.Item key="faq">
-          <a href="#">FAQ</a>
         </Menu.Item> */}
         <Menu.Item key="contact">
           <Link to="/contact">Contact Us</Link>

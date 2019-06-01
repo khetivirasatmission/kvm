@@ -1,6 +1,4 @@
-import { Button, Col, Form, Input, notification, Row } from "antd";
-import FormItem from "antd/lib/form/FormItem";
-import TextArea from "antd/lib/input/TextArea";
+import { Col, notification, Row } from "antd";
 import { navigate } from "gatsby-link";
 import React from "react";
 import GoogleMap from "../components/GoogleMap";
@@ -64,14 +62,23 @@ export default class Contact extends React.Component {
 
           <Row gutter={64}>
             <Col md={24} lg={12}>
-              <Form
+              <iframe
+                style={{ border: "0", width: "100%" }}
+                src="https://docs.google.com/forms/d/e/1FAIpQLSecB-GKr9wnBLkxahPKKTJmbVbNDFLRzBc59oKwHj4mglR_Yg/viewform?embedded=true"
+                width="482"
+                height="1400"
+              >
+                Loading...
+              </iframe>
+
+              {/* <Form
                 name="contact"
                 method="post"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
               >
-                {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+  
                 <input type="hidden" name="form-name" value="contact" />
                 <p style={{ display: "none" }}>
                   <label>
@@ -168,7 +175,7 @@ export default class Contact extends React.Component {
                 <Button type="primary" htmlType="submit">
                   Submit
                 </Button>
-              </Form>
+              </Form> */}
             </Col>
             <Col md={24} lg={12}>
               <h3>Address</h3>

@@ -47,7 +47,7 @@ export default () => (
       </p>
     </Card>
 
-    <h2>Core Team</h2>
+    {/* <h2>Core Team</h2>
     <Row gutter={18}>
       <Col span={8}>
         <Card className="card-team" bordered={false} bodyStyle={{ padding: 0 }}>
@@ -85,6 +85,6 @@ export default () => (
           </div>
         </Card>
       </Col>
-    </Row>
+    </Row> */}
   </PageLayout>
 );
