@@ -1,4 +1,5 @@
 import { Button, Carousel, Col, Row } from "antd";
+import { Link } from "gatsby";
 import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -72,7 +73,9 @@ const IndexPage = () => (
             Promote healthy food produced by organic farming and contribute to
             the ecological balance
           </p>
-          <Button>Learn</Button>
+          <Button>
+            <Link to="/education">Learn</Link>
+          </Button>
         </div>
       </Col>
       <Col xs={24} sm={12} lg={6} className="col-colored-2">
@@ -82,7 +85,9 @@ const IndexPage = () => (
             Join the ecological movement by associating with KVM as Volunteer,
             Intern, Supporter, Campaigner and Donor
           </p>
-          <Button>Join</Button>
+          <Button>
+            <Link to="/volunteer">Join</Link>
+          </Button>
         </div>
       </Col>
       <Col xs={24} sm={12} lg={6} className="col-colored-3">
@@ -92,7 +97,9 @@ const IndexPage = () => (
             Learn more about organic farming by reading our publications and
             attending Kudrati Kisan Haats in your city
           </p>
-          <Button>Media</Button>
+          <Button>
+            <Link to="/media">Media</Link>
+          </Button>
         </div>
       </Col>
       <Col xs={24} sm={12} lg={6} className="col-colored-4">
@@ -102,7 +109,9 @@ const IndexPage = () => (
             Donate and contribute to a movement for ecological rejuvenation of
             Punjab and its agricultural heritage
           </p>
-          <Button>Donate</Button>
+          <Button>
+            <Link to="/donate">Donate</Link>
+          </Button>
         </div>
       </Col>
     </Row>
