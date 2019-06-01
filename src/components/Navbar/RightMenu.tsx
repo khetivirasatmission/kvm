@@ -28,6 +28,10 @@ class RightMenu extends Component<{
           </Menu.Item>
         </SubMenu>
 
+        <Menu.Item key="certification">
+          <Link to="/certification">Certification</Link>
+        </Menu.Item>
+
         {/* <Menu.Item key="volunteers">
           <a href="#">Volunteers</a>
         </Menu.Item> */}

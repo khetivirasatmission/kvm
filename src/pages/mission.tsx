@@ -1,10 +1,7 @@
-import { Card, Col, Row } from "antd";
+import { Card } from "antd";
 import React from "react";
 import PageLayout from "../components/PageLayout";
 import SEO from "../components/seo";
-import t1 from "../images/t1.jpg";
-import t2 from "../images/t2.jpg";
-import t3 from "../images/t3.jpg";
 
 export default () => (
   <PageLayout>

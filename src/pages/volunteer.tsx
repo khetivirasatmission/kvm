@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import React from "react";
 import PageLayout from "../components/PageLayout";
 import SEO from "../components/seo";
+import volunteer from "../images/volunteer.png";
 
 export default () => (
   <PageLayout>
@@ -10,11 +11,27 @@ export default () => (
 
     <h1>Become a volunteer</h1>
 
+    <img
+      src={volunteer}
+      style={{ display: "block", margin: "0 auto", textAlign: "center" }}
+    />
+
     <Card title="What are we looking for?" bordered={false}>
       <p>
         KVM needs help from individuals who want to donate their precious time
         and talent to save Punjab. Volunteers can work in any of sector
-        according to their capacity and experience.
+        according to their capacity and experience. Those who are interested in
+        becoming part of ecological movement can associate with KVM in various
+        capacities as Volunteer, Intern, Supporter and Campaigner. KVM will
+        provide them chance to work intimately with communities, farmers,
+        campaigners and activists. It will be a life-time experience for all
+        enthusiastic souls. KVM has also undertaken broader issues of
+        agricultural disaster, Environmental health crisis and particularly the
+        health impacts of intensive agriculture, Globalization and WTO, issues
+        related to food security , seeds and IPRs, GM Crops and Foods ,
+        Corporate take-over of food and agriculture. KVM is constantly building
+        a public opinion and civil movement through various public dialogues and
+        discussions and engaging people from different walks of life.
       </p>
     </Card>
 

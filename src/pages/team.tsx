@@ -1,38 +1,11 @@
-import { Card, Col, Row } from "antd";
+import { Col, Row } from "antd";
 import React from "react";
 import PageLayout from "../components/PageLayout";
 import SEO from "../components/seo";
-import t0 from "../images/t0.jpg";
 import t1 from "../images/t1.jpg";
 import t2 from "../images/t2.jpg";
 import t3 from "../images/t3.jpg";
-
-interface IProfileProps {
-  name: string;
-  designation: string;
-  region?: string;
-  image: any;
-}
-
-const Profile = ({ name, designation, region, image }: IProfileProps) => {
-  let im;
-  if (image) {
-    im = <img alt={name} width="100%" src={image} />;
-  } else {
-    im = <img alt={name} width="100%" src={t0} />;
-  }
-
-  return (
-    <Card className="card-team" bordered={false} bodyStyle={{ padding: 0 }}>
-      <div className="custom-image">{im}</div>
-      <div className="custom-card">
-        <h3>{name}</h3>
-        <p>{designation}</p>
-        {region && <h4>{region}</h4>}
-      </div>
-    </Card>
-  );
-};
+import Profile from "../components/Profile";
 
 export default () => (
   <PageLayout>
