@@ -207,6 +207,11 @@ export default () => (
     </Row>
 
     <h3>PGS Regional Council Central Team</h3>
-    <Table columns={columns} dataSource={data} size="middle" />
+    <Table
+      columns={columns}
+      dataSource={data}
+      pagination={false}
+      size="middle"
+    />
   </PageLayout>
 );
