@@ -98,7 +98,7 @@ const IndexPage = () => (
             attending Kudrati Kisan Haats in your city
           </p>
           <Button>
-            <Link to="/media">Media</Link>
+            <Link to="/publications">Publications</Link>
           </Button>
         </div>
       </Col>

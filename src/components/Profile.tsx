@@ -31,7 +31,7 @@ const Image = ({ name, image }: IImageProps) => {
 
 const LinkedImage = ({ url, name, image }: ILinkedImageProps) => {
   return (
-    <a href={url}>
+    <a href={url} target="_blank">
       <Image name={name} image={image} />
     </a>
   );

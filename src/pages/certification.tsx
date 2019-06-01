@@ -104,7 +104,9 @@ export default () => (
         practices of each other and take decision on organic certification
         (PGS-Green and PGS Organic ).
       </p>
-
+    </Card>
+    
+    <Card title="Accreditation" bordered={false}>
       <Row gutter={18}>
         <Col xs={24} md={12} lg={8} />
         <Col xs={24} md={12} lg={8}>
