@@ -209,6 +209,7 @@ export default () => (
         </ul>
         <h3>Audio magazine</h3>
         <iframe
+          style={{ border: "0" }}
           width="100%"
           height="450"
           allow="autoplay"
