@@ -6,8 +6,8 @@ import SEO from "../components/seo";
 import certificate_of_authorization from "../images/certificate_of_authorization.jpg";
 import pdf from "../images/pdflogo.png";
 import c1 from "../images/pgs.jpg";
-import pgs1 from "../images/pgs1.png";
-import pgs2 from "../images/pgs2.png";
+import pgs1 from "../images/pgs1.jpg";
+import pgs2 from "../images/pgs2.jpg";
 
 const columns = [
   {
@@ -106,6 +106,7 @@ export default () => (
       </p>
 
       <Row gutter={18}>
+        <Col xs={24} md={12} lg={8} />
         <Col xs={24} md={12} lg={8}>
           <Profile
             designation="Certificate of Authorization"
@@ -116,8 +117,10 @@ export default () => (
       </Row>
 
       <p>
-        KVM is authorized Regional Council for providing organic certification
-        under Participatory Guarantee System in Punjab, Haryana and Chandigarh
+        <blockquote>
+          KVM is authorized Regional Council for providing organic certification
+          under Participatory Guarantee System in Punjab, Haryana and Chandigarh
+        </blockquote>
       </p>
     </Card>
 
@@ -174,18 +177,20 @@ export default () => (
     </Card>
 
     <Row gutter={18}>
-      <Col xs={24} md={12} lg={6}>
+      <Col xs={24} md={12} lg={4} />
+      <Col xs={24} md={12} lg={8}>
         <Profile
-          designation="Logo Used while marketing on the products produced from the field under conversion"
+          designation="PGS-India Green (organic products obtained from the agriculture fields which are under process of organic conversion)"
           image={pgs1}
         />
       </Col>
-      <Col xs={24} md={12} lg={6}>
+      <Col xs={24} md={12} lg={8}>
         <Profile
-          designation="Logo Used while marketing on the products produced from fields of completely converted into organic"
+          designation="PGS-India Organic (organic products obtained from agriculture fields which are completely converted into organic farming)"
           image={pgs2}
         />
       </Col>
+      <Col xs={24} md={12} lg={4} />
     </Row>
 
     <h3>PGS Operational Manuals</h3>
