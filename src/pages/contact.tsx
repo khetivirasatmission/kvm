@@ -65,7 +65,7 @@ export default class Contact extends React.Component {
                 style={{ border: "0", width: "100%" }}
                 src="https://docs.google.com/forms/d/e/1FAIpQLSecB-GKr9wnBLkxahPKKTJmbVbNDFLRzBc59oKwHj4mglR_Yg/viewform?embedded=true"
                 width="482"
-                height="1400"
+                height="900"
               >
                 Loading...
               </iframe>

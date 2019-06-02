@@ -19,6 +19,7 @@ const StyledContent = styled(Content)`
   margin: 3rem auto;
   width: 100%;
   max-width: 900px;
+  padding: 10px;
 `;
 
 const PageLayout = ({ children }) => (

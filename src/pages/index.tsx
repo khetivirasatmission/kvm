@@ -8,64 +8,78 @@ import f2 from "../images/f2.jpg";
 import f3 from "../images/f3.jpg";
 import f4 from "../images/f4.jpg";
 import f5 from "../images/f5.jpg";
+import styled from "styled-components";
+
+const SlideWrapper = styled.div`
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* top: 0; */
+  /* left: 0; */
+  width: 100%;
+  height: 700px;
+  /* position: absolute; */
+  z-index: 1;
+  background-image: url(${props => props.image});
+`;
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Carousel effect="fade" autoplay={true} dots={false}>
-      <div>
-        <img src={f1} />
-        <div className="slideWrapper">
+      <div style={{ minHeight: "400px" }}>
+        {/* <img src={f1} /> */}
+        <SlideWrapper image={f1}>
           <div className="slide">
             <h4>Save the ecology</h4>
             <h1>Organic Farming</h1>
             <Button>Donate now </Button>
           </div>
-        </div>
+        </SlideWrapper>
       </div>
       <div>
-        <img src={f2} />
-        <div className="slideWrapper">
+        {/* <img src={f2} /> */}
+        <SlideWrapper image={f2}>
           <div className="slide">
             <h4>Support the families</h4>
             <h1>Organic Kitchen Gardening</h1>
             <Button>Donate now </Button>
           </div>
-        </div>
+        </SlideWrapper>
       </div>
       <div>
-        <img src={f3} />
-        <div className="slideWrapper">
+        {/* <img src={f3} /> */}
+        <SlideWrapper image={f3}>
           <div className="slide">
             <h4>Improve the literacy</h4>
             <h1>Kudrati Kheti Gurukul</h1>
             <Button>Donate now </Button>
           </div>
-        </div>
+        </SlideWrapper>
       </div>
       <div>
-        <img src={f4} />
-        <div className="slideWrapper">
+        {/* <img src={f4} /> */}
+        <SlideWrapper image={f4}>
           <div className="slide">
             <h4>Support the women</h4>
             <h1>Women Action for Ecology</h1>
             <Button>Donate now </Button>
           </div>
-        </div>
+        </SlideWrapper>
       </div>
       <div>
-        <img src={f5} />
-        <div className="slideWrapper">
+        {/* <img src={f5} /> */}
+        <SlideWrapper image={f5}>
           <div className="slide">
             <h4>Start a movement</h4>
-            <h1>Advocacy & campaigning</h1>
+            <h1>Advocacy &amp; campaigning</h1>
             <Button>Donate now </Button>
           </div>
-        </div>
+        </SlideWrapper>
       </div>
     </Carousel>
 
-    <Row>
+    <Row style={{ marginTop: "-7px" }}>
       <Col xs={24} sm={12} lg={6} className="col-colored-1">
         <div>
           <h1>Save the planet</h1>

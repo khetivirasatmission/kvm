@@ -44,6 +44,27 @@ export default () => (
       </p>
     </Card>
 
+    <Card title="Work at grassroot level" bordered={false}>
+      <p>
+        Kheti Virasat Mission is committed to protecting farmers’ right to land,
+        income security, good livelihood & agriculture sovereignty as well as
+        protecting consumers’ right to safe and healthy food. KVM recognizes
+        that in order to achieve these goals, we must put the health of the
+        ecosystem . KVM is working at the grassroots with decentralized
+        participatory methods covering the vast arenas of sustainable
+        agriculture, conservation of ecology and natural resources,
+        environmental health, cultural aspect of ecology and other issues
+        related to globalization, livelihood, environmental and social justice.
+        By involving the very first stakeholders-- the farmers, especially the
+        most marginalized-- KVM had undertaken various activities to enhance
+        their capacities, enabling them to undertake the endeavor of sustainable
+        development and sustainable use of natural resources. KVM has a dream to
+        make farmers, especially the small and marginal farmers, debt-free and
+        living within a non-exploitative system; self-reliant while nurturing
+        their genetic resources and conserving their knowledge system.
+      </p>
+    </Card>
+
     {/* <h2>Core Team</h2>
     <Row gutter={18}>
       <Col span={8}>
