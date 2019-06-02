@@ -4,6 +4,7 @@ import logo from "../../images/logo.jpeg";
 import LeftMenu from "./LeftMenu";
 import "./Navbar.css";
 import RightMenu from "./RightMenu";
+import { Link } from "gatsby";
 
 class Navbar extends Component {
   state = {
@@ -26,9 +27,9 @@ class Navbar extends Component {
     return (
       <nav className="menu">
         <div className="menu__logo">
-          <a href="">
+          <Link to="/">
             <img src={logo} /> <h1>Kheti Virasat Mission</h1>
-          </a>
+          </Link>
         </div>
         <div className="menu__container">
           <div className="menu_left">
