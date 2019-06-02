@@ -23,8 +23,25 @@ class RightMenu extends Component<{
           </Menu.Item>
         </SubMenu>
         <SubMenu title={<span>Initiatives</span>}>
-          <Menu.Item key="setting:1">
+          <Menu.Item key="organickitchengardening">
+            <Link to="/organickitchengardening">
+              Organic Farming &amp; Kitchen Gardening
+            </Link>
+          </Menu.Item>
+          <Menu.Item key="urbankitchengardening">
+            <Link to="/urbankitchengardening">
+              Urban Farming &amp; Kitchen Gardening
+            </Link>
+          </Menu.Item>
+          <Menu.Item key="wae">
             <Link to="/wae">Women Action for Ecology</Link>
+          </Menu.Item>
+
+          <Menu.Item key="foodheritage">
+            <Link to="/foodheritage">Revival of Food Heritage</Link>
+          </Menu.Item>
+          <Menu.Item key="advocacy">
+            <Link to="/advocacy">Advocacy and Campaign</Link>
           </Menu.Item>
         </SubMenu>
 

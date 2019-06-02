@@ -53,7 +53,7 @@ class Navbar extends Component {
             onClose={this.onClose}
             visible={this.state.visible}
           >
-            <LeftMenu mode="inline" />
+            {/* <LeftMenu mode="inline" /> */}
             <RightMenu mode="inline" />
           </Drawer>
         </div>
