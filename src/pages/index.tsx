@@ -26,14 +26,16 @@ const SlideWrapper = styled.div`
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Carousel effect="fade" autoplay={true} dots={false}>
+    <Carousel effect="fade" autoplay={true}>
       <div style={{ minHeight: "400px" }}>
         {/* <img src={f1} /> */}
         <SlideWrapper image={f1}>
           <div className="slide">
             <h4>Save the ecology</h4>
             <h1>Organic Farming</h1>
-            <Button>Donate now </Button>
+            <Link to="/donate">
+              <Button>Donate now</Button>
+            </Link>
           </div>
         </SlideWrapper>
       </div>
@@ -43,7 +45,9 @@ const IndexPage = () => (
           <div className="slide">
             <h4>Support the families</h4>
             <h1>Organic Kitchen Gardening</h1>
-            <Button>Donate now </Button>
+            <Link to="/donate">
+              <Button>Donate now</Button>
+            </Link>
           </div>
         </SlideWrapper>
       </div>
@@ -53,7 +57,9 @@ const IndexPage = () => (
           <div className="slide">
             <h4>Improve the literacy</h4>
             <h1>Kudrati Kheti Gurukul</h1>
-            <Button>Donate now </Button>
+            <Link to="/donate">
+              <Button>Donate now</Button>
+            </Link>
           </div>
         </SlideWrapper>
       </div>
@@ -63,7 +69,9 @@ const IndexPage = () => (
           <div className="slide">
             <h4>Support the women</h4>
             <h1>Women Action for Ecology</h1>
-            <Button>Donate now </Button>
+            <Link to="/donate">
+              <Button>Donate now</Button>
+            </Link>
           </div>
         </SlideWrapper>
       </div>
@@ -73,13 +81,15 @@ const IndexPage = () => (
           <div className="slide">
             <h4>Start a movement</h4>
             <h1>Advocacy &amp; campaigning</h1>
-            <Button>Donate now </Button>
+            <Link to="/donate">
+              <Button>Donate now</Button>
+            </Link>
           </div>
         </SlideWrapper>
       </div>
     </Carousel>
 
-    <Row style={{ marginTop: "-7px" }}>
+    <Row>
       <Col xs={24} sm={12} lg={6} className="col-colored-1">
         <div>
           <h1>Save the planet</h1>

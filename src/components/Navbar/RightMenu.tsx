@@ -23,6 +23,9 @@ class RightMenu extends Component<{
           </Menu.Item>
         </SubMenu>
         <SubMenu title={<span>Initiatives</span>}>
+          <Menu.Item key="organicfarmersmarket">
+            <Link to="/organicfarmersmarket">Organic Farmers' Market</Link>
+          </Menu.Item>
           <Menu.Item key="organickitchengardening">
             <Link to="/organickitchengardening">
               Organic Farming &amp; Kitchen Gardening
@@ -37,6 +40,9 @@ class RightMenu extends Component<{
             <Link to="/wae">Women Action for Ecology</Link>
           </Menu.Item>
 
+          <Menu.Item key="kudratiaaharparivar">
+            <Link to="/kudratiaaharparivar">Kudrati Aahar Parivar</Link>
+          </Menu.Item>
           <Menu.Item key="foodheritage">
             <Link to="/foodheritage">Revival of Food Heritage</Link>
           </Menu.Item>
