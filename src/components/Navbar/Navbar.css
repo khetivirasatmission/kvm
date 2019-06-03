@@ -8,12 +8,13 @@
 .menu__logo {
   /* width: 150px; */
   float: left;
+  padding: 9px 0;
 }
 
 .menu__logo a {
   display: inline-block;
   font-size: 20px;
-  padding: 10px 0px;
+  /* padding: 10px 0px; */
 }
 
 .menu__logo img {
@@ -51,6 +52,7 @@
 
 .menu__container .menu_rigth {
   float: right;
+  margin-top: 4px;
 }
 
 .menu__mobile-button {
