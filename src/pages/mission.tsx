@@ -5,22 +5,23 @@ import SEO from "../components/seo";
 
 export default () => (
   <PageLayout>
-    <SEO title="Mission" />
+    <SEO title="Mission" description="" lang="en" />
 
     <h1>About Us</h1>
 
     <Card title="Our mission" bordered={false}>
       <p>
         The mission of KVM, forged by the pain and agony caused by the Green
-        Revolution, is founded by a conviction and commitment for voluntary
-        work. The formation of KVM has evolved as a result of constant efforts
-        and dedication to re-vitalize our society; to make our motherland
-        prosper with imperishable abundance and sustainable life systems. KVM is
+        Revolution, is founded by conviction and commitment for voluntary work.
+        The formation of KVM has evolved as a result of constant efforts and
+        dedication to re-vitalize our society; to make our motherland prosper
+        with imperishable abundance and sustainable life systems. KVM is
         obligated to the future generations of Punjab to protect its ecology. We
         are a civil-society movement with a deep compassion for Nature as a
-        Whole; our concerns include ecological sustainability & environmental
-        health, and the safe food and livelihoods nature can provide especially
-        for those who are socially and economically marginalized.
+        Whole; our concerns include ecological sustainability &amp;
+        environmental health, and the safe food and livelihoods nature can
+        provide especially for those who are socially and economically
+        marginalized.
       </p>
     </Card>
 
@@ -47,8 +48,8 @@ export default () => (
     <Card title="Work at grassroot level" bordered={false}>
       <p>
         Kheti Virasat Mission is committed to protecting farmers’ right to land,
-        income security, good livelihood & agriculture sovereignty as well as
-        protecting consumers’ right to safe and healthy food. KVM recognizes
+        income security, good livelihood &amp; agriculture sovereignty as well
+        as protecting consumers’ right to safe and healthy food. KVM recognizes
         that in order to achieve these goals, we must put the health of the
         ecosystem . KVM is working at the grassroots with decentralized
         participatory methods covering the vast arenas of sustainable
