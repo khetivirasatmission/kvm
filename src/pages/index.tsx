@@ -89,7 +89,7 @@ const IndexPage = () => (
       </div>
     </Carousel>
 
-    <Row>
+    <Row type="flex">
       <Col xs={24} sm={12} lg={6} className="col-colored-1">
         <div>
           <h1>Save the planet</h1>
