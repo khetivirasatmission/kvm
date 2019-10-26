@@ -1,6 +1,7 @@
 import { Button, Carousel, Col, Row } from "antd";
 import { Link } from "gatsby";
 import React from "react";
+import styled from "styled-components";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import f1 from "../images/f1.jpg";
@@ -8,7 +9,6 @@ import f2 from "../images/f2.jpg";
 import f3 from "../images/f3.jpg";
 import f4 from "../images/f4.jpg";
 import f5 from "../images/f5.jpg";
-import styled from "styled-components";
 
 const SlideWrapper = styled.div`
   background-position: center;
@@ -106,8 +106,8 @@ const IndexPage = () => (
         <div>
           <h1>Become a volunteer</h1>
           <p>
-            Join the ecological movement by associating with KVM as Volunteer,
-            Intern, Supporter, Campaigner and Donor
+            Join the ecological movement by associating with KVM as Intern,
+            Supporter, Campaigner and Donor
           </p>
           <Button>
             <Link to="/volunteer">Join</Link>
@@ -118,8 +118,8 @@ const IndexPage = () => (
         <div>
           <h1>Get Involved</h1>
           <p>
-            Learn more about organic farming by reading our publications and
-            attending Kudrati Kisan Haats in your city
+            Learn more about organic farming from our publications and attend
+            Kudrati Kisan Haats in your city
           </p>
           <Button>
             <Link to="/publications">Publications</Link>
