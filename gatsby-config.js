@@ -1,5 +1,5 @@
 module.exports = {
-  // pathPrefix: "/kvm",
+  pathPrefix: "/",
   siteMetadata: {
     title: `Kheti Virasat Mission`,
     description: `A NGO with mission to promote organic farming in Punjab.`,
