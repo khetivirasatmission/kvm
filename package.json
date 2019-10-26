@@ -51,7 +51,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b master",
     "start": "gatsby develop",
     "format": "prettier --write src/**/*.{ts,tsx,scss,md}",
     "serve": "gatsby serve",
