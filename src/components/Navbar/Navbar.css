@@ -1,5 +1,5 @@
 .menu {
-  padding: 0 20px;
+  padding: 0 6px;
   border-bottom: solid 1px #e8e8e8;
   overflow: hidden;
   box-shadow: 0 0 30px #f3f1f1;
@@ -8,7 +8,7 @@
 .menu__logo {
   /* width: 150px; */
   float: left;
-  padding: 9px 0;
+  padding: 8px 0;
 }
 
 .menu__logo a {
@@ -50,7 +50,7 @@
   float: left;
 }
 
-.menu__container .menu_rigth {
+.menu__container .menu_right {
   float: right;
   margin-top: 4px;
 }
@@ -58,10 +58,8 @@
 .menu__mobile-button {
   float: right;
   height: 32px;
-  padding: 6px;
-  margin-top: 8px;
+  margin-top: 32px;
   display: none !important; /* use of important to overwrite ant-btn */
-  background: #3e91f7;
 }
 
 .menu_drawer .ant-drawer-body {
@@ -73,18 +71,18 @@
   padding: 14px 24px !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 852px) {
   .menu__mobile-button {
     display: inline-block !important;
   }
 
   .menu_left,
-  .menu_rigth {
+  .menu_right {
     display: none;
   }
 
   .menu__logo a {
-    margin-left: -20px;
+    margin-left: -14px;
   }
 
   .menu__container .ant-menu-item,
@@ -93,6 +91,6 @@
   }
 
   .menu__logo a {
-    padding: 10px 20px;
+    padding: 10px 10px;
   }
 }

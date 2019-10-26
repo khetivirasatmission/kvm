@@ -1,10 +1,9 @@
 import { Button, Drawer, Icon } from "antd";
+import { Link } from "gatsby";
 import React, { Component } from "react";
 import logo from "../../images/logo.jpeg";
-import LeftMenu from "./LeftMenu";
 import "./Navbar.css";
 import RightMenu from "./RightMenu";
-import { Link } from "gatsby";
 
 class Navbar extends Component {
   state = {
@@ -35,18 +34,13 @@ class Navbar extends Component {
           <div className="menu_left">
             {/* <LeftMenu mode="horizontal" /> */}
           </div>
-          <div className="menu_rigth">
+          <div className="menu_right">
             <RightMenu mode="horizontal" />
           </div>
-          <Button
-            className="menu__mobile-button"
-            type="primary"
-            onClick={this.showDrawer}
-          >
-            <Icon type="align-right" />
+          <Button className="menu__mobile-button" onClick={this.showDrawer}>
+            <Icon type="menu" />
           </Button>
           <Drawer
-            title="Basic Drawer"
             placement="right"
             className="menu_drawer"
             closable={false}
