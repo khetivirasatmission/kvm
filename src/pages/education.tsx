@@ -1,6 +1,6 @@
 import { Card, Col, Row } from "antd";
 import React from "react";
-import PageLayout from "../components/PageLayout";
+import PageLayout from "../components/layouts/PageLayout";
 import Profile from "../components/Profile";
 import SEO from "../components/seo";
 import e1 from "../images/e1.jpg";

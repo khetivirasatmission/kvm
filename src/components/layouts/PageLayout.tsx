@@ -5,27 +5,28 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import { Layout as AntLayout, Menu } from "antd";
+import { Layout as AntLayout } from "antd";
 import { graphql, StaticQuery } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
+import Footer from "../Footer";
+import Navbar from "../Navbar";
 import "./layout.less";
-import Navbar from "./Navbar";
 
-const { Footer, Content } = AntLayout;
+const { Content } = AntLayout;
 
 const StyledContent = styled(Content)`
   margin: 3rem auto;
   width: 100%;
-  max-width: 900px;
+  max-width: 1024px;
   padding: 10px;
 `;
 
 const PageLayout = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query SiteQuery {
+      query SitePageQuery {
         site {
           siteMetadata {
             title
@@ -37,18 +38,7 @@ const PageLayout = ({ children }) => (
       <AntLayout>
         <Navbar />
         <StyledContent>{children}</StyledContent>
-        <Footer>
-          Copyright © {new Date().getFullYear()} Kheti Virasat Mission. All
-          rights reserved.
-          <Menu mode="horizontal" className="footer-menu">
-            <Menu.Item key="faq">
-              <a href="/faq">FAQ</a>
-            </Menu.Item>
-            <Menu.Item key="support">
-              <a href="#">Support</a>
-            </Menu.Item>
-          </Menu>
-        </Footer>
+        <Footer />
       </AntLayout>
     )}
   />

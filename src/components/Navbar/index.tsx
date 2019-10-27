@@ -31,9 +31,6 @@ class Navbar extends Component {
           </Link>
         </div>
         <div className="menu__container">
-          <div className="menu_left">
-            {/* <LeftMenu mode="horizontal" /> */}
-          </div>
           <div className="menu_right">
             <RightMenu mode="horizontal" />
           </div>

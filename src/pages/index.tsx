@@ -2,7 +2,7 @@ import { Button, Carousel, Col, Row } from "antd";
 import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
-import Layout from "../components/layout";
+import Layout from "../components/layouts/HomeLayout";
 import SEO from "../components/seo";
 import f1 from "../images/f1.jpg";
 import f2 from "../images/f2.jpg";

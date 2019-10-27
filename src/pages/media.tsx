@@ -1,5 +1,5 @@
 import React from "react";
-import PageLayout from "../components/PageLayout";
+import PageLayout from "../components/layouts/PageLayout";
 import SEO from "../components/seo";
 
 export default () => (

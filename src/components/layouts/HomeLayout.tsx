@@ -5,14 +5,15 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import { Layout as AntLayout, Menu } from "antd";
-import { graphql, Link, StaticQuery } from "gatsby";
+import { Layout as AntLayout } from "antd";
+import { graphql, StaticQuery } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
+import Footer from "../Footer";
+import Navbar from "../Navbar";
 import "./layout.less";
-import Navbar from "./Navbar";
 
-const { Footer, Content } = AntLayout;
+const { Content } = AntLayout;
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -29,18 +30,7 @@ const Layout = ({ children }) => (
       <AntLayout>
         <Navbar />
         <Content>{children}</Content>
-        <Footer>
-          Copyright © {new Date().getFullYear()} Kheti Virasat Mission. All
-          rights reserved.
-          <Menu mode="horizontal" className="footer-menu">
-            <Menu.Item key="faq">
-              <Link to="/faq">FAQ</Link>
-            </Menu.Item>
-            <Menu.Item key="support">
-              <Link to="/support">Support</Link>
-            </Menu.Item>
-          </Menu>
-        </Footer>
+        <Footer />
       </AntLayout>
     )}
   />

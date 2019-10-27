@@ -3,6 +3,7 @@
   border-bottom: solid 1px #e8e8e8;
   overflow: hidden;
   box-shadow: 0 0 30px #f3f1f1;
+  max-height: 80px;
 }
 
 .menu__logo {
@@ -46,10 +47,6 @@
   border-bottom: none;
 }
 
-.menu__container .menu_left {
-  float: left;
-}
-
 .menu__container .menu_right {
   float: right;
   margin-top: 4px;
@@ -58,7 +55,7 @@
 .menu__mobile-button {
   float: right;
   height: 32px;
-  margin-top: 32px;
+  margin-top: 16px;
   display: none !important; /* use of important to overwrite ant-btn */
 }
 
@@ -76,7 +73,6 @@
     display: inline-block !important;
   }
 
-  .menu_left,
   .menu_right {
     display: none;
   }
@@ -91,6 +87,6 @@
   }
 
   .menu__logo a {
-    padding: 10px 10px;
+    padding: 0px 10px;
   }
 }

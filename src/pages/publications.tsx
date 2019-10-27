@@ -1,6 +1,6 @@
 import { Col, Row } from "antd";
 import React from "react";
-import PageLayout from "../components/PageLayout";
+import PageLayout from "../components/layouts/PageLayout";
 import Profile from "../components/Profile";
 import SEO from "../components/seo";
 import bebe_di_rasoi from "../images/books/bebe_di_rasoi.png";

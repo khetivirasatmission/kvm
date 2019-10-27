@@ -1,7 +1,7 @@
 import { Card } from "antd";
 import { Link } from "gatsby";
 import React from "react";
-import PageLayout from "../components/PageLayout";
+import PageLayout from "../components/layouts/PageLayout";
 import SEO from "../components/seo";
 import volunteer from "../images/volunteer.png";
 
