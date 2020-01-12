@@ -1,4 +1,4 @@
-import { Button, Carousel, Col, Row } from "antd";
+import { Button, Carousel, Col, Row, Statistic } from "antd";
 import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
@@ -9,6 +9,7 @@ import f2 from "../images/f2.jpg";
 import f3 from "../images/f3.jpg";
 import f4 from "../images/f4.jpg";
 import f5 from "../images/f5.jpg";
+import f6 from "../images/trinjan/trinjan.jpg";
 
 const SlideWrapper = styled.div`
   background-position: center;
@@ -22,13 +23,16 @@ const SlideWrapper = styled.div`
   z-index: 1;
   background-image: url(${props => props.image});
 `;
+const StatisticWrapper = styled.div`
+  padding: 70px;
+  text-align: center;
+`;
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Carousel effect="fade" autoplay={true}>
       <div style={{ minHeight: "400px" }}>
-        {/* <img src={f1} /> */}
         <SlideWrapper image={f1}>
           <div className="slide">
             <h4>Save the ecology</h4>
@@ -40,7 +44,6 @@ const IndexPage = () => (
         </SlideWrapper>
       </div>
       <div>
-        {/* <img src={f2} /> */}
         <SlideWrapper image={f2}>
           <div className="slide">
             <h4>Support the families</h4>
@@ -52,7 +55,6 @@ const IndexPage = () => (
         </SlideWrapper>
       </div>
       <div>
-        {/* <img src={f3} /> */}
         <SlideWrapper image={f3}>
           <div className="slide">
             <h4>Improve the literacy</h4>
@@ -64,7 +66,6 @@ const IndexPage = () => (
         </SlideWrapper>
       </div>
       <div>
-        {/* <img src={f4} /> */}
         <SlideWrapper image={f4}>
           <div className="slide">
             <h4>Support the women</h4>
@@ -76,11 +77,21 @@ const IndexPage = () => (
         </SlideWrapper>
       </div>
       <div>
-        {/* <img src={f5} /> */}
         <SlideWrapper image={f5}>
           <div className="slide">
             <h4>Start a movement</h4>
             <h1>Advocacy &amp; campaigning</h1>
+            <Link to="/donate">
+              <Button>Donate now</Button>
+            </Link>
+          </div>
+        </SlideWrapper>
+      </div>
+      <div>
+        <SlideWrapper image={f6}>
+          <div className="slide">
+            <h4>Revive the tradition</h4>
+            <h1>Trinjan</h1>
             <Link to="/donate">
               <Button>Donate now</Button>
             </Link>
@@ -139,6 +150,29 @@ const IndexPage = () => (
         </div>
       </Col>
     </Row>
+
+    {/* <Row>
+      <Col xs={24} sm={12} lg={6}>
+        <StatisticWrapper>
+          <Statistic title="Active Users" value={112893} />
+        </StatisticWrapper>
+      </Col>
+      <Col xs={24} sm={12} lg={6}>
+        <StatisticWrapper>
+          <Statistic title="Active Users" value={112893} />
+        </StatisticWrapper>
+      </Col>
+      <Col xs={24} sm={12} lg={6}>
+        <StatisticWrapper>
+          <Statistic title="Active Users" value={112893} />
+        </StatisticWrapper>
+      </Col>
+      <Col xs={24} sm={12} lg={6}>
+        <StatisticWrapper>
+          <Statistic title="Active Users" value={112893} />
+        </StatisticWrapper>
+      </Col>
+    </Row> */}
   </Layout>
 );
 

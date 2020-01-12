@@ -22,7 +22,7 @@ class RightMenu extends Component<{
             <Link to="/team">Team</Link>
           </Menu.Item>
         </SubMenu>
-        <SubMenu title={<span>Initiatives</span>}>
+        {/* <SubMenu title={<span>Initiatives</span>}>
           <Menu.Item key="organicfarmersmarket">
             <Link to="/organicfarmersmarket">Organic Farmers' Market</Link>
           </Menu.Item>
@@ -46,14 +46,77 @@ class RightMenu extends Component<{
           <Menu.Item key="foodheritage">
             <Link to="/foodheritage">Revival of Food Heritage</Link>
           </Menu.Item>
+          <Menu.Item key="trinjan">
+            <Link to="/trinjan">Trinjan</Link>
+          </Menu.Item>
           <Menu.Item key="advocacy">
             <Link to="/advocacy">Advocacy and Campaign</Link>
           </Menu.Item>
-        </SubMenu>
+        </SubMenu> */}
 
+        <SubMenu title={<span>Organic Farming</span>}>
         <Menu.Item key="certification">
           <Link to="/certification">Certification</Link>
         </Menu.Item>
+        <Menu.Item key="farmers">
+          <Link to="/organicfarmers">Organic Farmers</Link>
+        </Menu.Item>
+          <Menu.Item key="organicfarmersmarket">
+            <Link to="/organicfarmersmarket">Organic Farmers' Market</Link>
+          </Menu.Item>
+          <Menu.Item key="organickitchengardening">
+            <Link to="/organickitchengardening">
+              Organic Farming &amp; Kitchen Gardening
+            </Link>
+          </Menu.Item>
+          <Menu.Item key="urbankitchengardening">
+            <Link to="/urbankitchengardening">
+              Urban Farming &amp; Kitchen Gardening
+            </Link>
+          </Menu.Item>
+         
+        </SubMenu>
+
+        <SubMenu title={<span>Heritage</span>}>
+          <Menu.Item key="kudratiaaharparivar">
+            <Link to="/kudratiaaharparivar">Kudrati Aahar Parivar</Link>
+          </Menu.Item>
+          <Menu.Item key="foodheritage">
+            <Link to="/foodheritage">Revival of Food Heritage</Link>
+          </Menu.Item>
+          <Menu.Item key="trinjan">
+            <Link to="/trinjan">Trinjan</Link>
+          </Menu.Item>
+        </SubMenu>
+
+        <SubMenu title={<span>Education</span>}>
+        <Menu.Item key="research">
+            <Link to="/research">Research</Link>
+          </Menu.Item>
+          <Menu.Item key="publications">
+            <Link to="/publications">Publications</Link>
+          </Menu.Item>
+        <Menu.Item key="internship">
+            <Link to="/internship">Internship</Link>
+          </Menu.Item>
+          <Menu.Item key="volunteer">
+            <Link to="/volunteer">Volunteer</Link>
+          </Menu.Item>
+          <Menu.Item key="education">
+            <Link to="/education">Eco-tours</Link>
+          </Menu.Item>
+        </SubMenu>
+
+        <SubMenu title={<span>Campaign</span>}>
+        <Menu.Item key="advocacy">
+            <Link to="/advocacy">Advocacy and Campaign</Link>
+          </Menu.Item>
+          <Menu.Item key="wae">
+            <Link to="/wae">Women Action for Ecology</Link>
+          </Menu.Item>
+        </SubMenu>
+
+        
 
         {/* <Menu.Item key="volunteers">
           <a href="#">Volunteers</a>

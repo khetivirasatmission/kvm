@@ -1,10 +1,11 @@
 import { Card, Col, Row } from "antd";
+import { Link } from "gatsby";
 import React from "react";
-import PageLayout from "../components/layouts/PageLayout";
-import Profile from "../components/Profile";
-import SEO from "../components/seo";
-import e2 from "../images/e2.jpg";
-import i1 from "../images/maya.jpg";
+import PageLayout from "../../components/layouts/PageLayout";
+import Profile from "../../components/Profile";
+import SEO from "../../components/seo";
+import e2 from "../../images/e2.jpg";
+import i1 from "../../images/maya.jpg";
 
 export default () => (
   <PageLayout>
@@ -72,8 +73,9 @@ export default () => (
       <p>
         Experiences of Our Internees
         <ul>
+          <li><Link to="/internship/anna">Anna Helfers, from Germany</Link></li>
           <li>Trent Brown, from University of Wollongong, Australia</li>
-          <li> Swarup Datta, PhD, Delhi School of Economics, New Delhi</li>
+          <li>Swarup Datta, PhD, Delhi School of Economics, New Delhi</li>
         </ul>
       </p>
     </Card>
