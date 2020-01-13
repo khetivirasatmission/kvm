@@ -37,8 +37,11 @@ const IndexPage = () => (
           <div className="slide">
             <h4>Save the ecology</h4>
             <h1>Organic Farming</h1>
+            <Link to="/organicfarmers" style={{marginRight:"10px"}}>
+              <Button>Know more</Button>
+            </Link>
             <Link to="/donate">
-              <Button>Donate now</Button>
+              <Button type="primary">Donate now</Button>
             </Link>
           </div>
         </SlideWrapper>
@@ -48,8 +51,11 @@ const IndexPage = () => (
           <div className="slide">
             <h4>Support the families</h4>
             <h1>Organic Kitchen Gardening</h1>
+            <Link to="/organickitchengardening" style={{marginRight:"10px"}}>
+              <Button>Know more</Button>
+            </Link>
             <Link to="/donate">
-              <Button>Donate now</Button>
+              <Button type="primary">Donate now</Button>
             </Link>
           </div>
         </SlideWrapper>
@@ -59,8 +65,11 @@ const IndexPage = () => (
           <div className="slide">
             <h4>Improve the literacy</h4>
             <h1>Kudrati Kheti Gurukul</h1>
+            <Link to="/kudratikhetigurukul" style={{marginRight:"10px"}}>
+              <Button>Know more</Button>
+            </Link>
             <Link to="/donate">
-              <Button>Donate now</Button>
+              <Button type="primary">Donate now</Button>
             </Link>
           </div>
         </SlideWrapper>
@@ -70,8 +79,11 @@ const IndexPage = () => (
           <div className="slide">
             <h4>Support the women</h4>
             <h1>Women Action for Ecology</h1>
+            <Link to="/wae" style={{marginRight:"10px"}}>
+              <Button>Know more</Button>
+            </Link>
             <Link to="/donate">
-              <Button>Donate now</Button>
+              <Button type="primary">Donate now</Button>
             </Link>
           </div>
         </SlideWrapper>
@@ -81,8 +93,11 @@ const IndexPage = () => (
           <div className="slide">
             <h4>Start a movement</h4>
             <h1>Advocacy &amp; campaigning</h1>
+            <Link to="/advocacy" style={{marginRight:"10px"}}>
+              <Button>Know more</Button>
+            </Link>
             <Link to="/donate">
-              <Button>Donate now</Button>
+              <Button type="primary">Donate now</Button>
             </Link>
           </div>
         </SlideWrapper>
@@ -92,8 +107,11 @@ const IndexPage = () => (
           <div className="slide">
             <h4>Revive the tradition</h4>
             <h1>Trinjan</h1>
+            <Link to="/trinjan" style={{marginRight:"10px"}}>
+              <Button>Know more</Button>
+            </Link>
             <Link to="/donate">
-              <Button>Donate now</Button>
+              <Button type="primary">Donate now</Button>
             </Link>
           </div>
         </SlideWrapper>
@@ -173,6 +191,38 @@ const IndexPage = () => (
         </StatisticWrapper>
       </Col>
     </Row> */}
+    <Row>
+      <Col xs={24} md={8} lg={8}>
+        <iframe
+          style={{ border: "0" }}
+          width="100%"
+          height="400"
+          allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/238237196&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+        />
+      </Col>
+      <Col xs={24} md={10} lg={10}>
+        <iframe
+          width="800"
+          height="400"
+          src="https://www.youtube.com/embed/videoseries?list=PLKMOgZ4mfxOvPSj2bxCYxG752mfTvG1o-"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+      </Col>
+      <Col xs={24} md={6} lg={6}>
+        <iframe
+          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fkhetivirasatmissionjaitu%2F&tabs=timeline&width=635&height=400&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId"
+          width="635"
+          height="400"
+          scrolling="no"
+          frameborder="0"
+          allowTransparency="true"
+          allow="encrypted-media"
+        ></iframe>
+      </Col>
+    </Row>
   </Layout>
 );
 

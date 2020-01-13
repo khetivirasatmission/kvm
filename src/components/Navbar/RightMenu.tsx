@@ -89,6 +89,9 @@ class RightMenu extends Component<{
         </SubMenu>
 
         <SubMenu title={<span>Education</span>}>
+        <Menu.Item key="kudratikhetigurukul">
+            <Link to="/kudratikhetigurukul">Kudrati Kheti Gurukul</Link>
+          </Menu.Item>
           <Menu.Item key="research">
             <Link to="/research">Research</Link>
           </Menu.Item>
@@ -116,7 +119,7 @@ class RightMenu extends Component<{
         </SubMenu>
 
         <Menu.Item key="press">
-        <Link to="/press">Press</Link>
+          <Link to="/press">Press</Link>
         </Menu.Item>
         <Menu.Item key="contact">
           <Link to="/contact">Contact Us</Link>

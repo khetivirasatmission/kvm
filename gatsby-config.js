@@ -72,6 +72,23 @@ module.exports = {
         icon: `src/images/logo.jpeg`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+        {
+          resolve: "gatsby-remark-embed-youtube",
+          options: {
+            width: 800,
+            height:400,
+            noIframeBorder: true,
+          }
+        },
+        "gatsby-remark-responsive-iframe"
+        ]
+      }
+    },
+    
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
