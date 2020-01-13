@@ -37,7 +37,7 @@ const IndexPage = () => (
           <div className="slide">
             <h4>Save the ecology</h4>
             <h1>Organic Farming</h1>
-            <Link to="/organicfarmers" style={{marginRight:"10px"}}>
+            <Link to="/organicfarmers" style={{ marginRight: "10px" }}>
               <Button>Know more</Button>
             </Link>
             <Link to="/donate">
@@ -51,7 +51,7 @@ const IndexPage = () => (
           <div className="slide">
             <h4>Support the families</h4>
             <h1>Organic Kitchen Gardening</h1>
-            <Link to="/organickitchengardening" style={{marginRight:"10px"}}>
+            <Link to="/organickitchengardening" style={{ marginRight: "10px" }}>
               <Button>Know more</Button>
             </Link>
             <Link to="/donate">
@@ -65,7 +65,7 @@ const IndexPage = () => (
           <div className="slide">
             <h4>Improve the literacy</h4>
             <h1>Kudrati Kheti Gurukul</h1>
-            <Link to="/kudratikhetigurukul" style={{marginRight:"10px"}}>
+            <Link to="/kudratikhetigurukul" style={{ marginRight: "10px" }}>
               <Button>Know more</Button>
             </Link>
             <Link to="/donate">
@@ -79,7 +79,7 @@ const IndexPage = () => (
           <div className="slide">
             <h4>Support the women</h4>
             <h1>Women Action for Ecology</h1>
-            <Link to="/wae" style={{marginRight:"10px"}}>
+            <Link to="/wae" style={{ marginRight: "10px" }}>
               <Button>Know more</Button>
             </Link>
             <Link to="/donate">
@@ -93,7 +93,7 @@ const IndexPage = () => (
           <div className="slide">
             <h4>Start a movement</h4>
             <h1>Advocacy &amp; campaigning</h1>
-            <Link to="/advocacy" style={{marginRight:"10px"}}>
+            <Link to="/advocacy" style={{ marginRight: "10px" }}>
               <Button>Know more</Button>
             </Link>
             <Link to="/donate">
@@ -107,7 +107,7 @@ const IndexPage = () => (
           <div className="slide">
             <h4>Revive the tradition</h4>
             <h1>Trinjan</h1>
-            <Link to="/trinjan" style={{marginRight:"10px"}}>
+            <Link to="/trinjan" style={{ marginRight: "10px" }}>
               <Button>Know more</Button>
             </Link>
             <Link to="/donate">

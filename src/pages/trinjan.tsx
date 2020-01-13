@@ -1,4 +1,4 @@
-import { Card, Col, Row } from "antd";
+import { Card, Col, Row,Button } from "antd";
 import React from "react";
 import PageLayout from "../components/layouts/PageLayout";
 import Profile from "../components/Profile";
@@ -19,7 +19,18 @@ export default () => (
   <PageLayout>
     <SEO title="Trinjan" />
 
-    <h1>Trinjan</h1>
+    <h1>
+      Trinjan{" "}
+      <Button
+        style={{ float: "right" }}
+        type="primary"
+        size="large"
+        href="https://www.payumoney.com/paybypayumoney/#/1EA80E79A26B9C9D3EE780BABDFBFDD2"
+        target="_blank"
+      >
+        Donate now
+      </Button>
+    </h1>
 
     <Row gutter={18}>
       <Col xs={24} md={24} lg={24}>

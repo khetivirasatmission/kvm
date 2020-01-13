@@ -89,7 +89,7 @@ class RightMenu extends Component<{
         </SubMenu>
 
         <SubMenu title={<span>Education</span>}>
-        <Menu.Item key="kudratikhetigurukul">
+          <Menu.Item key="kudratikhetigurukul">
             <Link to="/kudratikhetigurukul">Kudrati Kheti Gurukul</Link>
           </Menu.Item>
           <Menu.Item key="research">
