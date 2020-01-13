@@ -125,7 +125,7 @@ const IndexPage = () => (
           </Button>
         </div>
       </Col>
-      <Col xs={24} sm={12} lg={6} className="col-colored-3">
+      <Col xs={24} sm={12} lg={6} className="col-colored-1">
         <div>
           <h1>Get Involved</h1>
           <p>
@@ -137,7 +137,7 @@ const IndexPage = () => (
           </Button>
         </div>
       </Col>
-      <Col xs={24} sm={12} lg={6} className="col-colored-4">
+      <Col xs={24} sm={12} lg={6} className="col-colored-2">
         <div>
           <h1>Donate Now</h1>
           <p>

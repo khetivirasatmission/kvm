@@ -73,7 +73,9 @@ export default () => (
       <p>
         Experiences of Our Internees
         <ul>
-          <li><Link to="/internship/anna">Anna Helfers, from Germany</Link></li>
+          <li>
+            <Link to="/internship/anna">Anna Helfers, from Germany</Link>
+          </li>
           <li>Trent Brown, from University of Wollongong, Australia</li>
           <li>Swarup Datta, PhD, Delhi School of Economics, New Delhi</li>
         </ul>

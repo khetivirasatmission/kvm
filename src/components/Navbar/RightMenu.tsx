@@ -55,12 +55,12 @@ class RightMenu extends Component<{
         </SubMenu> */}
 
         <SubMenu title={<span>Organic Farming</span>}>
-        <Menu.Item key="certification">
-          <Link to="/certification">Certification</Link>
-        </Menu.Item>
-        <Menu.Item key="farmers">
-          <Link to="/organicfarmers">Organic Farmers</Link>
-        </Menu.Item>
+          <Menu.Item key="certification">
+            <Link to="/certification">Certification</Link>
+          </Menu.Item>
+          <Menu.Item key="farmers">
+            <Link to="/organicfarmers">Organic Farmers</Link>
+          </Menu.Item>
           <Menu.Item key="organicfarmersmarket">
             <Link to="/organicfarmersmarket">Organic Farmers' Market</Link>
           </Menu.Item>
@@ -74,7 +74,6 @@ class RightMenu extends Component<{
               Urban Farming &amp; Kitchen Gardening
             </Link>
           </Menu.Item>
-         
         </SubMenu>
 
         <SubMenu title={<span>Heritage</span>}>
@@ -90,13 +89,13 @@ class RightMenu extends Component<{
         </SubMenu>
 
         <SubMenu title={<span>Education</span>}>
-        <Menu.Item key="research">
+          <Menu.Item key="research">
             <Link to="/research">Research</Link>
           </Menu.Item>
           <Menu.Item key="publications">
             <Link to="/publications">Publications</Link>
           </Menu.Item>
-        <Menu.Item key="internship">
+          <Menu.Item key="internship">
             <Link to="/internship">Internship</Link>
           </Menu.Item>
           <Menu.Item key="volunteer">
@@ -108,7 +107,7 @@ class RightMenu extends Component<{
         </SubMenu>
 
         <SubMenu title={<span>Campaign</span>}>
-        <Menu.Item key="advocacy">
+          <Menu.Item key="advocacy">
             <Link to="/advocacy">Advocacy and Campaign</Link>
           </Menu.Item>
           <Menu.Item key="wae">
@@ -116,11 +115,9 @@ class RightMenu extends Component<{
           </Menu.Item>
         </SubMenu>
 
-        
-
-        {/* <Menu.Item key="volunteers">
-          <a href="#">Volunteers</a>
-        </Menu.Item> */}
+        <Menu.Item key="press">
+        <Link to="/press">Press</Link>
+        </Menu.Item>
         <Menu.Item key="contact">
           <Link to="/contact">Contact Us</Link>
         </Menu.Item>

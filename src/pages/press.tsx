@@ -6,7 +6,7 @@ export default () => (
   <PageLayout>
     <SEO title="Media" />
 
-    <h1>Media</h1>
+    <h1>KVM Coverage in Media</h1>
 
     <ul>
       <li>
@@ -203,7 +203,6 @@ export default () => (
         >
           India's independent farmers embrace organic
         </a>
-        
       </li>
       <li>
         <a
