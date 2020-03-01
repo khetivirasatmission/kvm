@@ -6,6 +6,7 @@ import SEO from "../components/seo";
 import t1 from "../images/t1.jpg";
 import t2 from "../images/t2.jpg";
 import t3 from "../images/t3.jpg";
+import t4 from "../images/t4.jpg";
 
 export default () => (
   <PageLayout>
@@ -105,6 +106,13 @@ export default () => (
           name="Rajeev Kohli"
           designation="Director, Marketing and Livelihood Development"
           image=""
+        />
+      </Col>
+      <Col xs={24} md={12} lg={5}>
+        <Profile
+          name="Deepak Ashwani"
+          designation="Director of EdibleForest, Wild Forest & Natural Lifestyle"
+          image={t4}
         />
       </Col>
       <Col xs={24} md={12} lg={5}>
