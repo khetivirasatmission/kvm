@@ -1,6 +1,7 @@
-import { Button, Carousel, Col, Row, Statistic } from "antd";
+import { Button, Carousel, Col, Row } from "antd";
 import { Link } from "gatsby";
 import React from "react";
+import { FacebookProvider, Page } from "react-facebook";
 import styled from "styled-components";
 import Layout from "../components/layouts/HomeLayout";
 import SEO from "../components/seo";
@@ -206,21 +207,23 @@ const IndexPage = () => (
           width="800"
           height="400"
           src="https://www.youtube.com/embed/videoseries?list=PLKMOgZ4mfxOvPSj2bxCYxG752mfTvG1o-"
-          frameborder="0"
+          frameBorder="0"
           allow="autoplay; encrypted-media"
-          allowfullscreen
-        ></iframe>
+          allowFullScreen={true}
+        />
       </Col>
       <Col xs={24} md={6} lg={6}>
-        <iframe
-          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fkhetivirasatmissionjaitu%2F&tabs=timeline&width=635&height=400&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId"
-          width="635"
-          height="400"
-          scrolling="no"
-          frameborder="0"
-          allowTransparency="true"
-          allow="encrypted-media"
-        ></iframe>
+        <FacebookProvider appId="195658071778073">
+          <Page
+            href="https://www.facebook.com/khetivirasatmissionjaitu"
+            tabs="timeline"
+            showFacepile={true}
+            smallHeader={true}
+            adaptContainerWidth={true}
+            width={470}
+            height={400}
+          />
+        </FacebookProvider>
       </Col>
     </Row>
   </Layout>
