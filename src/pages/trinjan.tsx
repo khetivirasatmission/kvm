@@ -1,26 +1,70 @@
-import { Card, Col, Row,Button } from "antd";
+import { Button, Card, Col, Row, Statistic } from "antd";
+import { Link } from "gatsby";
 import React from "react";
 import PageLayout from "../components/layouts/PageLayout";
 import Profile from "../components/Profile";
 import SEO from "../components/seo";
-import start from "../images/trinjan/start.jpg";
+import { StoryList } from "../components/Story";
 import t1 from "../images/trinjan/1.png";
 import t2 from "../images/trinjan/2.png";
 import t3 from "../images/trinjan/3.png";
-import t4 from "../images/trinjan/4.png";
 import t5 from "../images/trinjan/5.png";
 import t7 from "../images/trinjan/7.png";
-import t8 from "../images/trinjan/8.png";
-import t10 from "../images/trinjan/10.png";
-import t11 from "../images/trinjan/11.png";
-import t12 from "../images/trinjan/12.png";
+import start from "../images/trinjan/start.jpg";
+
+const storyStyle = {
+  paddingTop: "12px",
+};
+
+const artisans = [
+  {
+    key: "rimpykaur",
+    name: "Rimpy Kaur (18)",
+    designation: "Natural dyer",
+    image: t1,
+    story:
+      "Rimpy Kaur is from Kotli village in Muktsar district. With her academic background in fashion, she developed a quick passion for natural dyeing. We trained her into using all-natural plant materials to make dyes for the thread, including marigold flowers, carrots, onion skin, babul (gum arabic) bark, pomegranate skin, eucalyptus bark and much more. She attended regular trainings. Thus, not just her skills developed but also her wisdom. She understood that artificial dyes cause skin irritations and infections; thus switching to natural dyes is the need of the hour. TRINJAN has also given this young adult, a source of earning bread and butter, working from home. As people started acknowledging her work through KVM, her confidence is boosted by leaps and bounds. She says, “I will be glad to train others and share this art I have learnt through KVM. I will, happily, carry on with this work as it gives me deep creative satisfaction.” Rimpy represents the youth, which if provided with appropriate guidance and skills, can bring a change in the outlook of youngsters.",
+  },
+  {
+    key: "gagandeepkaur",
+    name: "Gagandeep Kaur (26)",
+    designation: "Embroider and Tailor",
+    image: t2,
+    story:
+      "A high school pass out, Gagandeep Kaur, lives in the Kotli village in district Muktsar. She had learnt embroidery from her mother and stitching from her sister at the age of 15. She says, “I continued both of these skills as a past time ever since I had learnt them. I lament the fact that now we are completely dependent on machines and look down upon blue collared professions. But I had always enjoyed my work.” Being grateful to KVM, she adds, “I am thankful to KVM for acknowledging my hobby and helping me take it to a professional level. Now I am able to provide financial backing to my family, too.” Being more delicate, working with natural material was little challenging in the beginning. But after receiving guidance from KVM, she has got a hang of it now.",
+  },
+  {
+    key: "ramandeepkaur",
+    name: "Ramandeep Kaur (23)",
+    designation: "Spinner",
+    image: t5,
+    story:
+      "Ramandeep Kaur (23), from Kotli, Muktsar, holds BCA degree. Inheriting the art of spinning from her mother, she used to spin, sometimes as a past-time and sometimes as a stress-relieving exercise. Since 2017, she has started spinning regularly as a professional with KVM. Ramandeep revisits the moments when KVM came to see this young girl spinning, “I felt so happy and honoured that they appreciated my work and gave me an opportunity to hone my skills. I feel contented that the skills learnt playfully from my elders are now my tools for financial stability.” She always experience a mental peace and calm, which comes along, when she spins. For her, spinning is much more than a mechanical activity.",
+  },
+  {
+    key: "sindedrpalkaur",
+    name: "Sinderpal Kaur (57)",
+    designation: "Weaver",
+    image: t7,
+    story:
+      "Sinderpal Kaur (57) lives in the village of Kotli, Muktsar district. At the age of seven, she learnt weaving from her mother. After learning the basics in a month or so, she kept practising to perfect the skill. She says, “Working on loom keeps me focused and grounded. It is a perfect exercise to rein in my wandering thoughts.” She is even more satisfied that the work is, now, generating her money. From a pity home maker, her status has now uplifted to a professional artisan. As this art is at the verge of extinction, Punjab is left with very few weavers who still know the intricacies of it. And Sinderpal, is indeed one of those rare people, who need immediate assistance, for they hold the seeds for young generation.",
+  },
+  {
+    key: "asharani",
+    name: "Aasha Rani (70)",
+    designation: "Basket Weaver",
+    image: t3,
+    story:
+      "With no academic background, Asha Rani (70) taught herself how to weave baskets and other crafts out of palm leaves in her early teens. Based at Jaitu, Faridkot, this is the source of bread and butter to her family of five. She explains her routine, “I go to different spots near the village pond to collect the raw material. I work for 8-9 hours per day to make two baskets and a plate in a day.” That's quite a speed! Despite some issues in her back, she manages to give continuous sitting, driven by her determination and passion. Even being a novice, Asha knows that any eatable, if kept in plastic, goes lifeless. Her work has multitude of benefits- from generating livelihood to the reviving of traditional craft and an eco-friendly alternative over plastic. KVM is supporting many little known artisans like Asha Rani, providing their products a market and their art a recognition through TRINJAN.",
+  },
+];
 
 export default () => (
   <PageLayout>
     <SEO title="Trinjan" />
 
     <h1>
-      Trinjan{" "}
+      Trinjan
       <Button
         style={{ float: "right" }}
         type="primary"
@@ -43,140 +87,342 @@ export default () => (
       bordered={false}
     >
       <p>
-        TRINJAN is the symbol of caring and sharing in Punjabi community. Under
-        this umbrella, women used to spin, weave, knit, sing, celebrate,
-        appreciate and create different kinds of artistic products. It used to
-        be a platform of collective teaching and learning with a close
-        association of nature and culture. The type of development model which
-        is being adopted in last 5-6 decades didn’t allow women to enhance the
-        collective working and its spread to the next generation. Younger
-        generation is getting school and college education where these
-        traditional creative skills are not considered worthy. That’s why the
-        spinning wheel which is a symbol of life is being burnt by people in
-        chullah as fuel wood. Same has happened with the handlooms and other
-        material used for handicrafts and textile items.
+        Trinjan, in rural Punjab, was the space where women would traditionally
+        gather to spin on charkhas, weave, talk, counsel, learn from each other,
+        cook and eat together. In the assaults made by Green Revolution, this
+        culture of community gatherings in disguise of artistic activities was
+        lost.
       </p>
       <p>
-        With this background and zeal to prevent this great traditional art from
-        being vanished, KVM started working for its revival. For us, these are
-        not mere products that come out, there is a connect of human and nature
-        that can be clearly seen along with the association and owness. In order
-        to prevent this heritage, Organic Desi Cotton is being grown by the
-        farmers, procured by KVM, hand spun, naturally dyed and hand woven by
-        the rural artisans. Along with this there are artisans who do hand
-        embroidery, make different grass crafts and other decorative products.
-        All these skills have been promoted and developed under TRINJAN.
-      </p>
-      <p>
-        It has freedom for the artisans as they can work from home, most of the
-        artisans are women. It’s a very good opportunity for the livelihood
-        generation and pass on this skill to the next generation. KVM believes
-        that revival of traditional, slow, natural and cultural wisdom shall
-        help addressing the physical, mental and emotional health crisis that
-        people have been going through.
-      </p>
-      <p>
-        This is a people’s initiative where KVM is acting as a platform only. We
-        urge you to come forward and support the work in whatever capacity you
-        could i.e. financially, providing marketing, documentation of folklore
-        associated, reaching out to more people, helping in providing the
-        required infrastructure and by visiting any part of this value chain any
-        time. It’s a call to all those concerned and worried about the
-        contemporary model of development to contribute for the change we all
-        wish to have for a better world.
+        KVM has revived this culture through its project TRINJAN. It is
+        providing women artisans a platform to re-explore their art, earn
+        livelihood and share their wisdom.
       </p>
     </Card>
 
-    <Row gutter={18}>
-      <Col xs={24} md={12} lg={12}>
-        <div>
+    <Card title="Project TRINJAN" bordered={false}>
+      <p>
+        TRINJAN is an extension of Kheti Virasat’s Mission for Rural Livelihood
+        through Traditional Skills. To revive the great knowledge of textile and
+        handicrafts that women had, TRINJAN started in 4 villages in 2017. The
+        self-reliance of cloth, aka 'Vastra Swavlambham’, which was once a part
+        and parcel of our culture, was lost long ago. Most of the spinners and
+        weavers were women. They were also actively involved in agriculture and
+        dairy activities. In the course of industrialisation and modernization,
+        most of them lost their patience and interest amid the flood of easily
+        accessible ready-made garments and limited themselves to household
+        chores. The charkhas were abandoned and the weavers were out of
+        practice. KVM identified these women artisans, most of them from poor
+        financial backgrounds, and encouraged them to restart their work
+        professionally, with KVM.
+      </p>
+      <p>
+        Under the umbrella of TRINJAN, we also organise festive gatherings known
+        as Trinjan Melas, exhibitions with live demonstrations, traditional food
+        festivals and cultural programmes.
+      </p>
+    </Card>
+
+    <Card title="Value chain" bordered={false}>
+      <p>
+        Organic indigenous Cotton grown by the farmers, is procured by KVM at
+        premium prices, hand spun, naturally dyed and hand woven by the rural
+        artisans. Along with this, there are women artisans who do hand
+        embroidery, crochet, Knitting, make different grass crafts and other
+        decorative products.
+      </p>
+      <p>
+        We are constantly working on the quality of the yarn, fabric, designing,
+        productivity and marketing through regular trainings of women. For this,
+        we have a network of experts and various organisations across India,
+        which is constantly evolving.
+      </p>
+    </Card>
+
+    <Card title="TRINJAN Family" bordered={false}>
+      <Row>
+        <Col xs={12} sm={12} lg={4}>
+          <div>
+            <Statistic title="Farmers" value={15} />
+          </div>
+        </Col>
+        <Col xs={12} sm={12} lg={4}>
+          <div>
+            <Statistic title="Spinners" value={80} />
+          </div>
+        </Col>
+        <Col xs={12} sm={12} lg={5}>
+          <div>
+            <Statistic title="Natural Dyers" value={10} />
+          </div>
+        </Col>
+        <Col xs={12} sm={12} lg={4}>
+          <div>
+            <Statistic title="Weavers" value={15} />
+          </div>
+        </Col>
+        <Col xs={12} sm={12} lg={5}>
+          <div>
+            <Statistic title="Hand Embroiders" value={5} />
+          </div>
+        </Col>
+        <Col xs={12} sm={12} lg={4}>
+          <div>
+            <Statistic title="Knitters" value={15} />
+          </div>
+        </Col>
+        <Col xs={12} sm={12} lg={4}>
+          <div>
+            <Statistic title="Darri Makers" value={10} />
+          </div>
+        </Col>
+        <Col xs={12} sm={12} lg={5}>
+          <div>
+            <Statistic title="Crochet Workers" value={12} />
+          </div>
+        </Col>
+        <Col xs={12} sm={12} lg={4}>
+          <div>
+            <Statistic title="Tailors" value={6} />
+          </div>
+        </Col>
+        <Col xs={12} sm={12} lg={5}>
+          <div>
+            <Statistic title="Basket Weavers" value={5} />
+          </div>
+        </Col>
+      </Row>
+    </Card>
+
+    <Card title="Our Products" bordered={false}>
+      <p>
+        These hardworking women make beautiful creative products including
+        bedsheets, khes (topsheet), towels, stolls, mufflers, fabric for
+        garments, darri, mats, rugs, woolen sweater, phulkaris, hand woven
+        baskets, crochet earrings, toran, coasters, wall hangings etc. These
+        products are than marketed by KVM on various public platforms.
+      </p>
+    </Card>
+
+    <Card title="Meet our Artisans" bordered={false}>
+      {/* <Row gutter={18}>
+        <Col xs={24} md={12} lg={8}>
           <Profile name="Rimpy Kaur" image={t1} />
-          <p>
-            Rimpy Kaur of Kotli village in Muktsar district is 18 years old and
-            has a BSCFT. With her background in fashion, it is not surprising
-            that Rimpy took to natural dying; and she has developed a quick
-            passion for it. She began practicing natural dying only 5-6 months
-            ago, learning from a KVM training. She uses all-natural plant
-            materials to make her dyes for the thread, including marigold
-            flowers, carrots, onion skin, babul tree bark (gum arabic),
-            pomegranate skin, and eucalyptus bark and leaves. She explains that
-            for barks like the babul or eucalyptus, she will soak the bark for a
-            month, then she will bring the water to a boil. After this boiling,
-            she strains the bark out and puts the thread into the water. After
-            2-3 hours, she brings this to a boil again. Finally, after this, she
-            pulls the thread out and rinses it with fresh water. She wanted to
-            learn how to do this because she likes the idea of using natural
-            dyes. She says it is better for the skin and to reduce skin
-            irritations and infections. She also has developed this work into a
-            source of income. She wants to continue to do it in her house,
-            noting that it benefits her social life as people come to visit her
-            and see her work, though her friends cannot believe what she creates
-            is done all naturally. She says that now she will happily teach
-            anyone who wants to learn how to do this and she will continue on
-            with her work, feeling proud that she is becoming known in her
-            community for her work in natural dying. It is an example of a
-            connection to and revival of traditional practices that can be
-            applied to the needs of today’s world and have multiple health,
-            social, and economic benefits as well.
-          </p>
-        </div>
-
-        <div>
+          <Anchor>
+            <Anchor.Link href="#rimpykaur" title="Read my story" />
+          </Anchor>
+        </Col>
+        <Col xs={24} md={12} lg={8}>
           <Profile name="Gagandeep Kaur" image={t2} />
-          <p>
-            Gagandeep Kaur is 26 years old, has a 10th grade education, and
-            lives in the village of Kotli in Muktsar district. She is Mistri
-            caste and has 6 members in her family. She has been practicing
-            embroidery since she was 15 years old, learning both from school and
-            from her mother. She also learned stitching from her sister. She
-            says she is always doing at least one of these handcrafts and
-            laments that in the past, everyone did work by hand but now everyone
-            wants the work done by machines. She says, smiling, that in her
-            school, she was really good at embroidery. So much so, that many
-            girls wanted her to do their embroidery homework for them. She
-            enjoys the work. The work provides a value to her household because
-            she brings more income in. She also feels that it is beneficial to
-            her social life because many people know her and come to her house
-            to visit her and see her embroidery. Gagandeep is quiet and does not
-            share much; she comes across as shy. But in her few words, she still
-            shows the layers of benefits to doing handcraft work; in this case
-            embroidery and stitching. Just in her twenties, she is not only
-            adding to her family’s financial well-being but is creating
-            beautiful works while reducing her stress and feeling good about her
-            place in community.
-          </p>
-        </div>
-
-        <div>
+          <Anchor>
+            <Anchor.Link href="#gangandeepkaur" title="Read my story" />
+          </Anchor>
+        </Col>
+        <Col xs={24} md={12} lg={8}>
+          <Profile name="Ramandeep Kaur" image={t5} />
+          <Anchor>
+            <Anchor.Link href="#ramandeepkaur" title="Read my story" />
+          </Anchor>
+        </Col>
+        <Col xs={24} md={12} lg={8}>
+          <Profile name="Sinderpal Kaur" image={t7} />
+          <Anchor>
+            <Anchor.Link href="#sinderpalkaur" title="Read my story" />
+          </Anchor>
+        </Col>
+        <Col xs={24} md={12} lg={8}>
           <Profile name="Aasha Rani" image={t3} />
+          <Anchor>
+            <Anchor.Link href="#asharani" title="Read my story" />
+          </Anchor>
+        </Col>
+         <Col xs={24} md={12} lg={6}>
+          <Profile name="M​anjit Kaur" image={t4} />
+        </Col>
+        <Col xs={24} md={12} lg={6}>
+          <Profile name="Gurcharan Kaur" image={t8} />
+        </Col>
+        <Col xs={24} md={12} lg={6}>
+          <Profile name="Sukhjit Kaur" image={t10} />
+        </Col>
+        <Col xs={24} md={12} lg={6}>
+          <Profile name="Mahinder Kaur" image={t11} />
+        </Col>
+        <Col xs={24} md={12} lg={6}>
+          <Profile name="Gurjit Kaur" image={t12} />
+        </Col> 
+      </Row>*/}
+      <StoryList list={artisans} />
+    </Card>
+
+    <Card title="Work with TRINJAN" bordered={false}>
+      <strong>We are looking for volunteers!</strong>
+      <p>
+        If the traditional art, handicraft and culture linkages amuses you,{" "}
+        <Link to="/volunteer">Join as a volunteer</Link> to help us further
+        explore, document, expand and evolve TRINJAN.
+      </p>
+    </Card>
+
+    <Card title="Donate for TRINJAN" bordered={false}>
+      <p>
+        This project is supported by donations.{"  "}
+        <Link to="/donate">Donate here</Link> for a cause.
+      </p>
+    </Card>
+
+    {/* <Row gutter={18}>
+      <Col xs={24} md={12} lg={6}>
+        <div id="rimpykaur">
+          <Profile
+            name="Rimpy Kaur (18)"
+            designation="Natural dyer"
+            image={t1}
+          />
+        </div>
+      </Col>
+      <Col xs={24} md={12} lg={18}>
+        <div style={storyStyle}>
           <p>
-            Aasha Rani is 70 years old and lives in Jaitu, Faridkot. She has no
-            formal education, and there are 5 members in her family. She ta ught
-            herself how to weave baskets and similar crafts when she was 15
-            years old and has been doing it ever since. Since the beginning, she
-            has made them mostly to sell. She can usually make 2 bowls or one
-            larger plate in a day. She goes to different places near the river
-            to collect the raw material of date palm leaves. She works 8-9 hours
-            each day making the baskets and other woven crafts. While she often
-            has back pain if she is working for a while, if she does, she will
-            get up and walk around and it will feel better. It does not deter
-            her from the work, though, because doing the work relieves her
-            tension. She says that she doesn’t feel the stress of the house when
-            she is making baskets. She feels that because of her work, she is
-            physically and mentally fit. Aasha also talks about the health
-            benefits of using her woven crafts. She says that many people do not
-            want to use plastic, they prefer her baskets. If we place chapati in
-            this craft, she adds, we reduce diseases [because it’s not putting
-            hot food into plastic]. She says that they put fruit in the baskets;
-            they put everything in them. It’s very beneficial to the house to
-            have them to use. This work shows the diversity of benefits from
-            economic, mental health well-being, ecological and general health
-            more broadly in the use of the crafts over plastic, and ties to
-            cultural tradition.
+            Rimpy Kaur is from Kotli village in Muktsar district. With her
+            academic background in fashion, she developed a quick passion for
+            natural dyeing. We trained her into using all-natural plant
+            materials to make dyes for the thread, including marigold flowers,
+            carrots, onion skin, babul (gum arabic) bark, pomegranate skin,
+            eucalyptus bark and much more. She attended regular trainings. Thus,
+            not just her skills developed but also her wisdom. She understood
+            that artificial dyes cause skin irritations and infections; thus
+            switching to natural dyes is the need of the hour. TRINJAN has also
+            given this young adult, a source of earning bread and butter,
+            working from home. As people started acknowledging her work through
+            KVM, her confidence is boosted by leaps and bounds. She says, “I
+            will be glad to train others and share this art I have learnt
+            through KVM. I will, happily, carry on with this work as it gives me
+            deep creative satisfaction.” Rimpy represents the youth, which if
+            provided with appropriate guidance and skills, can bring a change in
+            the outlook of youngsters.
           </p>
         </div>
+      </Col>
+    </Row>
 
-        <div>
+    <Row gutter={18}>
+      <Col xs={24} md={12} lg={6}>
+        <div id="gagandeepkaur">
+          <Profile
+            name="Gagandeep Kaur (26)"
+            designation="Embroider and Tailor"
+            image={t2}
+          />
+        </div>
+      </Col>
+      <Col xs={24} md={12} lg={18}>
+        <div style={storyStyle}>
+          <p>
+            A high school pass out, Gagandeep Kaur, lives in the Kotli village
+            in district Muktsar. She had learnt embroidery from her mother and
+            stitching from her sister at the age of 15. She says, “I continued
+            both of these skills as a past time ever since I had learnt them. I
+            lament the fact that now we are completely dependent on machines and
+            look down upon blue collared professions. But I had always enjoyed
+            my work.” Being grateful to KVM, she adds, “I am thankful to KVM for
+            acknowledging my hobby and helping me take it to a professional
+            level. Now I am able to provide financial backing to my family,
+            too.” Being more delicate, working with natural material was little
+            challenging in the beginning. But after receiving guidance from KVM,
+            she has got a hang of it now.
+          </p>
+        </div>
+      </Col>
+    </Row>
+
+    <Row gutter={18}>
+      <Col xs={24} md={12} lg={6}>
+        <div id="ramandeepkaur">
+          <Profile
+            name="Ramandeep Kaur (23)"
+            designation="Spinner"
+            image={t5}
+          />
+        </div>
+      </Col>
+      <Col xs={24} md={12} lg={18}>
+        <div style={storyStyle}>
+          <p>
+            Ramandeep Kaur (23), from Kotli, Muktsar, holds BCA degree.
+            Inheriting the art of spinning from her mother, she used to spin,
+            sometimes as a past-time and sometimes as a stress-relieving
+            exercise. Since 2017, she has started spinning regularly as a
+            professional with KVM. Ramandeep revisits the moments when KVM came
+            to see this young girl spinning, “I felt so happy and honoured that
+            they appreciated my work and gave me an opportunity to hone my
+            skills. I feel contented that the skills learnt playfully from my
+            elders are now my tools for financial stability.” She always
+            experience a mental peace and calm, which comes along, when she
+            spins. For her, spinning is much more than a mechanical activity.
+          </p>
+        </div>
+      </Col>
+    </Row>
+
+    <Row gutter={18}>
+      <Col xs={24} md={12} lg={6}>
+        <div id="sindedrpalkaur">
+          <Profile name="Sinderpal Kaur (57)" designation="Weaver" image={t7} />
+        </div>
+      </Col>
+      <Col xs={24} md={12} lg={18}>
+        <div style={storyStyle}>
+          <p>
+            Sinderpal Kaur (57) lives in the village of Kotli, Muktsar district.
+            At the age of seven, she learnt weaving from her mother. After
+            learning the basics in a month or so, she kept practising to perfect
+            the skill. She says, “Working on loom keeps me focused and grounded.
+            It is a perfect exercise to rein in my wandering thoughts.” She is
+            even more satisfied that the work is, now, generating her money.
+            From a pity home maker, her status has now uplifted to a
+            professional artisan. As this art is at the verge of extinction,
+            Punjab is left with very few weavers who still know the intricacies
+            of it. And Sinderpal, is indeed one of those rare people, who need
+            immediate assistance, for they hold the seeds for young generation.
+          </p>
+        </div>
+      </Col>
+    </Row>
+
+    <Row gutter={18}>
+      <Col xs={24} md={12} lg={6}>
+        <div id="asharani">
+          <Profile
+            name="Aasha Rani (70)"
+            designation="Basket Weaver"
+            image={t3}
+          />
+        </div>
+      </Col>
+      <Col xs={24} md={12} lg={18}>
+        <div style={storyStyle}>
+          <p>
+            With no academic background, Asha Rani (70) taught herself how to
+            weave baskets and other crafts out of palm leaves in her early
+            teens. Based at Jaitu, Faridkot, this is the source of bread and
+            butter to her family of five. She explains her routine, “I go to
+            different spots near the village pond to collect the raw material. I
+            work for 8-9 hours per day to make two baskets and a plate in a
+            day.” That's quite a speed! Despite some issues in her back, she
+            manages to give continuous sitting, driven by her determination and
+            passion. Even being a novice, Asha knows that any eatable, if kept
+            in plastic, goes lifeless. Her work has multitude of benefits- from
+            generating livelihood to the reviving of traditional craft and an
+            eco-friendly alternative over plastic. KVM is supporting many little
+            known artisans like Asha Rani, providing their products a market and
+            their art a recognition through TRINJAN.
+          </p>
+        </div>
+      </Col>
+    </Row> */}
+
+    {/* <div>
           <Profile name="M​anjit Kaur" image={t4} />
           <p>
             M​anjit Kaur is 60 years old from the village of Ramuana in the
@@ -197,57 +443,11 @@ export default () => (
             They are holistically beneficial to Manjit herself as well as her
             family and the broader community and planet.
           </p>
-        </div>
+        </div> */}
+    {/* </Col> */}
 
-        <div>
-          <Profile name="Ramandeep Kaur" image={t5} />
-          <p>
-            Ramandeep Kaur is 23 years old and lives in Kotli, Muktsar. She has
-            a BCA degree. There are 4 members in her family. Three to four years
-            ago she began spinning. She says that, to her, spinning is both a
-            hobby and a profession. In her family, in every generation – her
-            mother, her grandmother, etc. – each one spun and she learned from
-            them. But, she doesn’t have any friends her age who also spin. At
-            times when she feels stress, she will spin and feel better.
-            Ramandeep talks about KVM coming to meet her to see the young girl
-            who was spinning. She was so happy and honored that they came to see
-            her and that that they gave her work. Appearing shy and quiet,
-            Ramandeep answers questions with short sentences. Yet, she is
-            clearly proud of her work and commitment to spinning. She talks
-            about the financial benefit of treating this like a career and being
-            able to bring extra income in. Additionally, though, even in her
-            young twenties, she is aware of how much better, physically and
-            mentally, she feels when she spins each day. Furthermore, she is
-            able to articulate both the importance of carrying on this family
-            and cultural tradition, noticing that her generation – those around
-            her – are not necessarily doing the same.
-          </p>
-        </div>
-      </Col>
-
-      <Col xs={24} md={12} lg={12}>
-        <div>
-          <Profile name="Sinderpal Kaur" image={t7} />
-          <p>
-            Sinderpal Kaur is 57 years old and lives in the village of Kotli,
-            Muktsar district. Fifty years ago, as a girl, she learned how to
-            weave. It took her about a month to learn the basics of the craft
-            from her mother and after that, she continued on, becoming more
-            skilled at it. She says that when she does this work, she feels
-            better and that it is good for her health. She says that it reduces
-            her pain. When she sits idly, then she thinks about her worries and
-            her stresses. When she is weaving, she doesn’t think about these
-            other things but can just focus on the work in front of her.
-            Sinderpal also values this work because it supports her financially.
-            In her opinion, doing work by hand is good and she prefers this. It
-            also has become the way in which she has developed a good reputation
-            – in her village, she is known as a weaver. She says that the
-            younger generations are not interested in connecting with this
-            traditional craft work but she works hard to try to make that
-            connection. If the youth are willing to learn, then she will teach
-            them.
-          </p>
-        </div>
+    {/* <Col xs={24} md={12} lg={12}>
+        
 
         <div>
           <Profile name="Gurcharan Kaur" image={t8} />
@@ -324,10 +524,10 @@ export default () => (
             her properly and so she appreciates that KVM gives her work, paying
             her well and on time. She is part of a family of craftswomen who
             weave and embroider, and they continue an intergenerational
-            connection to this cultural work while also doing it together.{" "}
+            connection to this cultural work while also doing it together.
           </p>
         </div>
-      </Col>
-    </Row>
+      </Col> */}
+    {/* </Row> */}
   </PageLayout>
 );

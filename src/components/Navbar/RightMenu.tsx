@@ -18,9 +18,9 @@ class RightMenu extends Component<{
           <Menu.Item key="org">
             <Link to="/mission">Mission</Link>
           </Menu.Item>
-          <Menu.Item key="team">
+          {/* <Menu.Item key="team">
             <Link to="/team">Team</Link>
-          </Menu.Item>
+          </Menu.Item> */}
         </SubMenu>
         {/* <SubMenu title={<span>Initiatives</span>}>
           <Menu.Item key="organicfarmersmarket">

@@ -195,7 +195,7 @@ const IndexPage = () => (
     <Row>
       <Col xs={24} md={8} lg={8}>
         <iframe
-          style={{ border: "0" }}
+          style={{ border: "0", padding: "10px" }}
           width="100%"
           height="400"
           allow="autoplay"
@@ -204,6 +204,7 @@ const IndexPage = () => (
       </Col>
       <Col xs={24} md={10} lg={10}>
         <iframe
+          style={{ border: "0", padding: "10px" }}
           width="800"
           height="400"
           src="https://www.youtube.com/embed/videoseries?list=PLKMOgZ4mfxOvPSj2bxCYxG752mfTvG1o-"
@@ -213,17 +214,19 @@ const IndexPage = () => (
         />
       </Col>
       <Col xs={24} md={6} lg={6}>
-        <FacebookProvider appId="195658071778073">
-          <Page
-            href="https://www.facebook.com/khetivirasatmissionjaitu"
-            tabs="timeline"
-            showFacepile={true}
-            smallHeader={true}
-            adaptContainerWidth={true}
-            width={470}
-            height={400}
-          />
-        </FacebookProvider>
+        <div style={{ border: "0", padding: "10px" }}>
+          <FacebookProvider appId="195658071778073">
+            <Page
+              href="https://www.facebook.com/khetivirasatmissionjaitu"
+              tabs="timeline"
+              showFacepile={true}
+              smallHeader={true}
+              adaptContainerWidth={true}
+              width={460}
+              height={380}
+            />
+          </FacebookProvider>
+        </div>
       </Col>
     </Row>
   </Layout>
