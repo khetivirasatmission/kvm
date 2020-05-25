@@ -2,7 +2,7 @@ import { Button, Card, Col, Row, Typography } from "antd";
 import React, { useState } from "react";
 import t0 from "../images/t0.jpg";
 
-const { Paragraph, Text } = Typography;
+const { Paragraph } = Typography;
 
 interface IImageProps {
   name?: string;
@@ -120,9 +120,11 @@ const Story = ({
             {designation && <p>{designation}</p>}
             {region && <h4>{region}</h4>}
 
-            <Button size="small" onClick={onClick}>
-              Read more...
-            </Button>
+            {!expanded && (
+              <Button size="small" onClick={onClick}>
+                Read more...
+              </Button>
+            )}
           </div>
         </Card>
       </Col>
@@ -130,7 +132,7 @@ const Story = ({
         <Col xs={24} md={24} lg={18}>
           {story && (
             <div style={storyStyle}>
-              <Paragraph>{story}</Paragraph>
+              <p dangerouslySetInnerHTML={{ __html: story }} />
             </div>
           )}
         </Col>

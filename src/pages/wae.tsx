@@ -40,10 +40,8 @@ export default () => (
         spreading of the practices are the main tools for the empowerment of
         women through Nav-Trinjan.
       </p>
-
-      <h3 style={{ color: "#72a230", fontSize: "20px", fontWeight: "600" }}>
-        Activities of Women Action for Ecology
-      </h3>
+    </Card>
+    <Card title="Activities of Women Action for Ecology" bordered={false}>
       <ul>
         <li>Organic kitchen gardening</li>
         <li>Insect literacy</li>
@@ -51,7 +49,7 @@ export default () => (
         <li>Revival of food heritage</li>
         <li>
           Economic activities to support women from small and marginal farmer
-          families & Landless families
+          families and Landless families
         </li>
       </ul>
     </Card>

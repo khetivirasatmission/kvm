@@ -11,10 +11,59 @@ import t3 from "../images/trinjan/3.png";
 import t5 from "../images/trinjan/5.png";
 import t7 from "../images/trinjan/7.png";
 import start from "../images/trinjan/start.jpg";
+import { Table } from 'antd';
 
-const storyStyle = {
-  paddingTop: "12px",
-};
+// const storyStyle = {
+//   paddingTop: "12px",
+// };
+
+const columns = [
+  {
+    title: 'Stakeholder',
+    dataIndex: 'name',
+    key: 'name',
+    className: 'stakeholder'
+  },
+  {
+    title: 'Intervention',
+    dataIndex: 'intervention',
+    key: 'intervention',
+    className: 'intervention'
+  },
+];
+
+const data = [
+  {
+    key: '1',
+    name: 'Cotton farmers',
+    intervention: 'Provide training on organic practices; buy cotton on premium price'
+  },
+  {
+    key: '2',
+    name: 'Spinners',
+    intervention: 'Provide them with tools and raw material; conduct trainings to hone their skills'
+  },
+  {
+    key: '3',
+    name: 'Natural dyers',
+    intervention: 'Standardise natural dyes; train the youngsters in the art of dyeing'
+  },
+  {
+    key: '4',
+    name: 'Weavers and Embroiders',
+    intervention: 'Work on the fusion of traditional and contemporary designs; quality control'
+  },
+  {
+    key: '5',
+    name: 'Tailors',
+    intervention: 'Work on the customized designs; maintain quality and enhance the productivity'
+  },
+  {
+    key: '6',
+    name: 'Buyers',
+    intervention: 'Provide fabric with the compassionate warp and delicated weft carefully crafted by artistic hands'
+  },
+];
 
 const artisans = [
   {
@@ -22,6 +71,7 @@ const artisans = [
     name: "Rimpy Kaur (18)",
     designation: "Natural dyer",
     image: t1,
+    expanded: true,
     story:
       "Rimpy Kaur is from Kotli village in Muktsar district. With her academic background in fashion, she developed a quick passion for natural dyeing. We trained her into using all-natural plant materials to make dyes for the thread, including marigold flowers, carrots, onion skin, babul (gum arabic) bark, pomegranate skin, eucalyptus bark and much more. She attended regular trainings. Thus, not just her skills developed but also her wisdom. She understood that artificial dyes cause skin irritations and infections; thus switching to natural dyes is the need of the hour. TRINJAN has also given this young adult, a source of earning bread and butter, working from home. As people started acknowledging her work through KVM, her confidence is boosted by leaps and bounds. She says, “I will be glad to train others and share this art I have learnt through KVM. I will, happily, carry on with this work as it gives me deep creative satisfaction.” Rimpy represents the youth, which if provided with appropriate guidance and skills, can bring a change in the outlook of youngsters.",
   },
@@ -137,7 +187,12 @@ export default () => (
         we have a network of experts and various organisations across India,
         which is constantly evolving.
       </p>
+
+      <Table rowClassName={(_, index) => index % 2 === 0 ? 'table-row-light' : 'table-row-dark'}
+        columns={columns} dataSource={data} pagination={false} />
+      <br />
     </Card>
+
 
     <Card title="TRINJAN Family" bordered={false}>
       <Row>
@@ -259,7 +314,7 @@ export default () => (
       <strong>We are looking for volunteers!</strong>
       <p>
         If the traditional art, handicraft and culture linkages amuses you,{" "}
-        <Link to="/volunteer">Join as a volunteer</Link> to help us further
+        <Link to="/volunteer"><strong>Join as a volunteer</strong></Link> to help us further
         explore, document, expand and evolve TRINJAN.
       </p>
     </Card>
@@ -267,7 +322,7 @@ export default () => (
     <Card title="Donate for TRINJAN" bordered={false}>
       <p>
         This project is supported by donations.{"  "}
-        <Link to="/donate">Donate here</Link> for a cause.
+        <Link to="/donate"><strong>Donate here</strong></Link> for a cause.
       </p>
     </Card>
 

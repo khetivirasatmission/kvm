@@ -18,9 +18,9 @@ module.exports = {
       options: {
         javascriptEnabled: true,
         modifyVars: {
-          "primary-color": "#72A230",
+          "primary-color": "#4472C4",
           "secondary-color": "#72A230",
-          "link-color": "#72A230",
+          "link-color": "#4573C4",
           "font-size-base": "16px",
           "text-color": "#333333",
           "text-color-secondary": "#333333",
