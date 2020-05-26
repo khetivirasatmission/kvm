@@ -21,9 +21,17 @@ interface IProfileProps {
   file?: string;
 }
 
-const Image = ({ name, image }: IImageProps) => {
+export const Image = ({ name, image }: IImageProps) => {
   return (
     <div className="custom-image">
+      <img alt={name} width="100%" src={image} />
+    </div>
+  );
+};
+
+export const ExpandableImage = ({ name, image }: IImageProps) => {
+  return (
+    <div className="expandable-image">
       <img alt={name} width="100%" src={image} />
     </div>
   );

@@ -2,7 +2,7 @@ import { Button, Card, Col, Row, Statistic } from "antd";
 import { Link } from "gatsby";
 import React from "react";
 import PageLayout from "../components/layouts/PageLayout";
-import Profile from "../components/Profile";
+import Profile, { ExpandableImage } from "../components/Profile";
 import SEO from "../components/seo";
 import { StoryList } from "../components/Story";
 import t1 from "../images/trinjan/1.png";
@@ -11,7 +11,7 @@ import t3 from "../images/trinjan/3.png";
 import t5 from "../images/trinjan/5.png";
 import t7 from "../images/trinjan/7.png";
 import start from "../images/trinjan/start.jpg";
-import { Table } from 'antd';
+import { Table } from "antd";
 
 // const storyStyle = {
 //   paddingTop: "12px",
@@ -19,49 +19,55 @@ import { Table } from 'antd';
 
 const columns = [
   {
-    title: 'Stakeholder',
-    dataIndex: 'name',
-    key: 'name',
-    className: 'stakeholder'
+    title: "Stakeholder",
+    dataIndex: "name",
+    key: "name",
+    className: "stakeholder",
   },
   {
-    title: 'Intervention',
-    dataIndex: 'intervention',
-    key: 'intervention',
-    className: 'intervention'
+    title: "Intervention",
+    dataIndex: "intervention",
+    key: "intervention",
+    className: "intervention",
   },
 ];
 
 const data = [
   {
-    key: '1',
-    name: 'Cotton farmers',
-    intervention: 'Provide training on organic practices; buy cotton on premium price'
+    key: "1",
+    name: "Cotton farmers",
+    intervention:
+      "Provide training on organic practices; buy cotton on premium price",
   },
   {
-    key: '2',
-    name: 'Spinners',
-    intervention: 'Provide them with tools and raw material; conduct trainings to hone their skills'
+    key: "2",
+    name: "Spinners",
+    intervention:
+      "Provide them with tools and raw material; conduct trainings to hone their skills",
   },
   {
-    key: '3',
-    name: 'Natural dyers',
-    intervention: 'Standardise natural dyes; train the youngsters in the art of dyeing'
+    key: "3",
+    name: "Natural dyers",
+    intervention:
+      "Standardise natural dyes; train the youngsters in the art of dyeing",
   },
   {
-    key: '4',
-    name: 'Weavers and Embroiders',
-    intervention: 'Work on the fusion of traditional and contemporary designs; quality control'
+    key: "4",
+    name: "Weavers and Embroiders",
+    intervention:
+      "Work on the fusion of traditional and contemporary designs; quality control",
   },
   {
-    key: '5',
-    name: 'Tailors',
-    intervention: 'Work on the customized designs; maintain quality and enhance the productivity'
+    key: "5",
+    name: "Tailors",
+    intervention:
+      "Work on the customized designs; maintain quality and enhance the productivity",
   },
   {
-    key: '6',
-    name: 'Buyers',
-    intervention: 'Provide fabric with the compassionate warp and delicated weft carefully crafted by artistic hands'
+    key: "6",
+    name: "Buyers",
+    intervention:
+      "Provide fabric with the compassionate warp and delicated weft carefully crafted by artistic hands",
   },
 ];
 
@@ -126,9 +132,9 @@ export default () => (
       </Button>
     </h1>
 
-    <Row gutter={18}>
-      <Col xs={24} md={24} lg={24}>
-        <Profile designation="" image={start} />
+    <Row>
+      <Col xs={24}>
+        <ExpandableImage name="trinjan" image={start} />
       </Col>
     </Row>
 
@@ -188,11 +194,16 @@ export default () => (
         which is constantly evolving.
       </p>
 
-      <Table rowClassName={(_, index) => index % 2 === 0 ? 'table-row-light' : 'table-row-dark'}
-        columns={columns} dataSource={data} pagination={false} />
+      <Table
+        rowClassName={(_, index) =>
+          index % 2 === 0 ? "table-row-light" : "table-row-dark"
+        }
+        columns={columns}
+        dataSource={data}
+        pagination={false}
+      />
       <br />
     </Card>
-
 
     <Card title="TRINJAN Family" bordered={false}>
       <Row>
@@ -314,15 +325,20 @@ export default () => (
       <strong>We are looking for volunteers!</strong>
       <p>
         If the traditional art, handicraft and culture linkages amuses you,{" "}
-        <Link to="/volunteer"><strong>Join as a volunteer</strong></Link> to help us further
-        explore, document, expand and evolve TRINJAN.
+        <Link to="/volunteer">
+          <strong>Join as a volunteer</strong>
+        </Link>{" "}
+        to help us further explore, document, expand and evolve TRINJAN.
       </p>
     </Card>
 
     <Card title="Donate for TRINJAN" bordered={false}>
       <p>
         This project is supported by donations.{"  "}
-        <Link to="/donate"><strong>Donate here</strong></Link> for a cause.
+        <Link to="/donate">
+          <strong>Donate here</strong>
+        </Link>{" "}
+        for a cause.
       </p>
     </Card>
 

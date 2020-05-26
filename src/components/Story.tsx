@@ -112,7 +112,7 @@ const Story = ({
     <>
       <Col xs={24} md={12} lg={6}>
         <Card className="card-team" bordered={false} bodyStyle={{ padding: 0 }}>
-          {image && <div>{f}</div>}
+          <div>{f}</div>
           <div className="custom-card">
             {name && <h3>{name}</h3>}
             {designation && <p>{designation}</p>}

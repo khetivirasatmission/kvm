@@ -9,7 +9,7 @@
 .menu__logo {
   /* width: 150px; */
   float: left;
-  padding: 8px 0;
+  padding: 6px 0;
 }
 
 .menu__logo a {
@@ -28,15 +28,17 @@
   font-weight: 700;
   text-transform: uppercase;
   display: inline-block;
+  margin-bottom: 0;
+  line-height: 48px;
 }
 
 .menu__container .ant-menu-item {
   padding: 0px 5px;
 }
 
-.menu__container .ant-menu-submenu-title {
+/* .menu__container .ant-menu-submenu-title {
   padding: 10px 20px;
-}
+} */
 
 .menu__container .ant-menu-item a,
 .menu__container .ant-menu-submenu-title a {
@@ -49,7 +51,7 @@
 
 .menu__container .menu_right {
   float: right;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .menu__mobile-button {
