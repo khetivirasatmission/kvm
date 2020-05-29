@@ -1,4 +1,5 @@
-import { Button, Drawer, Icon } from "antd";
+import { Button, Drawer } from "antd";
+import { MenuOutlined } from "@ant-design/icons";
 import { Link } from "gatsby";
 import React, { Component } from "react";
 import logo from "../../images/logo.jpeg";
@@ -35,7 +36,7 @@ class Navbar extends Component {
             <RightMenu mode="horizontal" />
           </div>
           <Button className="menu__mobile-button" onClick={this.showDrawer}>
-            <Icon type="menu" />
+            <MenuOutlined />
           </Button>
           <Drawer
             placement="right"

@@ -28,19 +28,13 @@ class RightMenu extends Component<{
         <SubMenu title={<span>Our Work</span>}>
           <SubMenu title={<span>Farming</span>}>
             <Menu.Item key="organicfarming">
-              <Link to="/organicfarming">
-                Organic farming
-            </Link>
+              <Link to="/organicfarming">Organic farming</Link>
             </Menu.Item>
             <Menu.Item key="organickitchengardening">
-              <Link to="/organickitchengardening">
-                Kitchen Gardening
-            </Link>
+              <Link to="/organickitchengardening">Kitchen Gardening</Link>
             </Menu.Item>
             <Menu.Item key="urbankitchengardening">
-              <Link to="/urbankitchengardening">
-                Urban Farming
-            </Link>
+              <Link to="/urbankitchengardening">Urban Farming</Link>
             </Menu.Item>
           </SubMenu>
 
@@ -89,7 +83,6 @@ class RightMenu extends Component<{
               <Link to="/advocacy">Advocacy and Campaign</Link>
             </Menu.Item>
           </SubMenu>
-
         </SubMenu>
 
         <Menu.Item key="farmers">
@@ -108,7 +101,6 @@ class RightMenu extends Component<{
           </Menu.Item>
         </SubMenu>
 
-
         <SubMenu title={<span>Media Room</span>}>
           <Menu.Item key="publications">
             <Link to="/publications">Publications</Link>
@@ -117,7 +109,6 @@ class RightMenu extends Component<{
             <Link to="/press">Press</Link>
           </Menu.Item>
         </SubMenu>
-
 
         <Menu.Item key="contact">
           <Link to="/contact">Contact Us</Link>

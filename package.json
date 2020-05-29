@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "author": "Shirish Goyal <shirish.goyal@gmail.com>",
   "dependencies": {
+    "@ant-design/icons": "^4.1.0",
     "antd": "^4.2.5",
     "babel-plugin-import": "^1.13.0",
     "gatsby": "^2.22.10",

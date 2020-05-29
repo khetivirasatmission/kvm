@@ -138,6 +138,32 @@ export default () => (
       </Col>
     </Row>
 
+    {/* <Card
+      title=" Trinjan - A Documentary Premiere on Reviving the Spinning Wheel in Punjab and Experts Panel Discussion"
+      bordered={false}
+    >
+      <div className="video-responsive">
+        <iframe
+          src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/110253307375379/videos/110264644040912/"
+          width="1280"
+          height="720"
+          style={{ border: "none" }}
+          scrolling="no"
+        ></iframe>
+        
+      </div>
+    </Card> */}
+
+    {/* <iframe
+            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D110269744040402%26id%3D110253307375379&show_text=true&width=552&height=574&appId"
+            width="552"
+            height="574"
+            style={{ border: "none", overflow: "hidden" }}
+            scrolling="no"
+            allowTransparency={true}
+            allow="encrypted-media"
+          ></iframe> */}
+
     <Card
       title="Weaving the Social Fabric with Compassionate Warp and Dedicated Weft"
       bordered={false}
