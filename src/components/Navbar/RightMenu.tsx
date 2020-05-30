@@ -1,7 +1,9 @@
 import { Menu } from "antd";
 import { Link } from "gatsby";
 import React, { Component } from "react";
+import { Typography, Tag } from "antd";
 
+const { Text } = Typography;
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
@@ -25,6 +27,13 @@ class RightMenu extends Component<{
             <Link to="/team">Our Partners</Link>
           </Menu.Item> */}
         </SubMenu>
+        <Menu.Item key="trinjan">
+          <Link to="/trinjan">
+            <Tag color="red" style={{ fontSize: "14px" }}>
+              Trinjan Premiere
+            </Tag>
+          </Link>
+        </Menu.Item>
         <SubMenu title={<span>Our Work</span>}>
           <SubMenu title={<span>Farming</span>}>
             <Menu.Item key="organicfarming">

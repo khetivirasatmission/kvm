@@ -4,14 +4,14 @@ import React from "react";
 import PageLayout from "../components/layouts/PageLayout";
 import SEO from "../components/seo";
 
-function encode(data) {
+function encode(data: any) {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
 }
 
 export default class Contact extends React.Component {
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.state = {};
   }
@@ -25,11 +25,11 @@ export default class Contact extends React.Component {
     });
   };
 
-  handleChange = e => {
+  handleChange = (e: any) => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  handleSubmit = e => {
+  handleSubmit = (e: any) => {
     e.preventDefault();
 
     const form = e.target;
@@ -48,7 +48,7 @@ export default class Contact extends React.Component {
           navigate("/");
         });
       })
-      .catch(error => alert(error));
+      .catch((error) => alert(error));
   };
 
   render() {

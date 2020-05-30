@@ -2,7 +2,7 @@ import { Button, Card, Col, Row, Statistic } from "antd";
 import { Link } from "gatsby";
 import React from "react";
 import PageLayout from "../components/layouts/PageLayout";
-import Profile, { ExpandableImage } from "../components/Profile";
+import { ExpandableImage } from "../components/Profile";
 import SEO from "../components/seo";
 import { StoryList } from "../components/Story";
 import t1 from "../images/trinjan/1.png";
@@ -11,7 +11,18 @@ import t3 from "../images/trinjan/3.png";
 import t5 from "../images/trinjan/5.png";
 import t7 from "../images/trinjan/7.png";
 import start from "../images/trinjan/start.jpg";
+import premiere from "../images/trinjan/premiere-poster.jpeg";
+// import discussion from "../images/trinjan/panel-discussion.jpeg";
 import { Table } from "antd";
+import {
+  FacebookProvider,
+  EmbeddedPost,
+  EmbeddedVideo,
+  Comments,
+  CommentsCount,
+  MessageUs,
+  CustomChat,
+} from "react-facebook";
 
 // const storyStyle = {
 //   paddingTop: "12px",
@@ -134,15 +145,23 @@ export default () => (
 
     <Row>
       <Col xs={24}>
-        <ExpandableImage name="trinjan" image={start} />
+        <div className="video-responsive">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/e5xox_aJh1U?controls=0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          ></iframe>
+        </div>
+        {/* <ExpandableImage name="premiere" image={premiere} /> */}
       </Col>
     </Row>
 
-    {/* <Card
+    <Card
       title=" Trinjan - A Documentary Premiere on Reviving the Spinning Wheel in Punjab and Experts Panel Discussion"
       bordered={false}
     >
-      <div className="video-responsive">
+      {/* <div className="video-responsive">
         <iframe
           src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/110253307375379/videos/110264644040912/"
           width="1280"
@@ -150,19 +169,39 @@ export default () => (
           style={{ border: "none" }}
           scrolling="no"
         ></iframe>
-        
-      </div>
-    </Card> */}
+      </div> */}
+      {/* <FacebookProvider appId="195658071778073">
+            <div className="video-responsive">
+              <EmbeddedVideo
+                href="https://www.facebook.com/110253307375379/videos/110264644040912/"
+                width="100%"
+                allowFullscreen={true}
+                autoPlay={false}
+              />
+            </div>
+          </FacebookProvider> */}
+    </Card>
 
-    {/* <iframe
-            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D110269744040402%26id%3D110253307375379&show_text=true&width=552&height=574&appId"
-            width="552"
-            height="574"
-            style={{ border: "none", overflow: "hidden" }}
-            scrolling="no"
-            allowTransparency={true}
-            allow="encrypted-media"
-          ></iframe> */}
+    <Row>
+      <Col xs={24} sm={24} md={12}>
+        <FacebookProvider appId="195658071778073">
+          <EmbeddedPost
+            href="https://www.facebook.com/AIDSeattle/posts/3097818930275023"
+            width="500"
+          />
+        </FacebookProvider>
+      </Col>
+      <Col xs={24} sm={24} md={12}>
+        <FacebookProvider appId="195658071778073">
+          <Comments
+            href="https://www.facebook.com/khetivirasatmission/posts/10220975923139367"
+            order_by="reverse_time"
+            width="500"
+            numPosts={50}
+          />
+        </FacebookProvider>
+      </Col>
+    </Row>
 
     <Card
       title="Weaving the Social Fabric with Compassionate Warp and Dedicated Weft"
@@ -204,6 +243,12 @@ export default () => (
         festivals and cultural programmes.
       </p>
     </Card>
+
+    <Row>
+      <Col xs={24}>
+        <ExpandableImage name="trinjan" image={start} />
+      </Col>
+    </Row>
 
     <Card title="Value chain" bordered={false}>
       <p>
