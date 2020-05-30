@@ -165,23 +165,13 @@ export default () => (
     >
       {/* <div className="video-responsive">
         <iframe
-          src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/110253307375379/videos/110264644040912/"
+          src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/AIDindia/videos/1360584650778452/"
           width="1280"
           height="720"
           style={{ border: "none" }}
           scrolling="no"
         ></iframe>
       </div> */}
-      {/* <FacebookProvider appId="195658071778073">
-            <div className="video-responsive">
-              <EmbeddedVideo
-                href="https://www.facebook.com/110253307375379/videos/110264644040912/"
-                width="100%"
-                allowFullscreen={true}
-                autoPlay={false}
-              />
-            </div>
-          </FacebookProvider> */}
     </Card>
 
     <Row>
@@ -282,12 +272,12 @@ export default () => (
       <Row>
         <Col xs={12} sm={12} lg={4}>
           <div>
-            <Statistic title="Farmers" value={15} />
+            <Statistic title="Farmers" value={19} />
           </div>
         </Col>
         <Col xs={12} sm={12} lg={4}>
           <div>
-            <Statistic title="Spinners" value={80} />
+            <Statistic title="Spinners" value={137} />
           </div>
         </Col>
         <Col xs={12} sm={12} lg={5}>
@@ -297,37 +287,37 @@ export default () => (
         </Col>
         <Col xs={12} sm={12} lg={4}>
           <div>
-            <Statistic title="Weavers" value={15} />
+            <Statistic title="Fabric Weavers" value={28} />
           </div>
         </Col>
         <Col xs={12} sm={12} lg={5}>
           <div>
-            <Statistic title="Hand Embroiders" value={5} />
+            <Statistic title="Hand Embroiders" value={13} />
           </div>
         </Col>
         <Col xs={12} sm={12} lg={4}>
           <div>
-            <Statistic title="Knitters" value={15} />
+            <Statistic title="Knitters" value={24} />
           </div>
         </Col>
         <Col xs={12} sm={12} lg={4}>
           <div>
-            <Statistic title="Darri Makers" value={10} />
+            <Statistic title="Darri Weavers" value={18} />
           </div>
         </Col>
         <Col xs={12} sm={12} lg={5}>
           <div>
-            <Statistic title="Crochet Workers" value={12} />
+            <Statistic title="Crochet Workers" value={29} />
           </div>
         </Col>
         <Col xs={12} sm={12} lg={4}>
           <div>
-            <Statistic title="Tailors" value={6} />
+            <Statistic title="Tailors" value={7} />
           </div>
         </Col>
         <Col xs={12} sm={12} lg={5}>
           <div>
-            <Statistic title="Basket Weavers" value={5} />
+            <Statistic title="Basket Weavers" value={11} />
           </div>
         </Col>
       </Row>
