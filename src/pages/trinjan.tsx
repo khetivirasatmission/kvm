@@ -143,35 +143,21 @@ export default () => (
       </Button>
     </h1>
 
-    <Row>
-      <Col xs={24}>
-        <div className="video-responsive">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/e5xox_aJh1U?controls=0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            style={{ border: "none" }}
-            scrolling="no"
-          ></iframe>
-        </div>
-        {/* <ExpandableImage name="premiere" image={premiere} /> */}
-      </Col>
-    </Row>
+
 
     <Card
       title=" Trinjan - A Documentary Premiere on Reviving the Spinning Wheel in Punjab and Experts Panel Discussion"
       bordered={false}
     >
-      {/* <div className="video-responsive">
+      <div className="video-responsive">
         <iframe
-          src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/AIDindia/videos/1360584650778452/"
+          src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/AIDSeattle/videos/269883164380614/"
           width="1280"
           height="720"
           style={{ border: "none" }}
           scrolling="no"
         ></iframe>
-      </div> */}
+      </div>
     </Card>
 
     <Row>
