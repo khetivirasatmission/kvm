@@ -151,6 +151,8 @@ export default () => (
             height="315"
             src="https://www.youtube.com/embed/e5xox_aJh1U?controls=0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            style={{ border: "none" }}
+            scrolling="no"
           ></iframe>
         </div>
         {/* <ExpandableImage name="premiere" image={premiere} /> */}
@@ -186,7 +188,7 @@ export default () => (
       <Col xs={24} sm={24} md={12}>
         <FacebookProvider appId="195658071778073">
           <EmbeddedPost
-            href="https://www.facebook.com/AIDSeattle/posts/3097818930275023"
+            href="https://www.facebook.com/khetivirasatmission/posts/10220976917804233"
             width="500"
           />
         </FacebookProvider>
@@ -194,10 +196,10 @@ export default () => (
       <Col xs={24} sm={24} md={12}>
         <FacebookProvider appId="195658071778073">
           <Comments
-            href="https://www.facebook.com/khetivirasatmission/posts/10220975923139367"
+            href="https://www.facebook.com/khetivirasatmission/posts/10220976917804233"
             order_by="reverse_time"
             width="500"
-            numPosts={50}
+            numPosts={10}
           />
         </FacebookProvider>
       </Col>
