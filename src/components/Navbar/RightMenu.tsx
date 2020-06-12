@@ -96,15 +96,9 @@ class RightMenu extends Component<{
 
         <SubMenu title={<span>Our Services</span>}>
           <SubMenu title={<span>Get our technical support</span>}>
-            {/* <Menu.Item key="internship">
-              <Link to="/internship">Internship</Link>
-            </Menu.Item> */}
             <Menu.Item key="designyourgarden">
               <Link to="/designyourgarden">Design your garden</Link>
             </Menu.Item>
-            {/* <Menu.Item key="donate">
-              <Link to="/donate">Become a donor</Link>
-            </Menu.Item> */}
           </SubMenu>
         </SubMenu>
 
@@ -119,8 +113,8 @@ class RightMenu extends Component<{
           <Menu.Item key="volunteer">
             <Link to="/volunteer">Volunteer</Link>
           </Menu.Item>
-          <Menu.Item key="donate">
-            <Link to="/donate">Become a donor</Link>
+          <Menu.Item key="contribute">
+            <Link to="/contribute">Contribute</Link>
           </Menu.Item>
         </SubMenu>
 

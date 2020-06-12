@@ -2,6 +2,7 @@ import { Button, Card, Col, Row, Statistic } from "antd";
 import { Link } from "gatsby";
 import React from "react";
 import PageLayout from "../components/layouts/PageLayout";
+import DonateButton from "../components/DonateButton";
 import { ExpandableImage } from "../components/Profile";
 import SEO from "../components/seo";
 import { StoryList } from "../components/Story";
@@ -132,15 +133,7 @@ export default () => (
 
     <h1>
       Trinjan
-      <Button
-        style={{ float: "right" }}
-        type="primary"
-        size="large"
-        href="https://www.payumoney.com/paybypayumoney/#/1EA80E79A26B9C9D3EE780BABDFBFDD2"
-        target="_blank"
-      >
-        Donate now
-      </Button>
+      <DonateButton />
     </h1>
 
     <Card
@@ -227,11 +220,11 @@ export default () => (
       </p>
     </Card>
 
-    <Row>
+    {/* <Row>
       <Col xs={24}>
         <ExpandableImage name="trinjan" image={start} />
       </Col>
-    </Row>
+    </Row> */}
 
     <Card title="Value chain" bordered={false}>
       <p>
