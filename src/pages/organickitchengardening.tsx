@@ -1,5 +1,7 @@
 import { Card, Col, Row } from "antd";
 import React from "react";
+import { Link } from "gatsby";
+
 import PageLayout from "../components/layouts/PageLayout";
 import Profile from "../components/Profile";
 import SEO from "../components/seo";
@@ -8,9 +10,23 @@ import of1 from "../images/of1.jpg";
 
 export default () => (
   <PageLayout>
-    <SEO title="Organic Farming & Kitchen Gardening" />
+    <SEO title="Organic Kitchen Gardening" />
 
-    <h1>Organic Farming & Kitchen Gardening</h1>
+    <h1>Organic Kitchen Gardening</h1>
+
+    <p style={{ fontSize: "18px", color: "#72a230" }}>
+      <strong>G</strong>row your own Safe Food
+      <br />
+      <strong>A</strong>bolish the Hospital bills
+      <br />
+      <strong>R</strong>estore Nature in the Backyard
+      <br />
+      <strong>D</strong>iscover the journey of plants from Pot to Platter
+      <br />
+      <strong>E</strong>at fresh and Healthy
+      <br />
+      <strong>N</strong>urture your body, mind & soul with Living Food
+    </p>
 
     <Row gutter={18}>
       <Col xs={24} md={12} lg={12}>
@@ -21,116 +37,82 @@ export default () => (
       </Col>
     </Row>
 
-    <Card title="Natural Farming" bordered={false}>
+    <Card title="Introduction" bordered={false}>
       <p>
-        To detoxify the ecology of Punjab and to make the state a pesticide-free
-        region, KVM has propagated organic farming across Punjab since its
-        inception. In the last few years, hundreds of farmers have adopted
-        natural farming. KVM undertakes a variety of activities to educate,
-        sensitize, & train farmers for organic farming through Workshops,
-        Seminars, Farmer Field Schools and Participatory Resource Appraisals.
+        A garden requires patient labour and attention. Plants do not grow
+        merely to satisfy our ambitions. They thrive because someone had
+        nurtured them will love and compassion. If we make such connection with
+        the Plants, they will take care of us and cure us.{" "}
+        <em>
+          They will make right diagnosis and will prepare the customized remedy
+          for the gardener by blending the Energies from the Universe and the
+          Earth.
+        </em>
       </p>
-    </Card>
-    <Card title="Seeds Conservation" bordered={false}>
       <p>
-        KVM seeks to revive our local traditional seed varieties and actively
-        promotes their production. KVM motivates farmers to save their own seeds
-        and then use those seeds in farming practices. As a result, many farmers
-        are now saving their own seeds. For this, KVM has provided them a great
-        deal of indigenous seeds from different states of the country like
-        Andhra Pradesh, Maharashtra, Uttar Pradesh, Himachal Pradesh etc., and
-        this holy work is ongoing.
-      </p>
-    </Card>
-    <Card title="Chemical-free Kitchen Gardening" bordered={false}>
-      <p>
-        Women Action for Ecology, (WAE) a branch of KVM, encourages women to
-        start growing vegetables in their kitchen gardens. "Feed your children
-        with poison free safe food" is the slogan of this campaign. It begins
-        with making kitchens poison-free: free from that food which is grown
-        with pesticides and other agro-chemicals. Through this campaign, women
-        are motivated to start small kitchen gardens to grow seasonal vegetables
-        organically. This initiative is also ensuring more diverse and safe food
-        for the new generation of Punjab. From its beginnings in two villages,
-        Chaina and Bhotna, this campaign is now slowly spreading to nine more
-        villages. A key dimension of this campaign is the conservation of native
-        diversity of vegetable seeds. In the era of IPRs (private patents on
-        seeds) it is important to have our own seeds in our own hands.
-      </p>
-    </Card>
-    <Card title="Inter-cropping System" bordered={false}>
-      <p>
-        KVM works to enhance the biodiversity in the fields. For this it
-        encourages the farmers to adopt an intercropping crop system. This
-        increases the soil fertility and diversity of food. Intercropping offers
-        farmers the opportunity to engage nature's principle of diversity on
-        their farms.
+        The Garden, thus, becomes your playground, your painting, your pharmacy,
+        your provider and what not!
       </p>
     </Card>
 
-    <Card title="Training workshops for farmers" bordered={false}>
+    <Card title="Our Initiatives" bordered={false}>
       <p>
-        KVM organizes regular workshops and training on natural farming
-        practices. KVM provides training on the following topics:
+        Through Kitchen gardens, we are connecting with the non-farming
+        community - urban folks, women, youngsters & students; who would have
+        otherwise been alienated from the entire organic movement.
       </p>
 
-      <ul>
-        <li>Natural farming</li>
-        <li>Conservation of seeds </li>
-        <li>Inter cropping farming system</li>
-        <li>Millets based farming system</li>
-        <li>Non-pesticide management</li>
-        <li>Chemical-free kitchen gardening</li>
-      </ul>
-
+      <h4>Kitchen Gardening Workshops</h4>
       <p>
-        In the last eight years, KVM has provided extension services to the
-        farmers. For this purpose, more than 4,000 village level awareness
-        meetings and farmer field workshop were organized across the state. More
-        than 15,000 farmers had participated in these workshops and meetings. At
-        present, more than 2,500 farmers are practicing natural farming in
-        association with KVM. These farmers have adopted various natural methods
-        of soil nutrition management, pest management, crop management and water
-        management. The Natural Farming experts associated with KVM also update
-        beginner Natural Farmers with the latest technological information and
-        new farming practices.
+        We conduct regular workshops on setting-up organic kitchen gardens in
+        villages, educational institutes and urban areas. Our workshops answer:
+        <br />
+        <em>Why</em> to grow?
+        <br />
+        <em>What</em> to grow?
+        <br />
+        <em>When</em> to grow?
+        <br />
+        <em>Where</em> to grow?
+        <br />
+        <em>How</em> to grow?
+        <br />
       </p>
-    </Card>
 
-    <Card title="Revival of Food heritage" bordered={false}>
+      <h4>Design your Garden</h4>
       <p>
-        KVM also works to revive food heritage in the Malwa region of Punjab.
-        For this, it is working to promote the use of millets like Bajra, Jowar,
-        Makki, as they are very nutritious and part of our traditional food
-        habits. KVM organizes “Bebe Di Rasoi”, a traditional food based festival
-        to promote millet based food habits every year.
+        Under the flagship of our movement – <strong>Be Kudrati</strong>, we
+        provide technical assistance and expertise to start Organic Kitchen
+        Gardens in varied setups, ranging from urban household to educational
+        institutions.
       </p>
-    </Card>
-
-    <Card
-      title="Establishing a pool of local resource persons all around the state"
-      bordered={false}
-    >
       <p>
-        This is another big achievement of KVM-- that we have successfully
-        established so many of common people/farmers as local resource persons
-        on different environmental, agricultural and health issues.
+        Put your skates on and{" "}
+        <Link to="/designyourgarden">get a Garden designed</Link> for yourself!
       </p>
-    </Card>
 
-    <Card title="Awareness about GM crops" bordered={false}>
+      <h4>Project Kitchen Garden</h4>
       <p>
-        KVM is also generating awareness about the negative effects of GM crops
-        on soil, environment as well as on health. KVM also creates awareness
-        about the effect of these crops on their seed sovereignty.
+        With the support of Association for India's Development (AID), we
+        started the ‘
+        <strong>Women Action for Organic Farming and Rural Livelihood</strong>’
+        in 2011. Under this umbrella, we are training rural women to establish
+        Organic Kitchen Gardens (inclusive of vegetables, fruits, medicinal
+        plants and mushroom cultivation) in their backyards. Started from 4
+        villages in 2011, it has now spread across <strong>60 villages</strong>{" "}
+        with <strong>6,000 women</strong> involved.
       </p>
-    </Card>
-
-    <Card title="Bi-monthly magazine in Punjabi" bordered={false}>
       <p>
-        To impart knowledge about agricultural practices, current issues about
-        environment, agriculture and health, KVM has started its bi-monthly
-        magazine named ‘Balihari Kudrat’ in Punjabi.
+        <Link to="/projectkitchengardens">Click here</Link> to know more about
+        our initiative.
+      </p>
+
+      <h4>Kitchen Garden for Students</h4>
+      <p>
+        Under the guidance of KVM, various educational institutions have set up
+        Kitchen Gardens to involve students. Our experts pay their regular
+        visits to interact with students and give their technical advice for the
+        Kitchen Gardens.
       </p>
     </Card>
   </PageLayout>
