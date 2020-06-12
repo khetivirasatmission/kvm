@@ -165,7 +165,7 @@ export default () => (
       </p>
     </Card>
 
-    <Card title="Garden tales..." bordered={false}>
+    <Card title="The Garden Tales" bordered={false}>
       <StoryList list={artisans} />
     </Card>
   </PageLayout>

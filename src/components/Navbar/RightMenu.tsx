@@ -27,13 +27,6 @@ class RightMenu extends Component<{
             <Link to="/team">Our Partners</Link>
           </Menu.Item> */}
         </SubMenu>
-        <Menu.Item key="trinjan">
-          <Link to="/trinjan">
-            <Tag color="red" style={{ fontSize: "14px" }}>
-              Trinjan Premiere
-            </Tag>
-          </Link>
-        </Menu.Item>
         <SubMenu title={<span>Our Work</span>}>
           <SubMenu title={<span>Farming</span>}>
             <Menu.Item key="organicfarming">
@@ -45,15 +38,22 @@ class RightMenu extends Component<{
             <Menu.Item key="urbankitchengardening">
               <Link to="/urbankitchengardening">Urban Farming</Link>
             </Menu.Item>
+            <Menu.Item key="seedconservation">
+              <Link to="/seedconservation">Seed Conservation</Link>
+            </Menu.Item>
+            {/* <Menu.Item key="junglekrishi">
+              <Link to="/junglekrishi">Jungle Krishi</Link>
+            </Menu.Item> */}
           </SubMenu>
 
           <SubMenu title={<span>Women Empowerment</span>}>
-            <Menu.Item key="trinjan">
-              <Link to="/trinjan">Trinjan</Link>
-            </Menu.Item>
             <Menu.Item key="projectkitchengardens">
               <Link to="/projectkitchengardens">Project Kitchen Gardens</Link>
             </Menu.Item>
+            <Menu.Item key="trinjan">
+              <Link to="/trinjan">Trinjan</Link>
+            </Menu.Item>
+
             <Menu.Item key="kudratiaaharparivar">
               <Link to="/kudratiaaharparivar">Kudrati Aahar Parivar</Link>
             </Menu.Item>
@@ -91,6 +91,20 @@ class RightMenu extends Component<{
             <Menu.Item key="advocacy">
               <Link to="/advocacy">Advocacy and Campaign</Link>
             </Menu.Item>
+          </SubMenu>
+        </SubMenu>
+
+        <SubMenu title={<span>Our Services</span>}>
+          <SubMenu title={<span>Get our technical support</span>}>
+            {/* <Menu.Item key="internship">
+              <Link to="/internship">Internship</Link>
+            </Menu.Item> */}
+            <Menu.Item key="designyourgarden">
+              <Link to="/designyourgarden">Design your garden</Link>
+            </Menu.Item>
+            {/* <Menu.Item key="donate">
+              <Link to="/donate">Become a donor</Link>
+            </Menu.Item> */}
           </SubMenu>
         </SubMenu>
 

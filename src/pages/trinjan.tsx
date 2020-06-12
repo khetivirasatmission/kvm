@@ -143,24 +143,29 @@ export default () => (
       </Button>
     </h1>
 
-
-
     <Card
-      title=" Trinjan - A Documentary Premiere on Reviving the Spinning Wheel in Punjab and Experts Panel Discussion"
+      title=" Trinjan - A Documentary Premiere on Reviving the Spinning Wheel in Punjab"
       bordered={false}
     >
       <div className="video-responsive">
-        <iframe
+        {/* <iframe
           src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/AIDSeattle/videos/269883164380614/"
           width="1280"
           height="720"
           style={{ border: "none" }}
           scrolling="no"
+        ></iframe> */}
+        <iframe
+          width="1196"
+          height="673"
+          src="https://www.youtube.com/embed/e5xox_aJh1U"
+          style={{ border: "none" }}
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         ></iframe>
       </div>
     </Card>
 
-    <Row>
+    {/* <Row>
       <Col xs={24} sm={24} md={12}>
         <FacebookProvider appId="195658071778073">
           <EmbeddedPost
@@ -179,7 +184,7 @@ export default () => (
           />
         </FacebookProvider>
       </Col>
-    </Row>
+    </Row> */}
 
     <Card
       title="Weaving the Social Fabric with Compassionate Warp and Dedicated Weft"

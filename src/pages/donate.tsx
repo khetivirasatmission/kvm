@@ -1,36 +1,22 @@
 import { Button, Card, Col, Row } from "antd";
 import React from "react";
-import PageLayout from "../components/layouts/PageLayout";
+import DomesticDonate from "../components/DomesticDonate"; /*  */
+import FCRADonate from "../components/FCRADonate"; /*  */
+import PageLayout from "../components/layouts/PageLayout"; /*  */
 import SEO from "../components/seo";
 
 export default () => (
   <PageLayout>
     <SEO title="Donate" />
 
-    <h1>
-      Contribute{" "}
-      <Button
-        style={{ float: "right" }}
-        type="primary"
-        size="large"
-        href="https://www.payumoney.com/paybypayumoney/#/1EA80E79A26B9C9D3EE780BABDFBFDD2"
-        target="_blank"
-      >
-        Donate now
-      </Button>
-    </h1>
+    <h1>Contribute </h1>
 
     <Card title="Kheti Virasat Mission" bordered={false}>
       <p>
         A Movement, Born out of Compassion. With Concern about agro-ecological
         &amp; environmental health crisis and Committed to take on the challenge
-        of Ecological Reconstruction of Punjab﻿
+        of Ecological Reconstruction of Punjab
       </p>
-
-      <blockquote>
-        Donations made to Kheti Virasat Mission are exempted from Income Tax
-        under 80-G wide number CIT/BTI/ITO(T)51-80G/2013-24/64
-      </blockquote>
 
       <p>
         For the last thirteen years, farmers, different community groups and
@@ -159,24 +145,54 @@ export default () => (
       </p>
     </Card>
     <Card title="Become a donor" bordered={false}>
-      <p>
-        You can send your Cheque/Demand Draft payable to ‘Kheti Virasat Mission'
-        and send it to:
-        <address>
-          <strong>Kheti Virasat Mission Trust</strong>
-          <br />
-          <strong>STATE BANK OF INDIA</strong> (Bishnandi Bazar) <br />
-          <strong>Account No.</strong>: 30325986397
-          <br />
-          <strong>Branch</strong>: Jaitu <br />
-          <strong>IFSC Code</strong>: SBIN0007745
-        </address>
-      </p>
+      <Row>
+        <Col xs={24} md={12} lg={12}>
+          <h4>For making donations within India</h4>
+          <Button
+            type="primary"
+            size="large"
+            href="https://www.payumoney.com/paybypayumoney/#/1EA80E79A26B9C9D3EE780BABDFBFDD2"
+            target="_blank"
+            style={{ marginBottom: "10px" }}
+          >
+            Donate now
+          </Button>
+        </Col>
+        <Col xs={24} md={12} lg={12}>
+          <h4>For making donations outside India</h4>
+          <Button
+            type="primary"
+            size="large"
+            target="_blank"
+            style={{ marginBottom: "10px" }}
+            href="https://pages.razorpay.com/pl_F1dQh0eWTi3SQr/view"
+          >
+            Donate Now
+          </Button>
+        </Col>
+      </Row>
+
+      <blockquote>
+        Donations made to Kheti Virasat Mission are exempted from Income Tax
+        under 80-G wide number CIT/BTI/ITO(T)51-80G/2013-24/64
+      </blockquote>
+
+      <h4>You can also send your Cheque/Demand Draft payable to:</h4>
+      <address>
+        <strong>Kheti Virasat Mission Trust</strong>
+        <br />
+        <strong>STATE BANK OF INDIA</strong> (Bishnandi Bazar) <br />
+        <strong>Account No.</strong>: 30325986397
+        <br />
+        <strong>Branch</strong>: Jaitu <br />
+        <strong>IFSC Code</strong>: SBIN0007745
+      </address>
 
       <p>
         For us any small or big amount is welcome. So anything from Rs.500-1000
         to any other upper limit which you may desire. For further details
-        please contact: info@khetivirasatmission.org or call at 01635-231415
+        please <strong>contact: info@khetivirasatmission.org</strong> or
+        <strong> call: (91) 1635-231415</strong>
       </p>
     </Card>
   </PageLayout>
