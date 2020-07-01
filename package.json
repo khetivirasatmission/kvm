@@ -62,7 +62,7 @@
     "build": "gatsby build",
     "clean": "gatsby clean",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public -b master",
-    "start": "gatsby develop",
+    "start": "gatsby develop -p 9000",
     "format": "prettier --write src/**/*.{ts,tsx,scss,md}",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
