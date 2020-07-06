@@ -22,7 +22,7 @@ const SlideWrapper = styled.div`
   height: 700px;
   /* position: absolute; */
   z-index: 1;
-  background-image: url(${props => props.image});
+  background-image: url(${(props) => props.image});
 `;
 const StatisticWrapper = styled.div`
   padding: 70px;
@@ -119,8 +119,8 @@ const IndexPage = () => (
       </div>
     </Carousel>
 
-    <Row type="flex">
-      <Col xs={24} sm={12} lg={6} className="col-colored-1">
+    <Row>
+      <Col xs={24} md={12} xl={6} className="col-colored-1">
         <div>
           <h1>Save the planet</h1>
           <p>
@@ -132,7 +132,7 @@ const IndexPage = () => (
           </Button>
         </div>
       </Col>
-      <Col xs={24} sm={12} lg={6} className="col-colored-2">
+      <Col xs={24} md={12} xl={6} className="col-colored-2">
         <div>
           <h1>Become a volunteer</h1>
           <p>
@@ -144,7 +144,7 @@ const IndexPage = () => (
           </Button>
         </div>
       </Col>
-      <Col xs={24} sm={12} lg={6} className="col-colored-1">
+      <Col xs={24} md={12} xl={6} className="col-colored-1">
         <div>
           <h1>Get Involved</h1>
           <p>
@@ -156,7 +156,7 @@ const IndexPage = () => (
           </Button>
         </div>
       </Col>
-      <Col xs={24} sm={12} lg={6} className="col-colored-2">
+      <Col xs={24} md={12} xl={6} className="col-colored-2">
         <div>
           <h1>Donate Now</h1>
           <p>
@@ -193,39 +193,45 @@ const IndexPage = () => (
       </Col>
     </Row> */}
     <Row>
-      <Col xs={24} md={8} lg={8}>
-        <iframe
-          style={{ border: "0", padding: "10px" }}
-          width="100%"
-          height="400"
-          allow="autoplay"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/238237196&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-        />
+      <Col xs={24} lg={8}>
+        <div className="">
+          <iframe
+            style={{ border: "0", padding: "10px" }}
+            width="100%"
+            height="400"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/238237196&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+          />
+        </div>
       </Col>
-      <Col xs={24} md={10} lg={10}>
-        <iframe
-          style={{ border: "0", padding: "10px" }}
-          width="800"
-          height="400"
-          src="https://www.youtube.com/embed/videoseries?list=PLKMOgZ4mfxOvPSj2bxCYxG752mfTvG1o-"
-          frameBorder="0"
-          allow="autoplay; encrypted-media"
-          allowFullScreen={true}
-        />
+      <Col xs={24} lg={10}>
+        <div className="video-responsive">
+          <iframe
+            style={{ border: "0", padding: "10px" }}
+            width="800"
+            height="400"
+            src="https://www.youtube.com/embed/videoseries?list=PLKMOgZ4mfxOvPSj2bxCYxG752mfTvG1o-"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen={true}
+          />
+        </div>
       </Col>
-      <Col xs={24} md={6} lg={6}>
-        <div style={{ border: "0", padding: "10px" }}>
-          <FacebookProvider appId="195658071778073">
-            <Page
-              href="https://www.facebook.com/khetivirasatmissionjaitu"
-              tabs="timeline"
-              showFacepile={true}
-              smallHeader={true}
-              adaptContainerWidth={true}
-              width={460}
-              height={380}
-            />
-          </FacebookProvider>
+      <Col xs={24} lg={6}>
+        <div className="">
+          <div style={{ border: "0", padding: "10px" }}>
+            <FacebookProvider appId="195658071778073">
+              <Page
+                href="https://www.facebook.com/khetivirasatmissionjaitu"
+                tabs="timeline"
+                showFacepile={true}
+                smallHeader={true}
+                adaptContainerWidth={true}
+                width={460}
+                height={380}
+              />
+            </FacebookProvider>
+          </div>
         </div>
       </Col>
     </Row>

@@ -167,56 +167,54 @@ export default () => (
       </Col>
     </Row>
 
-    <p>
-      <h3>Blog Magazine</h3>
-      <ul>
-        <li>
-          <a
-            href="http://baliharikudrat.blogspot.in/2012_07_01_archive.html"
-            target="_blank"
-          >
-            May-June 2012
-          </a>
-        </li>
-        <li>
-          <a
-            href="http://baliharikudrat.blogspot.in/2012_05_01_archive.html"
-            target="_blank"
-          >
-            Mar-Apr 2012
-          </a>
-        </li>
-        <li>
-          <a href="http://baliharikudrat.blogspot.in/" target="_blank">
-            Jan-Feb 2012
-          </a>
-        </li>
-        <li>
-          <a
-            href="http://baliharikudrat.blogspot.in/2012/01/blog-post_4105.html"
-            target="_blank"
-          >
-            Nov-Dec 2011
-          </a>
-        </li>
-        <li>
-          <a
-            href="http://baliharikudrat.blogspot.in/search?updated-min=2011-01-01T00:00:00-08:00&amp;updated-max=2012-01-01T00:00:00-08:00&amp;max-results=19"
-            target="_blank"
-          >
-            Sept-Oct 2011
-          </a>
-        </li>
-      </ul>
-      <h3>Audio magazine</h3>
-      <iframe
-        style={{ border: "0" }}
-        width="100%"
-        height="450"
-        allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/238237196&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-      />
-    </p>
+    <h3>Blog Magazine</h3>
+    <ul>
+      <li>
+        <a
+          href="http://baliharikudrat.blogspot.in/2012_07_01_archive.html"
+          target="_blank"
+        >
+          May-June 2012
+        </a>
+      </li>
+      <li>
+        <a
+          href="http://baliharikudrat.blogspot.in/2012_05_01_archive.html"
+          target="_blank"
+        >
+          Mar-Apr 2012
+        </a>
+      </li>
+      <li>
+        <a href="http://baliharikudrat.blogspot.in/" target="_blank">
+          Jan-Feb 2012
+        </a>
+      </li>
+      <li>
+        <a
+          href="http://baliharikudrat.blogspot.in/2012/01/blog-post_4105.html"
+          target="_blank"
+        >
+          Nov-Dec 2011
+        </a>
+      </li>
+      <li>
+        <a
+          href="http://baliharikudrat.blogspot.in/search?updated-min=2011-01-01T00:00:00-08:00&amp;updated-max=2012-01-01T00:00:00-08:00&amp;max-results=19"
+          target="_blank"
+        >
+          Sept-Oct 2011
+        </a>
+      </li>
+    </ul>
+    <h3>Audio magazine</h3>
+    <iframe
+      style={{ border: "0" }}
+      width="100%"
+      height="450"
+      allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/238237196&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+    />
 
     <h3>Articles</h3>
     <ul>
