@@ -5,21 +5,21 @@ import { FacebookProvider, Page } from "react-facebook";
 import styled from "styled-components";
 import Layout from "../components/layouts/HomeLayout";
 import SEO from "../components/seo";
-import f1 from "../images/f1.jpg";
-import f2 from "../images/f2.jpg";
-import f3 from "../images/f3.jpg";
-import f4 from "../images/f4.jpg";
-import f5 from "../images/f5.jpg";
-import f6 from "../images/trinjan/trinjan.jpg";
+// import f1 from "../images/f1.jpg";
+// import f2 from "../images/f2.jpg";
+// import f3 from "../images/f3.jpg";
+// import f4 from "../images/f4.jpg";
+// import f5 from "../images/f5.jpg";
+import f6 from "../images/trinjan-charkha.png";
 
-const SlideWrapper = styled.div`
+const SlideWrapper = styled<any>('div')`
   background-position: center;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.5);
   /* top: 0; */
   /* left: 0; */
   width: 100%;
-  height: 700px;
+  height: 920px;
   /* position: absolute; */
   z-index: 1;
   background-image: url(${(props) => props.image});
@@ -32,7 +32,21 @@ const StatisticWrapper = styled.div`
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Carousel effect="fade" autoplay={true}>
+
+    <SlideWrapper image={f6}>
+      <div className="slide">
+        <h4>Revive the tradition</h4>
+        <h1>Trinjan</h1>
+        <Link to="/trinjan" style={{ marginRight: "10px" }}>
+          <Button>Know more</Button>
+        </Link>
+        <Link to="/donate">
+          <Button type="primary">Donate now</Button>
+        </Link>
+      </div>
+    </SlideWrapper>
+
+    {/* <Carousel effect="fade" autoplay={true}>
       <div style={{ minHeight: "400px" }}>
         <SlideWrapper image={f1}>
           <div className="slide">
@@ -117,7 +131,7 @@ const IndexPage = () => (
           </div>
         </SlideWrapper>
       </div>
-    </Carousel>
+    </Carousel> */}
 
     <Row>
       <Col xs={24} md={12} xl={6} className="col-colored-1">
