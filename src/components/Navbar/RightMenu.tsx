@@ -129,7 +129,10 @@ class RightMenu extends Component<{
 
         <SubMenu title={<span>Covid-19</span>}>
           <Menu.Item key="covid">
-            <Link to="/covid19">Trinjan Response</Link>
+            <a href={"trinjan-covid-response-july-2020.pdf"} target="_blank">
+              Trinjan Response
+            </a>
+            {/* <Link to="/covid19">Trinjan Response</Link> */}
           </Menu.Item>
         </SubMenu>
 
