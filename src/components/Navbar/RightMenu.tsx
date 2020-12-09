@@ -118,6 +118,10 @@ class RightMenu extends Component<{
           </Menu.Item>
         </SubMenu>
 
+        <Menu.Item key="intern">
+          <Link to="/internship" style={{ fontWeight: 700, color: "#72a230" }}>Internship*</Link>
+        </Menu.Item>
+
         <SubMenu title={<span>Media Room</span>}>
           <Menu.Item key="publications">
             <Link to="/publications">Publications</Link>
@@ -139,7 +143,7 @@ class RightMenu extends Component<{
         <Menu.Item key="contact">
           <Link to="/contact">Contact Us</Link>
         </Menu.Item>
-      </Menu>
+      </Menu >
     );
   }
 }

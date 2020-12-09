@@ -2,7 +2,7 @@ import { Button, Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import { Link } from "gatsby";
 import React, { Component } from "react";
-import logo from "../../images/logo.jpeg";
+import logo from "../../images/logo.png";
 import "./Navbar.css";
 import RightMenu from "./RightMenu";
 

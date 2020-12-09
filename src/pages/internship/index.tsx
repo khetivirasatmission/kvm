@@ -13,6 +13,22 @@ export default () => (
 
     <h1>Internship</h1>
 
+    <Card
+      title="Apply for Internship"
+      bordered={false}
+    >
+      <ul>
+        <li>
+          <Link to="/internship/field">On-field Internship - Trinjan</Link>
+        </li>
+        <li>
+          <Link to="/internship/online">
+            Online Internship - Trinjan
+            </Link>
+        </li>
+      </ul>
+    </Card>
+
     <Row gutter={18}>
       <Col xs={24} md={12} lg={12}>
         <Profile
@@ -89,5 +105,7 @@ export default () => (
         </ul>
       </p>
     </Card>
+
+
   </PageLayout>
 );
