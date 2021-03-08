@@ -3,9 +3,5 @@
     "[typescriptreact]": {
         "editor.formatOnSave": true
     },
-    "emmet.includedLanguages":{
-        "typescript":"typescriptreact"
-    },
-    "htmltagwrap.tag": "strong",
     "editor.snippetSuggestions": "top"
 }

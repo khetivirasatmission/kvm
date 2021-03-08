@@ -94,7 +94,7 @@ class RightMenu extends Component<{
           </SubMenu>
         </SubMenu>
 
-        <SubMenu title={<span>Our Services</span>}>
+        <SubMenu title={<span>Services</span>}>
           <SubMenu title={<span>Get our technical support</span>}>
             <Menu.Item key="designyourgarden">
               <Link to="/designyourgarden">Design your garden</Link>
@@ -104,6 +104,15 @@ class RightMenu extends Component<{
 
         <Menu.Item key="farmers">
           <Link to="/organicfarmers">Stories of Evolution</Link>
+        </Menu.Item>
+
+        <Menu.Item key="kudratutsav21">
+          <Link
+            to="/kudratutsav21"
+            style={{ fontWeight: 700, color: "#72a230" }}
+          >
+            Kudrat Utsav*
+          </Link>
         </Menu.Item>
 
         <SubMenu title={<span>Get Involved</span>}>
@@ -118,23 +127,16 @@ class RightMenu extends Component<{
           </Menu.Item>
         </SubMenu>
 
-        <Menu.Item key="intern">
-          <Link to="/internship" style={{ fontWeight: 700, color: "#72a230" }}>Internship*</Link>
-        </Menu.Item>
-
-        <SubMenu title={<span>Media Room</span>}>
+        <SubMenu title={<span>Media</span>}>
           <Menu.Item key="publications">
             <Link to="/publications">Publications</Link>
           </Menu.Item>
           <Menu.Item key="press">
             <Link to="/press">Press</Link>
           </Menu.Item>
-        </SubMenu>
-
-        <SubMenu title={<span>Covid-19</span>}>
           <Menu.Item key="covid">
             <a href={"trinjan-covid-response-july-2020.pdf"} target="_blank">
-              Trinjan Response
+              Covid-19 Response
             </a>
             {/* <Link to="/covid19">Trinjan Response</Link> */}
           </Menu.Item>
@@ -143,7 +145,7 @@ class RightMenu extends Component<{
         <Menu.Item key="contact">
           <Link to="/contact">Contact Us</Link>
         </Menu.Item>
-      </Menu >
+      </Menu>
     );
   }
 }
