@@ -5,14 +5,17 @@ import { FacebookProvider, Page } from "react-facebook";
 import styled from "styled-components";
 import Layout from "../components/layouts/HomeLayout";
 import SEO from "../components/seo";
-// import f1 from "../images/f1.jpg";
-// import f2 from "../images/f2.jpg";
-// import f3 from "../images/f3.jpg";
-// import f4 from "../images/f4.jpg";
-// import f5 from "../images/f5.jpg";
+import f1 from "../images/f1.jpg";
+import f2 from "../images/f2.jpg";
+import f3 from "../images/f3.jpg";
+import f4 from "../images/f4.jpg";
+import f5 from "../images/f5.jpg";
 import f6 from "../images/trinjan-charkha.png";
+import k1 from "../images/kudratutsav/ku1.jpeg";
+import k2 from "../images/kudratutsav/ku2.jpeg";
+import k3 from "../images/kudratutsav/ku3.jpeg";
 
-const SlideWrapper = styled<any>('div')`
+const SlideWrapper = styled<any>("div")`
   background-position: center;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.5);
@@ -33,7 +36,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
 
-    <SlideWrapper image={f6}>
+    {/* <SlideWrapper image={f6}>
       <div className="slide">
         <h4>Revive the tradition</h4>
         <h1>Trinjan</h1>
@@ -44,10 +47,61 @@ const IndexPage = () => (
           <Button type="primary">Donate now</Button>
         </Link>
       </div>
-    </SlideWrapper>
+    </SlideWrapper> */}
 
-    {/* <Carousel effect="fade" autoplay={true}>
-      <div style={{ minHeight: "400px" }}>
+    <Carousel effect="fade" autoplay={true}>
+      <SlideWrapper image={k1}>
+        <div className="slide">
+          <h4>26-28 March 2021</h4>
+          <h1>Kudrat Utsav</h1>
+          <Link to="/kudratutsav21" style={{ marginRight: "10px" }}>
+            <Button>Know more</Button>
+          </Link>
+          <Link to="/donate">
+            <Button type="primary">Donate now</Button>
+          </Link>
+        </div>
+      </SlideWrapper>
+
+      <SlideWrapper image={k2}>
+        <div className="slide">
+          <h4>26-28 March 2021</h4>
+          <h1>Kudrat Utsav</h1>
+          <Link to="/kudratutsav21" style={{ marginRight: "10px" }}>
+            <Button>Know more</Button>
+          </Link>
+          <Link to="/donate">
+            <Button type="primary">Donate now</Button>
+          </Link>
+        </div>
+      </SlideWrapper>
+
+      <SlideWrapper image={k3}>
+        <div className="slide">
+          <h4>26-28 March 2021</h4>
+          <h1>Kudrat Utsav</h1>
+          <Link to="/kudratutsav21" style={{ marginRight: "10px" }}>
+            <Button>Know more</Button>
+          </Link>
+          <Link to="/donate">
+            <Button type="primary">Donate now</Button>
+          </Link>
+        </div>
+      </SlideWrapper>
+      <SlideWrapper image={f6}>
+        <div className="slide">
+          <h4>Revive the tradition</h4>
+          <h1>Trinjan</h1>
+          <Link to="/trinjan" style={{ marginRight: "10px" }}>
+            <Button>Know more</Button>
+          </Link>
+          <Link to="/donate">
+            <Button type="primary">Donate now</Button>
+          </Link>
+        </div>
+      </SlideWrapper>
+
+      {/* <div style={{ minHeight: "400px" }}>
         <SlideWrapper image={f1}>
           <div className="slide">
             <h4>Save the ecology</h4>
@@ -130,8 +184,8 @@ const IndexPage = () => (
             </Link>
           </div>
         </SlideWrapper>
-      </div>
-    </Carousel> */}
+      </div> */}
+    </Carousel>
 
     <Row>
       <Col xs={24} md={12} xl={6} className="col-colored-1">
