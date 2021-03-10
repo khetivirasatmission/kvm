@@ -54,9 +54,8 @@ export default () => (
       </address>
 
       <p>
-        For us any small or big amount is welcome. So anything from Rs.500-1000
-        to any other upper limit which you may desire. For further details
-        please <strong>contact: info@khetivirasatmission.org</strong> or
+        For further details please{" "}
+        <strong>contact: info@khetivirasatmission.org</strong> or
         <strong> call: (91) 1635-231415</strong>
       </p>
     </Card>
