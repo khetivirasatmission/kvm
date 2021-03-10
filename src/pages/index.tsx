@@ -22,7 +22,7 @@ const SlideWrapper = styled<any>("div")`
   /* top: 0; */
   /* left: 0; */
   width: 100%;
-  height: 920px;
+  height: 840px;
   /* position: absolute; */
   z-index: 1;
   background-image: url(${(props) => props.image});
@@ -51,19 +51,6 @@ const IndexPage = () => (
 
     <Carousel effect="fade" autoplay={true}>
       <SlideWrapper image={k1}>
-        <div className="slide">
-          <h4>26-28 March 2021</h4>
-          <h1>Kudrat Utsav</h1>
-          <Link to="/kudratutsav21" style={{ marginRight: "10px" }}>
-            <Button>Know more</Button>
-          </Link>
-          <Link to="/donate">
-            <Button type="primary">Donate now</Button>
-          </Link>
-        </div>
-      </SlideWrapper>
-
-      <SlideWrapper image={k2}>
         <div className="slide">
           <h4>26-28 March 2021</h4>
           <h1>Kudrat Utsav</h1>
