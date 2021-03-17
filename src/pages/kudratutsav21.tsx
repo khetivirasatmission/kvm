@@ -1,20 +1,47 @@
-import { Card, Col, Row } from "antd";
+import { Button, Card, Col, Row } from "antd";
 import React from "react";
 import PageLayout from "../components/layouts/PageLayout";
 import Profile from "../components/Profile";
 import SEO from "../components/seo";
 import e1 from "../images/kudratutsav/kudratutsav21.jpeg";
 
+const registrationLink = "https://forms.gle/uQqrhTgh33BJh5oi9";
+
 export default () => (
   <PageLayout>
     <SEO title="Kudrat Utsav 2021" />
 
-    <h1>Kudrat Utsav 2021</h1>
+    <div>
+      <h1>
+        Kudrat Utsav 2021
+        <Button
+          type="primary"
+          size="large"
+          href={registrationLink}
+          target="_blank"
+          style={{ float: "right" }}
+        >
+          Register
+        </Button>
+      </h1>
+    </div>
 
     <Row gutter={18}>
       <Col xs={24}>
         <Profile designation="" image={e1} />
       </Col>
+    </Row>
+
+    <Row gutter={18} justify="center">
+      <Button
+        type="primary"
+        size="large"
+        href={registrationLink}
+        target="_blank"
+        style={{ margin: "auto", textAlign: "center" }}
+      >
+        Register now
+      </Button>
     </Row>
 
     <Card title="KUDRAT UTSAV - 21" bordered={false}>
@@ -33,6 +60,7 @@ export default () => (
         Association
       </p>
     </Card>
+
     <Card title="Objectives" bordered={false}>
       <p>
         <ul style={{ listStyle: "square inside none" }}>
