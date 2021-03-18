@@ -1,68 +1,87 @@
-import { Button, Card, Col, Row } from "antd";
+import { Button, Card, Col, Row, Radio, Checkbox } from "antd";
 import React from "react";
 import PageLayout from "../components/layouts/PageLayout";
+import Calendar from "../components/Calendar";
 import Profile from "../components/Profile";
 import SEO from "../components/seo";
 import e1 from "../images/kudratutsav/kudratutsav21.jpeg";
 
 const registrationLink = "https://forms.gle/uQqrhTgh33BJh5oi9";
 
-export default () => (
-  <PageLayout>
-    <SEO title="Kudrat Utsav 2021" />
+// const dayOptions = ["26 March", "27 March", "28 March"];
+// const defaultCheckedDayOptions = ["26 March", "27 March", "28 March"];
 
-    <div>
-      <h1>
-        Kudrat Utsav 2021
+// console.log(events);
+
+export default () => {
+  // const [checkedDayOptions, setCheckedDayOptions] = React.useState(
+  //   defaultCheckedDayOptions
+  // );
+
+  // const onEventDateChange = (list) => {
+  //   setCheckedDayOptions(list);
+  //   console.log(list);
+  // };
+
+  function onEventTypeChange(e) {
+    console.log(`${e.target.value}`);
+  }
+
+  return (
+    <PageLayout>
+      <SEO title="Kudrat Utsav 2021" />
+
+      <div>
+        <h1>
+          Kudrat Utsav 2021
+          <Button
+            type="primary"
+            size="large"
+            href={registrationLink}
+            target="_blank"
+            style={{ float: "right" }}
+          >
+            Register
+          </Button>
+        </h1>
+      </div>
+
+      <Row gutter={18}>
+        <Col xs={24}>
+          <Profile designation="" image={e1} />
+        </Col>
+      </Row>
+
+      <Row gutter={18} justify="center">
         <Button
           type="primary"
           size="large"
           href={registrationLink}
           target="_blank"
-          style={{ float: "right" }}
+          style={{ margin: "auto", textAlign: "center" }}
         >
-          Register
+          Register now
         </Button>
-      </h1>
-    </div>
+      </Row>
 
-    <Row gutter={18}>
-      <Col xs={24}>
-        <Profile designation="" image={e1} />
-      </Col>
-    </Row>
+      <Card title="KUDRAT UTSAV - 21" bordered={false}>
+        <p>Kudrat Utsav 2021 is a festival dedicated to </p>
+        <ul style={{ listStyle: "square inside none" }}>
+          <li>Organic Farming & Food</li>
+          <li>Holistic Health & Nutrition</li>
+          <li>Sustainability & Ecology</li>
+          <li>Tradition & Culture</li>
+        </ul>
+        <p>
+          The event is being organized from 26th to 28th, March 2021 at Maharaja
+          Ranjit Singh Punjab Technical University, Bathinda by Kheti Virasat
+          Mission in association with Maharaja Ranjit Singh Punjab Technical
+          University, Central University of Punjab and Bathinda Management
+          Association
+        </p>
+      </Card>
 
-    <Row gutter={18} justify="center">
-      <Button
-        type="primary"
-        size="large"
-        href={registrationLink}
-        target="_blank"
-        style={{ margin: "auto", textAlign: "center" }}
-      >
-        Register now
-      </Button>
-    </Row>
-
-    <Card title="KUDRAT UTSAV - 21" bordered={false}>
-      <p>Kudrat Utsav 2021 is a festival dedicated to </p>
-      <ul style={{ listStyle: "square inside none" }}>
-        <li>Organic Farming & Food</li>
-        <li>Holistic Health & Nutrition</li>
-        <li>Sustainability & Ecology</li>
-        <li>Tradition & Culture</li>
-      </ul>
-      <p>
-        The event is being organized from 26th to 28th, March 2021 at Maharaja
-        Ranjit Singh Punjab Technical University, Bathinda by Kheti Virasat
-        Mission in association with Maharaja Ranjit Singh Punjab Technical
-        University, Central University of Punjab and Bathinda Management
-        Association
-      </p>
-    </Card>
-
-    <Card title="Objectives" bordered={false}>
-      <p>
+      <Card title="Objectives" bordered={false}>
         <ul style={{ listStyle: "square inside none" }}>
           <li>To introduce people to a sustainable food system</li>
           <li>
@@ -101,12 +120,34 @@ export default () => (
             fields.
           </li>
         </ul>
-      </p>
-    </Card>
-    <Card title="Activities" bordered={false}>
-      <p>
-        Keeping the festival objectives in perspective, following activities
-        will be part of the Utsav.
+      </Card>
+      <Card title="Activity Calendar" bordered={false}>
+        {/* <CheckboxGroup
+          options={dayOptions}
+          value={checkedDayOptions}
+          onChange={onEventDateChange}
+        /> */}
+        <p>
+          Keeping the festival objectives in perspective, following activities
+          will be part of the Utsav.
+        </p>
+
+        {/* <Radio.Group
+          onChange={onEventTypeChange}
+          defaultValue="list"
+          style={{ float: "right" }}
+        >
+          <Radio.Button value="list">List</Radio.Button>
+          <Radio.Button value="photo">Photo</Radio.Button>
+          <Radio.Button value="map">Map</Radio.Button>
+        </Radio.Group> */}
+
+        <Calendar />
+
+        {/* <p>
+          Keeping the festival objectives in perspective, following activities
+          will be part of the Utsav.
+        </p>
         <ul style={{ listStyle: "square inside none" }}>
           <li>Organic Millet Food Festival Workshops</li>
           <li>Desi Seed Festival</li>
@@ -191,8 +232,8 @@ export default () => (
           </li>
           <li>Cultural Evening</li>
           <li>Movie screenings</li>
-        </ul>
-      </p>
-    </Card>
-  </PageLayout>
-);
+        </ul> */}
+      </Card>
+    </PageLayout>
+  );
+};
