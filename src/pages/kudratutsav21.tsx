@@ -4,9 +4,10 @@ import PageLayout from "../components/layouts/PageLayout";
 import Calendar from "../components/Calendar";
 import Profile from "../components/Profile";
 import SEO from "../components/seo";
-import e1 from "../images/kudratutsav/kudratutsav21.jpeg";
+import e1 from "../images/kudratutsav/kudratutsav21.png";
 
-const registrationLink = "https://forms.gle/uQqrhTgh33BJh5oi9";
+const registrationLink =
+  "https://zoom.us/meeting/register/tJwoc-yqrT4sGdQzvVINfkO8mXW4hizc2qrm";
 
 // const dayOptions = ["26 March", "27 March", "28 March"];
 // const defaultCheckedDayOptions = ["26 March", "27 March", "28 March"];
@@ -72,13 +73,13 @@ export default () => {
           <li>Sustainability & Ecology</li>
           <li>Tradition & Culture</li>
         </ul>
-        <p>
+        {/* <p>
           The event is being organized from 26th to 28th, March 2021 at Maharaja
           Ranjit Singh Punjab Technical University, Bathinda by Kheti Virasat
           Mission in association with Maharaja Ranjit Singh Punjab Technical
           University, Central University of Punjab and Bathinda Management
           Association
-        </p>
+        </p> */}
       </Card>
 
       <Card title="Objectives" bordered={false}>
@@ -122,117 +123,14 @@ export default () => {
         </ul>
       </Card>
       <Card title="Activity Calendar" bordered={false}>
-        {/* <CheckboxGroup
-          options={dayOptions}
-          value={checkedDayOptions}
-          onChange={onEventDateChange}
-        /> */}
         <p>
           Keeping the festival objectives in perspective, following activities
           will be part of the Utsav.
         </p>
 
-        {/* <Radio.Group
-          onChange={onEventTypeChange}
-          defaultValue="list"
-          style={{ float: "right" }}
-        >
-          <Radio.Button value="list">List</Radio.Button>
-          <Radio.Button value="photo">Photo</Radio.Button>
-          <Radio.Button value="map">Map</Radio.Button>
-        </Radio.Group> */}
-
         <Calendar />
 
-        {/* <p>
-          Keeping the festival objectives in perspective, following activities
-          will be part of the Utsav.
-        </p>
-        <ul style={{ listStyle: "square inside none" }}>
-          <li>Organic Millet Food Festival Workshops</li>
-          <li>Desi Seed Festival</li>
-
-          <li>Kitchen Gardening Workshop</li>
-          <li>Lok Swasthye Prampra - Talks on Holistic Health</li>
-          <li>
-            Holistic Health Consultation by Dr Khadar Wali / Dr. Azad and Others
-          </li>
-          <li>
-            Discussions on
-            <ol
-              style={{
-                listStyle: "lower-roman inside none",
-                paddingLeft: "20px",
-              }}
-            >
-              <li>Medicinal Plants In Farming / Organic Kitchen Gardening</li>
-              <li>
-                Ecological Agriculture Practices specially Crop residue
-                management
-              </li>
-              <li>Punjab Millet Campaign</li>
-            </ol>
-          </li>
-
-          <li>
-            Farmers Workshops on
-            <ol
-              style={{
-                listStyle: "lower-roman inside none",
-                paddingLeft: "20px",
-              }}
-            >
-              <li>Millet Cultivation</li>
-              <li>Organic Cotton Cultivation</li>
-              <li>Ecological methods of Paddy Sowing</li>
-              <li>Medicinal Plant Cultivation</li>
-              <li>Building Marketing Avenues of Organic Produce</li>
-              <li>FPO Formation and Management</li>
-            </ol>
-          </li>
-          <li>Kisan Haat / farmer stalls</li>
-          <li>Farmers Consultation</li>
-
-          <li>
-            Competitions
-            <ol
-              style={{
-                listStyle: "lower-roman inside none",
-                paddingLeft: "20px",
-              }}
-            >
-              <li>Quiz</li>
-              <li>Rangoli</li>
-              <li>On-the Spot Painting</li>
-            </ol>
-          </li>
-
-          <li>
-            Exhibitions
-            <ol
-              style={{
-                listStyle: "lower-roman inside none",
-                paddingLeft: "20px",
-              }}
-            >
-              <li>Journey of KVM</li>
-              <li>Miracle Millets</li>
-              <li>Organic Farming Techniques</li>
-              <li>Environmental Health</li>
-              <li>Holistic Health</li>
-              <li>Pest Literacy</li>
-              <li>Medicinal Plants</li>
-              <li>Lok Swasthye Prampra</li>
-              <li>Ecological Straw Management</li>
-              <li>Organic Kitchen Gardening</li>
-              <li>Fruit and Food Forest</li>
-              <li>Trinjan - Rural Artisans of Punjab</li>
-              <li>Live Demonstrations - Trinjan weavers and artisans</li>
-            </ol>
-          </li>
-          <li>Cultural Evening</li>
-          <li>Movie screenings</li>
-        </ul> */}
+        <p>Stay tuned for more events every weekend...</p>
       </Card>
     </PageLayout>
   );
