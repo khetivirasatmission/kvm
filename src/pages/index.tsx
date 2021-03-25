@@ -14,7 +14,7 @@ import f5 from "../images/f5.jpg";
 import f6 from "../images/trinjan-charkha.png";
 
 import k1 from "../images/kudratutsav/ku1.png";
-import k2 from "../images/kudratutsav/ku2.jpeg";
+import k2 from "../images/kudratutsav/ku2.png";
 import k3 from "../images/kudratutsav/ku3.png";
 import k4 from "../images/kudratutsav/ku4.png";
 import k5 from "../images/kudratutsav/ku5.png";

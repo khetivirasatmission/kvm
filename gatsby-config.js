@@ -8,12 +8,12 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: [`Raleway\:400,900`, `Open Sans\:300,400,700,900`]
-        }
-      }
+          families: [`Raleway\:400,900`, `Open Sans\:300,400,700,900`],
+        },
+      },
     },
     {
       resolve: "gatsby-plugin-less",
@@ -33,7 +33,7 @@ module.exports = {
             "layout-body-background": "#ffffff",
             "border-radius-base": "18px",
           },
-        }
+        },
       },
     },
     {
@@ -89,11 +89,51 @@ module.exports = {
               width: 800,
               height: 400,
               noIframeBorder: true,
-            }
+            },
           },
-          "gatsby-remark-responsive-iframe"
-        ]
-      }
+          "gatsby-remark-responsive-iframe",
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-facebook-customer-chat`,
+      options: {
+        sdk: {
+          appId: "195658071778073",
+          xfbml: true,
+          version: "v10.0",
+        },
+        chat: {
+          pageId: "137172129706131",
+          loggedInGreeting: "Hi! How can I help you?",
+          loggedOutGreeting: "Hi! How can I help you?",
+        },
+      },
     },
   ],
 };
+
+// <!-- Load Facebook SDK for JavaScript -->
+//       <div id="fb-root"></div>
+//       <script>
+//         window.fbAsyncInit = function() {
+//           FB.init({
+//             xfbml            : true,
+//             version          : 'v10.0'
+//           });
+//         };
+
+//         (function(d, s, id) {
+//         var js, fjs = d.getElementsByTagName(s)[0];
+//         if (d.getElementById(id)) return;
+//         js = d.createElement(s); js.id = id;
+//         js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+//         fjs.parentNode.insertBefore(js, fjs);
+//       }(document, 'script', 'facebook-jssdk'));</script>
+
+//       <!-- Your Chat Plugin code -->
+//       <div class="fb-customerchat"
+//         attribution="install_email"
+//         page_id="137172129706131"
+//   theme_color="#67b868">
+//       </div>
