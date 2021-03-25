@@ -13,13 +13,14 @@ import f4 from "../images/f4.jpg";
 import f5 from "../images/f5.jpg";
 import f6 from "../images/trinjan-charkha.png";
 
-import k1 from "../images/kudratutsav/ku1.jpeg";
+import k1 from "../images/kudratutsav/ku1.png";
 import k2 from "../images/kudratutsav/ku2.jpeg";
-import k3 from "../images/kudratutsav/ku3.jpeg";
-import k4 from "../images/kudratutsav/ku4.jpeg";
-import k5 from "../images/kudratutsav/ku5.jpeg";
-import k6 from "../images/kudratutsav/ku6.jpeg";
-import k7 from "../images/kudratutsav/ku7.jpeg";
+import k3 from "../images/kudratutsav/ku3.png";
+import k4 from "../images/kudratutsav/ku4.png";
+import k5 from "../images/kudratutsav/ku5.png";
+import k6 from "../images/kudratutsav/ku6.png";
+import k7 from "../images/kudratutsav/ku7.png";
+import k8 from "../images/kudratutsav/ku8.png";
 // import k3 from "../images/kudratutsav/ku3.jpeg";
 
 const px2vw = (size, width = 1912) => `${(size / width) * 100}vw`;
@@ -282,6 +283,19 @@ const IndexPage = () => (
       </SlideWrapper>
 
       <SlideWrapper image={k7}>
+        <Slide>
+          <h4>Starts 26 March, 2021</h4>
+          <h1>Kudrat Utsav</h1>
+          <Link to="/kudratutsav21" style={{ marginRight: "10px" }}>
+            <Button>Know more</Button>
+          </Link>
+          <Link to="/kudratutsav21">
+            <Button type="primary">Register now</Button>
+          </Link>
+        </Slide>
+      </SlideWrapper>
+
+      <SlideWrapper image={k8}>
         <Slide>
           <h4>Starts 26 March, 2021</h4>
           <h1>Kudrat Utsav</h1>
