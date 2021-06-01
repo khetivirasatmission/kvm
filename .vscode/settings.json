@@ -1,7 +1,15 @@
 {
-    "typescript.surveys.enabled": false,
-    "[typescriptreact]": {
-        "editor.formatOnSave": true
-    },
-    "editor.snippetSuggestions": "top"
+  "typescript.surveys.enabled": false,
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "editor.snippetSuggestions": "top",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true
+  }
 }

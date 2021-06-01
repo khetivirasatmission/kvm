@@ -7290,6 +7290,11 @@
   dependencies:
     "common-tags" "^1.6.0"
 
+"gatsby-plugin-gtag@^1.0.13":
+  "integrity" "sha512-Oul6O67klajrEjkkF1diD228SmyUWsAwTq/1tYq41vBwmyNiPk4dhk8K93rrNQ5d5zesSv+awBeGBa503tQqGw=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-gtag/-/gatsby-plugin-gtag-1.0.13.tgz"
+  "version" "1.0.13"
+
 "gatsby-plugin-image@^0.3.1":
   "integrity" "sha512-ZQIti9ibifOM3R3e1hasWzGJIjy5DyCN+GOEJetIKG2m/E9YMtohsngtDxef+tDtC1fiuOM82r/BJoQolE2Dfg=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-image/-/gatsby-plugin-image-0.3.1.tgz"
@@ -7612,7 +7617,7 @@
     "semver" "^7.3.2"
     "sharp" "^0.26.3"
 
-"gatsby@^2.0.0", "gatsby@^2.0.15", "gatsby@^2.0.32", "gatsby@^2.12.0", "gatsby@^2.12.1", "gatsby@^2.2.0", "gatsby@^2.24.79", "gatsby@^2.25.0", "gatsby@^2.26.1", "gatsby@^2.4.0", "gatsby@>=2", "gatsby@>2.0.15":
+"gatsby@^2.0.0", "gatsby@^2.0.15", "gatsby@^2.0.32", "gatsby@^2.12.0", "gatsby@^2.12.1", "gatsby@^2.2.0", "gatsby@^2.24.79", "gatsby@^2.25.0", "gatsby@^2.26.1", "gatsby@^2.4.0", "gatsby@>=2", "gatsby@>2.0.0-alpha", "gatsby@>2.0.15":
   "integrity" "sha512-NnsXUD/u51ykNkOuqt8aAqIXWY9asP0nh0Jcum+pAZ+BBhOQu5cr4nnB6h1NS93ZlEyJxlH6gfle1nN2GoUFDA=="
   "resolved" "https://registry.npmjs.org/gatsby/-/gatsby-2.28.2.tgz"
   "version" "2.28.2"
