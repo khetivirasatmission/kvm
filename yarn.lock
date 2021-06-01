@@ -1168,7 +1168,7 @@
   dependencies:
     "regenerator-runtime" "^0.13.4"
 
-"@babel/runtime@^7.1.5", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.1", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.7":
+"@babel/runtime@^7.1.5", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.1", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.3", "@babel/runtime@^7.8.7":
   "integrity" "sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg=="
   "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.12.5.tgz"
   "version" "7.12.5"
@@ -4139,9 +4139,9 @@
     "lodash.uniq" "^4.5.0"
 
 "caniuse-lite@^1.0.0", "caniuse-lite@^1.0.30001043", "caniuse-lite@^1.0.30001109", "caniuse-lite@^1.0.30001164":
-  "integrity" "sha512-8cEsSMwXfx7lWSUMA2s08z9dIgsnR5NAqjXP23stdsU3AUWkCr/rr4s4OFtHXn5XXr6+7kam3QFVoYyXNPdJPA=="
-  "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001165.tgz"
-  "version" "1.0.30001165"
+  "integrity" "sha512-e4Gyp7P8vqC2qV2iHA+cJNf/yqUKOShXQOJHQt81OHxlIZl/j/j3soEA0adAQi8CPUQgvOdDENyQ5kd6a6mNSg=="
+  "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001232.tgz"
+  "version" "1.0.30001232"
 
 "caseless@~0.12.0":
   "integrity" "sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw="
@@ -7275,6 +7275,13 @@
     "antd" "^4.0.0"
     "babel-plugin-import" "^1.13.0"
 
+"gatsby-plugin-chatwoot@^1.1.0":
+  "integrity" "sha512-YtLB+EGx7DUji5AsDaEk7dKfYzFbgLPs98Kt9fSt03PwVsN7ULzBihAdwoBUEda68opX9ccvrlKei0yZS/KDaQ=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-chatwoot/-/gatsby-plugin-chatwoot-1.1.0.tgz"
+  "version" "1.1.0"
+  dependencies:
+    "@babel/runtime" "^7.8.3"
+
 "gatsby-plugin-emotion@^5.0.0":
   "integrity" "sha512-hOPzvYG3N4Ml4hu92pzHiTZCXc5oO32C08eMdAthp/3hWNBfOc+wdI+Xb+18txGvE9Na3yCdCB4/yo6nQWyyOQ=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-emotion/-/gatsby-plugin-emotion-5.0.0.tgz"
@@ -7617,7 +7624,7 @@
     "semver" "^7.3.2"
     "sharp" "^0.26.3"
 
-"gatsby@^2.0.0", "gatsby@^2.0.15", "gatsby@^2.0.32", "gatsby@^2.12.0", "gatsby@^2.12.1", "gatsby@^2.2.0", "gatsby@^2.24.79", "gatsby@^2.25.0", "gatsby@^2.26.1", "gatsby@^2.4.0", "gatsby@>=2", "gatsby@>2.0.0-alpha", "gatsby@>2.0.15":
+"gatsby@^2.0.0", "gatsby@^2.0.15", "gatsby@^2.0.32", "gatsby@^2.12.0", "gatsby@^2.12.1", "gatsby@^2.19.5", "gatsby@^2.2.0", "gatsby@^2.24.79", "gatsby@^2.25.0", "gatsby@^2.26.1", "gatsby@^2.4.0", "gatsby@>=2", "gatsby@>2.0.0-alpha", "gatsby@>2.0.15":
   "integrity" "sha512-NnsXUD/u51ykNkOuqt8aAqIXWY9asP0nh0Jcum+pAZ+BBhOQu5cr4nnB6h1NS93ZlEyJxlH6gfle1nN2GoUFDA=="
   "resolved" "https://registry.npmjs.org/gatsby/-/gatsby-2.28.2.tgz"
   "version" "2.28.2"
@@ -13729,7 +13736,7 @@
     "strip-ansi" "3.0.1"
     "text-table" "0.2.0"
 
-"react-dom@*", "react-dom@^0.14.0 || ^15.0.0 || ^16.0.0", "react-dom@^0.14.0 || ^15.0.1 || ^16.0.0", "react-dom@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react-dom@^15.0.0 || ^16.0.0", "react-dom@^16.0.0", "react-dom@^16.13.1", "react-dom@^16.4.2", "react-dom@^16.6.1 || ^17", "react-dom@>= 16.8.0", "react-dom@>=16.3.0", "react-dom@>=16.8.0", "react-dom@>=16.9.0", "react-dom@15.x || 16.x || 16.4.0-alpha.0911da3":
+"react-dom@*", "react-dom@^0.14.0 || ^15.0.0 || ^16.0.0", "react-dom@^0.14.0 || ^15.0.1 || ^16.0.0", "react-dom@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react-dom@^15.0.0 || ^16.0.0", "react-dom@^16.0.0", "react-dom@^16.12.0", "react-dom@^16.13.1", "react-dom@^16.4.2", "react-dom@^16.6.1 || ^17", "react-dom@>= 16.8.0", "react-dom@>=16.3.0", "react-dom@>=16.8.0", "react-dom@>=16.9.0", "react-dom@15.x || 16.x || 16.4.0-alpha.0911da3":
   "integrity" "sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-16.13.1.tgz"
   "version" "16.13.1"
@@ -13824,7 +13831,7 @@
     "prop-types" "^15.6.0"
     "spin.js" "^2.3.2"
 
-"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0", "react@^0.14.0 || ^15.0.1 || ^16.0.0", "react@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react@^0.14.3 || ^15.0.0 || ^16.0.0", "react@^15.0.0 || ^16.0.0", "react@^16.0.0", "react@^16.13.1", "react@^16.13.1 || ^17.0.0", "react@^16.3.0", "react@^16.4.2", "react@^16.6.1 || ^17", "react@>= 16.8.0", "react@>= 16.9.0", "react@>=15.0.0", "react@>=16.0.0", "react@>=16.3.0", "react@>=16.8.0", "react@>=16.9.0", "react@15.x || 16.x", "react@15.x || 16.x || 16.4.0-alpha.0911da3", "react@16.x":
+"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0", "react@^0.14.0 || ^15.0.1 || ^16.0.0", "react@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react@^0.14.3 || ^15.0.0 || ^16.0.0", "react@^15.0.0 || ^16.0.0", "react@^16.0.0", "react@^16.12.0", "react@^16.13.1", "react@^16.13.1 || ^17.0.0", "react@^16.3.0", "react@^16.4.2", "react@^16.6.1 || ^17", "react@>= 16.8.0", "react@>= 16.9.0", "react@>=15.0.0", "react@>=16.0.0", "react@>=16.3.0", "react@>=16.8.0", "react@>=16.9.0", "react@15.x || 16.x", "react@15.x || 16.x || 16.4.0-alpha.0911da3", "react@16.x":
   "integrity" "sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.13.1.tgz"
   "version" "16.13.1"
