@@ -126,7 +126,7 @@ module.exports = {
       options: {
         baseUrl: "https://app.chatwoot.com", // Required
         websiteToken: "rox7pQWbUYK21VFLHBQxaR6x", // Required
-        includeInDevelopment: true, // Optional
+        includeInDevelopment: false, // Optional
         chatwootSettings: {}, // Optional
       },
     },
