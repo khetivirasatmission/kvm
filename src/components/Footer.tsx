@@ -19,9 +19,9 @@ const Footer = () => (
       <Menu.Item key="faq">
         <Link to="/faq">FAQ</Link>
       </Menu.Item>
-      <Menu.Item key="support">
+      {/* <Menu.Item key="support">
         <Link to="/support">Support</Link>
-      </Menu.Item>
+      </Menu.Item> */}
     </Menu>
   </AntFooter>
 );
