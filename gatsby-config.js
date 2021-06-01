@@ -95,21 +95,21 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-facebook-customer-chat`,
-      options: {
-        sdk: {
-          appId: "195658071778073",
-          xfbml: true,
-          version: "v10.0",
-        },
-        chat: {
-          pageId: "137172129706131",
-          loggedInGreeting: "Hi! How can I help you?",
-          loggedOutGreeting: "Hi! How can I help you?",
-        },
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-facebook-customer-chat`,
+    //   options: {
+    //     sdk: {
+    //       appId: "195658071778073",
+    //       xfbml: true,
+    //       version: "v10.0",
+    //     },
+    //     chat: {
+    //       pageId: "137172129706131",
+    //       loggedInGreeting: "Hi! How can I help you?",
+    //       loggedOutGreeting: "Hi! How can I help you?",
+    //     },
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-gtag`,
       options: {
