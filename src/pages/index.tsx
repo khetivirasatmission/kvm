@@ -13,6 +13,7 @@ import f4 from "../images/f4.jpg";
 import f5 from "../images/f5.jpg";
 import f6 from "../images/trinjan-charkha.png";
 
+import k0 from "../images/regenerative2.png";
 import k1 from "../images/kudratutsav/ku1.png";
 import k2 from "../images/kudratutsav/ku2.png";
 import k3 from "../images/kudratutsav/ku3.png";
@@ -204,6 +205,17 @@ const IndexPage = () => (
     </SlideWrapper> */}
 
     <Carousel effect="fade" autoplay={true} dots={false}>
+
+    <SlideWrapper image={k0}>
+        <Slide>
+          <h4>Holistic Food Production</h4>
+          <h1>Regenerative Agriculture</h1>
+          <Link to="/regenerative-agri" style={{ marginRight: "10px" }}>
+            <Button>Know more</Button>
+          </Link>
+        </Slide>
+      </SlideWrapper>
+      
       <SlideWrapper image={k1}>
         <Slide>
           <h4>Starts 26 March, 2021</h4>

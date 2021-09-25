@@ -5,15 +5,13 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import { Layout as AntLayout } from "antd";
+
 import { graphql, StaticQuery } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./layout.less";
-
-const { Content } = AntLayout;
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -27,11 +25,11 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <AntLayout>
+      <div>
         <Navbar />
-        <Content>{children}</Content>
+        <div>{children}</div>
         <Footer />
-      </AntLayout>
+      </div>
     )}
   />
 );
