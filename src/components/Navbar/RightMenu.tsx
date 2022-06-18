@@ -13,9 +13,9 @@ class RightMenu extends Component<{
   render() {
     return (
       <Menu mode={this.props.mode}>
-        <Menu.Item key="home">
+        {/* <Menu.Item key="home">
           <Link to="/">Home</Link>
-        </Menu.Item>
+        </Menu.Item> */}
         <SubMenu title={<span>About us</span>}>
           <Menu.Item key="org">
             <Link to="/mission">Our Mission and Vision</Link>
@@ -75,6 +75,17 @@ class RightMenu extends Component<{
             <Link to="/certification">PGS Certification</Link>
           </Menu.Item>
 
+          <SubMenu title={<span>Festivals</span>}>
+            <Menu.Item key="kudratutsav21">
+              <Link
+                to="/kudratutsav21"
+                // style={{ fontWeight: 700, color: "#72a230" }}
+              >
+                Kudrat Utsav
+              </Link>
+            </Menu.Item>
+          </SubMenu>
+
           <SubMenu title={<span>Education</span>}>
             <Menu.Item key="kudratikhetigurukul">
               <Link to="/kudratikhetigurukul">Kudrati Kheti Gurukul</Link>
@@ -106,12 +117,12 @@ class RightMenu extends Component<{
           <Link to="/organicfarmers">Stories of Evolution</Link>
         </Menu.Item>
 
-        <Menu.Item key="kudratutsav21">
+        <Menu.Item key="millets">
           <Link
-            to="/kudratutsav21"
+            to="/aaharsearogya"
             style={{ fontWeight: 700, color: "#72a230" }}
           >
-            Kudrat Utsav*
+            Aahaar Se Arogya
           </Link>
         </Menu.Item>
 

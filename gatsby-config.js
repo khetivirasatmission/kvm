@@ -130,7 +130,7 @@ module.exports = {
         chatwootSettings: {}, // Optional
       },
     },
-    'gatsby-plugin-postcss'
+    "gatsby-plugin-postcss",
   ],
 };
 

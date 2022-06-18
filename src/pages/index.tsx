@@ -6,22 +6,22 @@ import styled from "styled-components";
 import Layout from "../components/layouts/HomeLayout";
 import SEO from "../components/seo";
 
-import f1 from "../images/f1.jpg";
-import f2 from "../images/f2.jpg";
-import f3 from "../images/f3.jpg";
-import f4 from "../images/f4.jpg";
-import f5 from "../images/f5.jpg";
-import f6 from "../images/trinjan-charkha.png";
+// import f1 from "../images/f1.jpg";
+// import f2 from "../images/f2.jpg";
+// import f3 from "../images/f3.jpg";
+// import f4 from "../images/f4.jpg";
+// import f5 from "../images/f5.jpg";
+// import f6 from "../images/trinjan-charkha.png";
 
-import k0 from "../images/regenerative2.png";
-import k1 from "../images/kudratutsav/ku1.png";
-import k2 from "../images/kudratutsav/ku2.png";
-import k3 from "../images/kudratutsav/ku3.png";
-import k4 from "../images/kudratutsav/ku4.png";
-import k5 from "../images/kudratutsav/ku5.png";
-import k6 from "../images/kudratutsav/ku6.png";
-import k7 from "../images/kudratutsav/ku7.png";
-import k8 from "../images/kudratutsav/ku8.png";
+// import k0 from "../images/regenerative2.png";
+// import k1 from "../images/kudratutsav/ku1.png";
+// import k2 from "../images/kudratutsav/ku2.png";
+// import k3 from "../images/kudratutsav/ku3.png";
+import k4 from "../images/aaharseaarogya/ku4.png";
+import k5 from "../images/aaharseaarogya/ku5.png";
+// import k6 from "../images/kudratutsav/ku6.png";
+// import k7 from "../images/kudratutsav/ku7.png";
+// import k8 from "../images/kudratutsav/ku8.png";
 // import k3 from "../images/kudratutsav/ku3.jpeg";
 
 const px2vw = (size, width = 1912) => `${(size / width) * 100}vw`;
@@ -104,7 +104,7 @@ const Slide = styled<any>("div")`
   }
 
   @media (min-width: 320px) {
-    h4{
+    h4 {
       font-size: ${px2vw(4, 320)};
       letter-spacing: 3px;
       font-weight: 900;
@@ -126,7 +126,7 @@ const Slide = styled<any>("div")`
   }
 
   @media (min-width: 768px) {
-    h4{
+    h4 {
       font-size: ${px2vw(8, 768)};
       font-weight: 400;
     }
@@ -147,7 +147,7 @@ const Slide = styled<any>("div")`
   }
 
   @media (min-width: 1024px) {
-    h4{
+    h4 {
       font-size: ${px2vw(10, 1024)};
     }
 
@@ -167,7 +167,7 @@ const Slide = styled<any>("div")`
   }
 
   @media (min-width: 1280px) {
-    h4{
+    h4 {
       font-size: ${px2vw(12, 1280)};
     }
 
@@ -205,8 +205,7 @@ const IndexPage = () => (
     </SlideWrapper> */}
 
     <Carousel effect="fade" autoplay={true} dots={false}>
-
-    <SlideWrapper image={k0}>
+      {/* <SlideWrapper image={k0}>
         <Slide>
           <h4>Holistic Food Production</h4>
           <h1>Regenerative Agriculture</h1>
@@ -214,22 +213,9 @@ const IndexPage = () => (
             <Button>Know more</Button>
           </Link>
         </Slide>
-      </SlideWrapper>
-      
-      <SlideWrapper image={k1}>
-        <Slide>
-          <h4>Starts 26 March, 2021</h4>
-          <h1>Kudrat Utsav</h1>
-          <Link to="/kudratutsav21" style={{ marginRight: "10px" }}>
-            <Button>Know more</Button>
-          </Link>
-          <Link to="/kudratutsav21">
-            <Button type="primary">Register now</Button>
-          </Link>
-        </Slide>
-      </SlideWrapper>
+      </SlideWrapper> */}
 
-      <SlideWrapper image={k2}>
+      {/* <SlideWrapper image={k1}>
         <Slide>
           <h4>Starts 26 March, 2021</h4>
           <h1>Kudrat Utsav</h1>
@@ -240,9 +226,9 @@ const IndexPage = () => (
             <Button type="primary">Register now</Button>
           </Link>
         </Slide>
-      </SlideWrapper>
+      </SlideWrapper> */}
 
-      <SlideWrapper image={k3}>
+      {/* <SlideWrapper image={k2}>
         <Slide>
           <h4>Starts 26 March, 2021</h4>
           <h1>Kudrat Utsav</h1>
@@ -253,35 +239,48 @@ const IndexPage = () => (
             <Button type="primary">Register now</Button>
           </Link>
         </Slide>
-      </SlideWrapper>
+      </SlideWrapper> */}
+
+      {/* <SlideWrapper image={k3}>
+        <Slide>
+          <h4>Starts 26 March, 2021</h4>
+          <h1>Kudrat Utsav</h1>
+          <Link to="/kudratutsav21" style={{ marginRight: "10px" }}>
+            <Button>Know more</Button>
+          </Link>
+          <Link to="/kudratutsav21">
+            <Button type="primary">Register now</Button>
+          </Link>
+        </Slide>
+      </SlideWrapper> */}
 
       <SlideWrapper image={k4}>
         <Slide>
-          <h4>Starts 26 March, 2021</h4>
-          <h1>Kudrat Utsav</h1>
-          <Link to="/kudratutsav21" style={{ marginRight: "10px" }}>
+          <h4>Starts 19 June, 2022</h4>
+          <h1>Aahaar Se Arogya</h1>
+          <Link to="/aahaarsearogya" style={{ marginRight: "10px" }}>
             <Button>Know more</Button>
           </Link>
-          <Link to="/kudratutsav21">
+          {/* <Link to="/aarogyaseaahar">
             <Button type="primary">Register now</Button>
-          </Link>
+          </Link> */}
         </Slide>
       </SlideWrapper>
 
       <SlideWrapper image={k5}>
         <Slide>
-          <h4>Starts 26 March, 2021</h4>
-          <h1>Kudrat Utsav</h1>
-          <Link to="/kudratutsav21" style={{ marginRight: "10px" }}>
+          <h4>Starts 19 June, 2022</h4>
+          <h1>Aahaar Se Arogya</h1>
+          <Link to="/aahaarsearogya" style={{ marginRight: "10px" }}>
             <Button>Know more</Button>
           </Link>
-          <Link to="/kudratutsav21">
+          {/* <Link to="/kudratutsav21">
             <Button type="primary">Register now</Button>
-          </Link>
+          </Link> */}
         </Slide>
       </SlideWrapper>
 
-      <SlideWrapper image={k6}>
+      {/* <SlideWrapper image={k6}>
         <Slide>
           <h4>Starts 26 March, 2021</h4>
           <h1>Kudrat Utsav</h1>
@@ -292,9 +291,9 @@ const IndexPage = () => (
             <Button type="primary">Register now</Button>
           </Link>
         </Slide>
-      </SlideWrapper>
+      </SlideWrapper> */}
 
-      <SlideWrapper image={k7}>
+      {/* <SlideWrapper image={k7}>
         <Slide>
           <h4>Starts 26 March, 2021</h4>
           <h1>Kudrat Utsav</h1>
@@ -305,9 +304,9 @@ const IndexPage = () => (
             <Button type="primary">Register now</Button>
           </Link>
         </Slide>
-      </SlideWrapper>
+      </SlideWrapper> */}
 
-      <SlideWrapper image={k8}>
+      {/* <SlideWrapper image={k8}>
         <Slide>
           <h4>Starts 26 March, 2021</h4>
           <h1>Kudrat Utsav</h1>
@@ -318,7 +317,7 @@ const IndexPage = () => (
             <Button type="primary">Register now</Button>
           </Link>
         </Slide>
-      </SlideWrapper>
+      </SlideWrapper> */}
 
       {/* <SlideWrapper image={f6}>
         <div className="slide">
