@@ -17,8 +17,8 @@ import SEO from "../components/seo";
 // import k1 from "../images/kudratutsav/ku1.png";
 // import k2 from "../images/kudratutsav/ku2.png";
 // import k3 from "../images/kudratutsav/ku3.png";
-import k4 from "../images/aaharseaarogya/ku4.png";
-import k5 from "../images/aaharseaarogya/ku5.png";
+import k4 from "../images/aaharseaarogya/ku6.png";
+// import k5 from "../images/aaharseaarogya/ku5.png";
 // import k6 from "../images/kudratutsav/ku6.png";
 // import k7 from "../images/kudratutsav/ku7.png";
 // import k8 from "../images/kudratutsav/ku8.png";
@@ -256,7 +256,7 @@ const IndexPage = () => (
 
       <SlideWrapper image={k4}>
         <Slide>
-          <h4>Starts 19 June, 2022</h4>
+          <h4>Starts 19 Sep, 2022</h4>
           <h1>Aahaar Se Arogya</h1>
           <Link to="/aahaarsearogya" style={{ marginRight: "10px" }}>
             <Button>Know more</Button>
@@ -267,7 +267,7 @@ const IndexPage = () => (
         </Slide>
       </SlideWrapper>
 
-      <SlideWrapper image={k5}>
+      {/* <SlideWrapper image={k5}>
         <Slide>
           <h4>Starts 19 June, 2022</h4>
           <h1>Aahaar Se Arogya</h1>
@@ -276,9 +276,9 @@ const IndexPage = () => (
           </Link>
           {/* <Link to="/kudratutsav21">
             <Button type="primary">Register now</Button>
-          </Link> */}
+          </Link>
         </Slide>
-      </SlideWrapper>
+      </SlideWrapper> */}
 
       {/* <SlideWrapper image={k6}>
         <Slide>

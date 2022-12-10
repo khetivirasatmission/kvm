@@ -4,7 +4,7 @@ import PageLayout from "../components/layouts/PageLayout";
 import Calendar from "../components/Calendar";
 import Profile from "../components/Profile";
 import SEO from "../components/seo";
-import e1 from "../images/aaharseaarogya/poster.jpeg";
+import e1 from "../images/aaharseaarogya/khadar-vali-event-19-sep.jpeg";
 
 const registrationLink =
   "https://zoom.us/meeting/register/tJwoc-yqrT4sGdQzvVINfkO8mXW4hizc2qrm";
@@ -57,6 +57,39 @@ export default () => {
           <Profile designation="" image={e1} />
         </Col>
       </Row>
+
+      <Card title="Upcoming talk on Aahaar se Arogya" bordered={false}>
+        <p>
+          Kheti Virasat Mission and Mission Tandrust Punjab, Directorate of
+          Environment and Climate Change, Govt. of Punjab jointly in
+          collaboration with Chandigarh Group of Colleges (CGC), Landran,
+          invites you to 'Aahaar se Arogya' - a public talk by Dr. Khadar Vali.
+        </p>
+        <p>Monday, 19th September, 2022, at CGC, Landran from 11 AM to 2 PM.</p>
+        <p>
+          Come and listen to Dr. Khadar Vali as he talks about how this one
+          grain has the potential to solve human and environmental health crisis
+          faced by Punjab. Know why it is important to include this Magic Grain
+          in our daily diet! And, how it can prevent common lifestyle diseases.
+        </p>
+        <p>
+          Join us with your friends and family to share space with the Millet
+          Man of India, and be a part of preparation for celebrating the
+          International Year of Millets, 2023.
+        </p>
+        <p>
+          Know about millets through the 'Millets Exhibition’ and enjoy a
+          sumptuous millets lunch.
+        </p>
+        <p>
+          Please do FREE Registration to attend at :
+          <a href="https://forms.gle/o6QojnMaei1z4w867" target="_blank">
+            https://forms.gle/o6QojnMaei1z4w867
+          </a>
+        </p>
+        <p>Entry: Gate Number 7, CGC Landran.</p>
+        <p>RSVP 9417993859 9731766337</p>
+      </Card>
 
       {/* <Row gutter={18} justify="center">
         <Button

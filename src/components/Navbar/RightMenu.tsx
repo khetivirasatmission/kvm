@@ -119,7 +119,7 @@ class RightMenu extends Component<{
 
         <Menu.Item key="millets">
           <Link
-            to="/aaharsearogya"
+            to="/aahaarsearogya"
             style={{ fontWeight: 700, color: "#72a230" }}
           >
             Aahaar Se Arogya

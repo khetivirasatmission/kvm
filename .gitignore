@@ -69,3 +69,5 @@ yarn-error.log
 .yarn-integrity
 =
 =16.8.0
+.direnv
+.cache
