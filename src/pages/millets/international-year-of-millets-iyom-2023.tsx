@@ -1,15 +1,11 @@
 import { Card, Col, Row } from "antd";
 import React from "react";
 import { HeadFC, Link, PageProps } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 import PageLayout from "../../components/layouts/PageLayout";
 import { StoryList } from "../../components/StoryOne";
 import SEO from "../../components/Seo";
 import Profile from "../../components/Profile";
-import kap1 from "../../images/millets/foxtail.jpg";
-import kap2 from "../../images/millets/little.jpg";
-import kap3 from "../../images/millets/barnyard.jpg";
-import kap4 from "../../images/millets/kodo.jpg";
-import kap5 from "../../images/millets/browntop.jpg";
 
 import foxtail from "../../images/millets/foxtail.png";
 import little from "../../images/millets/little.png";
@@ -21,8 +17,11 @@ import pearl from "../../images/millets/pearl.png";
 import proso from "../../images/millets/proso.png";
 import sorghum from "../../images/millets/sorghum.png";
 
-import { MilletsLogo } from "../../components/Images";
-import { StaticImage } from "gatsby-plugin-image";
+import kap1 from "../../images/millets/foxtail2.png";
+import kap2 from "../../images/millets/little2.png";
+import kap3 from "../../images/millets/barnyard2.png";
+import kap4 from "../../images/millets/kodo2.png";
+import kap5 from "../../images/millets/browntop2.png";
 
 const millets = [
   {
@@ -72,9 +71,29 @@ const Page: React.FC<PageProps> = () => {
     <PageLayout>
       <h1>International Year of Millets (IYOM) 2023</h1>
 
-      <MilletsLogo />
+      <div className="block m-auto text-center">
+        <StaticImage
+          src="../../images/millets/kvm.png"
+          alt="KVM logo"
+          placeholder="blurred"
+          width={225}
+          layout="constrained"
+          className="mr-4"
+        />
+        <StaticImage
+          src="../../images/millets/IYM2023_H_Col_EN.png"
+          alt="IYoM logo"
+          placeholder="blurred"
+          width={725}
+          layout="constrained"
+          className="ml-4 border-l border-gray-400"
+        />
+      </div>
 
-      <p style={{ color: "#72a230", fontSize: "18px", textAlign: "center" }}>
+      <p
+        style={{ color: "#72a230", fontSize: "18px", textAlign: "center" }}
+        className="mt-10"
+      >
         <em>
           ‘KVM gives a calrion call to bring back the magic of millets, the
           nutri cereals’
