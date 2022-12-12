@@ -53,10 +53,8 @@ typings/
 
 # dotenv environment variables file
 .env
-
-# gatsby files
-.cache/
-public
+.direnv
+.vscode
 
 # Mac files
 .DS_Store
@@ -67,7 +65,9 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
-=
-=16.8.0
-.direnv
-.cache
+
+# gatsby files
+.cache/
+public
+src/gatsby-types.d.ts
+

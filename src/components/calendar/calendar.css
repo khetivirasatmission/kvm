@@ -1,0 +1,13 @@
+.rbc-calendar {
+  width: 100%;
+}
+
+.rbc-event,
+.rbc-day-slot .rbc-background-event {
+  background-color: #4472c4;
+}
+
+.rbc-event .rbc-event-content {
+  font-size: 13px;
+  line-height: 16px;
+}

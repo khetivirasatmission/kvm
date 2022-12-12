@@ -1,30 +1,24 @@
 import { Card, Col, Row } from "antd";
 import { Link } from "gatsby";
 import React from "react";
+import type { HeadFC, PageProps } from "gatsby";
 import PageLayout from "../../components/layouts/PageLayout";
+import SEO from "../../components/Seo";
 import Profile from "../../components/Profile";
-import SEO from "../../components/seo";
 import e2 from "../../images/e2.jpg";
 import i1 from "../../images/maya.jpg";
 
-export default () => (
+const Page: React.FC<PageProps> = () => (
   <PageLayout>
-    <SEO title="Internship" />
-
     <h1>Internship</h1>
 
-    <Card
-      title="Apply for Internship"
-      bordered={false}
-    >
+    <Card title="Apply for Internship" bordered={false}>
       <ul>
         <li>
           <Link to="/internship/field">On-field Internship - Trinjan</Link>
         </li>
         <li>
-          <Link to="/internship/online">
-            Online Internship - Trinjan
-            </Link>
+          <Link to="/internship/online">Online Internship - Trinjan</Link>
         </li>
       </ul>
     </Card>
@@ -105,7 +99,11 @@ export default () => (
         </ul>
       </p>
     </Card>
-
-
   </PageLayout>
+);
+
+export default Page;
+
+export const Head: HeadFC = () => (
+  <SEO title="Internship" description="" lang="en" />
 );

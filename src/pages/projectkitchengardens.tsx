@@ -1,7 +1,8 @@
 import { Card, Col, Row } from "antd";
 import React from "react";
+import type { HeadFC, PageProps } from "gatsby";
 import PageLayout from "../components/layouts/PageLayout";
-import SEO from "../components/seo";
+import SEO from "../components/Seo";
 import t1 from "../images/kitchengardens/balpreetkaur.jpg";
 import t2 from "../images/kitchengardens/manjitkaur.jpg";
 import t3 from "../images/kitchengardens/veerpalkaur.jpg";
@@ -57,116 +58,122 @@ const artisans = [
   },
 ];
 
-export default () => (
-  <PageLayout>
-    <SEO title="Project Kitchen Gardens" />
-    <h1>Project Kitchen Gardens</h1>
+const Page: React.FC<PageProps> = () => {
+  return (
+    <PageLayout>
+      <h1>Project Kitchen Gardens</h1>
 
-    <h3 style={{ color: "#72a230", textAlign: "center" }}>I AM A GARDENER</h3>
-    <p style={{ fontSize: "18px", color: "#72a230", textAlign: "center" }}>
-      What's your superpower?
-    </p>
-
-    <Card title="Introduction" bordered={false}>
-      <p>
-        The setbacks of Green Revolution were manifold. First - The crop pattern
-        was reduced to wheat and rice, that too with heavy doses of chemical
-        applications. Second - Women lost their role and interest in farming
-        practices. Third - Nutritional security was lost, as fruits, vegetables
-        and medicinal plants were either out of the farming scenario or fed with
-        cocktails of pesticides. Fourth - The food was devoid of compassion and
-        life-force energy. To address these issues, we had started working with
-        women to establish kitchen gardens in villages.{" "}
-      </p>
-    </Card>
-
-    <Card title="Our Project" bordered={false}>
-      <p>
-        With the support of Association for India's Development (AID), we
-        started the ‘Women Action for Organic Farming and Rural Livelihood’ in
-        2011. Under this umbrella, we are training women to establish Organic
-        Kitchen Gardens (inclusive of vegetables, fruits, medicinal plants and
-        mushroom cultivation) in their backyards. Started from 4 villages in
-        2011, it has now spread across <strong>60 villages</strong> with{" "}
-        <strong>6,000 women</strong> involved.{" "}
-      </p>
-    </Card>
-
-    <Card title="Our Initiatives" bordered={false}>
-      <h4>Kitchen Gardens</h4>
-      <p>
-        KVM delivers trainings which include designing the garden; making
-        natural growth promotors; pest management; seed conservation & much
-        more. The key feature is that majority of our trainers, project
-        coordinators and trainees are women. The field coordinators pay their
-        regular visits to the gardens every month, addressing the challenges
-        faced by the gardeners.
-        <ul>
-          <li>
-            In a season, around 15-20 varieties of vegetables are grown and it
-            reaches up to 50 every year.{" "}
-          </li>
-          <li>
-            Along with vegetables, fruits and medicinal plants have also been
-            planted.{" "}
-          </li>
-          <li>
-            By growing vegetables organically in the households, women have
-            provided nutritional security.
-          </li>
-          <li>
-            Many health issues and diseases have been reduced after eating
-            chemical-free vegetables.
-          </li>
-          <li>
-            On an average, one household is able to save Rs. 1500 per month,
-            which is otherwise spent to buy vegetables.
-          </li>
-          <li>
-            People admire the improved taste and quality of the farm-fresh
-            produce.
-          </li>
-        </ul>
+      <h3 style={{ color: "#72a230", textAlign: "center" }}>I AM A GARDENER</h3>
+      <p style={{ fontSize: "18px", color: "#72a230", textAlign: "center" }}>
+        What's your superpower?
       </p>
 
-      <h4>Seed Banks</h4>
-      <p>
-        A new dimension was added to the project by propagating the concept of
-        indigenous Seed Conservation. Punjab was void of its indigenous seed
-        diversity. Working with women, we realized that they can play a key role
-        to restore the same. So, native seeds, collected from various states and
-        adapted into the environment of Punjab, were distributed to the
-        gardeners. KVM groomed them to conserve these seeds every year for next
-        sowing seasons. Slowly, the gardeners became seed savers; and currently
-        we have <strong>110 family seed banks</strong> maintained by these
-        women. KVM distributes <strong>‘seed kits’</strong> to the newcomers
-        comprising of seeds of 15 - 20 seasonal vegetables.
-      </p>
+      <Card title="Introduction" bordered={false}>
+        <p>
+          The setbacks of Green Revolution were manifold. First - The crop
+          pattern was reduced to wheat and rice, that too with heavy doses of
+          chemical applications. Second - Women lost their role and interest in
+          farming practices. Third - Nutritional security was lost, as fruits,
+          vegetables and medicinal plants were either out of the farming
+          scenario or fed with cocktails of pesticides. Fourth - The food was
+          devoid of compassion and life-force energy. To address these issues,
+          we had started working with women to establish kitchen gardens in
+          villages.{" "}
+        </p>
+      </Card>
 
-      <h4>Mushroom Cultivation</h4>
-      <p>
-        To add-on to their livelihood, we organise Mushroom Cultivation
-        workshops for our gardeners. Seeds and other raw materials are made
-        available, along with. With the assistance of KVM, some{" "}
-        <strong>400 women</strong> are successfully growing and selling organic
-        mushrooms from their homes itself.
-      </p>
+      <Card title="Our Project" bordered={false}>
+        <p>
+          With the support of Association for India's Development (AID), we
+          started the ‘Women Action for Organic Farming and Rural Livelihood’ in
+          2011. Under this umbrella, we are training women to establish Organic
+          Kitchen Gardens (inclusive of vegetables, fruits, medicinal plants and
+          mushroom cultivation) in their backyards. Started from 4 villages in
+          2011, it has now spread across <strong>60 villages</strong> with{" "}
+          <strong>6,000 women</strong> involved.{" "}
+        </p>
+      </Card>
 
-      <h4>Young Seed Keepers</h4>
-      <p>
-        This was a group of 20 young girls trained into conservation of
-        indigenous seeds. Their classroom was a one-acre rented plot in Chaina
-        village of Faridkot district. These young seed savers were trained to
-        manage the farm; grow organic and indigenous vegetables; conserve the
-        seeds, preserve them with traditional practices and markete them in
-        various public events, under the auspices of KVM. These seeds were sold
-        as ‘seed kits’ yielding an earning of Rs. 80,000; which was distributed
-        among the group itself.
-      </p>
-    </Card>
+      <Card title="Our Initiatives" bordered={false}>
+        <h4>Kitchen Gardens</h4>
+        <p>
+          KVM delivers trainings which include designing the garden; making
+          natural growth promotors; pest management; seed conservation & much
+          more. The key feature is that majority of our trainers, project
+          coordinators and trainees are women. The field coordinators pay their
+          regular visits to the gardens every month, addressing the challenges
+          faced by the gardeners.
+          <ul>
+            <li>
+              In a season, around 15-20 varieties of vegetables are grown and it
+              reaches up to 50 every year.{" "}
+            </li>
+            <li>
+              Along with vegetables, fruits and medicinal plants have also been
+              planted.{" "}
+            </li>
+            <li>
+              By growing vegetables organically in the households, women have
+              provided nutritional security.
+            </li>
+            <li>
+              Many health issues and diseases have been reduced after eating
+              chemical-free vegetables.
+            </li>
+            <li>
+              On an average, one household is able to save Rs. 1500 per month,
+              which is otherwise spent to buy vegetables.
+            </li>
+            <li>
+              People admire the improved taste and quality of the farm-fresh
+              produce.
+            </li>
+          </ul>
+        </p>
 
-    <Card title="The Garden Tales" bordered={false}>
-      <StoryList list={artisans} />
-    </Card>
-  </PageLayout>
-);
+        <h4>Seed Banks</h4>
+        <p>
+          A new dimension was added to the project by propagating the concept of
+          indigenous Seed Conservation. Punjab was void of its indigenous seed
+          diversity. Working with women, we realized that they can play a key
+          role to restore the same. So, native seeds, collected from various
+          states and adapted into the environment of Punjab, were distributed to
+          the gardeners. KVM groomed them to conserve these seeds every year for
+          next sowing seasons. Slowly, the gardeners became seed savers; and
+          currently we have <strong>110 family seed banks</strong> maintained by
+          these women. KVM distributes <strong>‘seed kits’</strong> to the
+          newcomers comprising of seeds of 15 - 20 seasonal vegetables.
+        </p>
+
+        <h4>Mushroom Cultivation</h4>
+        <p>
+          To add-on to their livelihood, we organise Mushroom Cultivation
+          workshops for our gardeners. Seeds and other raw materials are made
+          available, along with. With the assistance of KVM, some{" "}
+          <strong>400 women</strong> are successfully growing and selling
+          organic mushrooms from their homes itself.
+        </p>
+
+        <h4>Young Seed Keepers</h4>
+        <p>
+          This was a group of 20 young girls trained into conservation of
+          indigenous seeds. Their classroom was a one-acre rented plot in Chaina
+          village of Faridkot district. These young seed savers were trained to
+          manage the farm; grow organic and indigenous vegetables; conserve the
+          seeds, preserve them with traditional practices and markete them in
+          various public events, under the auspices of KVM. These seeds were
+          sold as ‘seed kits’ yielding an earning of Rs. 80,000; which was
+          distributed among the group itself.
+        </p>
+      </Card>
+
+      <Card title="The Garden Tales" bordered={false}>
+        <StoryList list={artisans} />
+      </Card>
+    </PageLayout>
+  );
+};
+
+export default Page;
+
+export const Head: HeadFC = () => <SEO title="Project Kitchen Gardens" />;

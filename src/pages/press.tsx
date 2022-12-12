@@ -1,11 +1,10 @@
 import React from "react";
+import type { HeadFC, PageProps } from "gatsby";
 import PageLayout from "../components/layouts/PageLayout";
-import SEO from "../components/seo";
+import SEO from "../components/Seo";
 
-export default () => (
+const Page: React.FC<PageProps> = () => (
   <PageLayout>
-    <SEO title="Media" />
-
     <h1>KVM Coverage in Media</h1>
 
     <ul>
@@ -235,4 +234,10 @@ export default () => (
       </li>
     </ul>
   </PageLayout>
+);
+
+export default Page;
+
+export const Head: HeadFC = () => (
+  <SEO title="Press" description="" lang="en" />
 );

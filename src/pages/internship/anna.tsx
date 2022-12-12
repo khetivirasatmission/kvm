@@ -1,14 +1,14 @@
 import { Card, Col, Row } from "antd";
 import React from "react";
-import PageLayout from "../../components/layouts/PageLayout";
+
 import Profile from "../../components/Profile";
-import SEO from "../../components/seo";
+import type { HeadFC, PageProps } from "gatsby";
+import PageLayout from "../../components/layouts/PageLayout";
+import SEO from "../../components/Seo";
 // import start from "../images/trinjan/start.jpg";
 
-export default () => (
+const Page: React.FC<PageProps> = () => (
   <PageLayout>
-    <SEO title="Anna's Journey with KVM" />
-
     <h1>Anna's Journey with KVM</h1>
 
     {/* <Row gutter={18}>
@@ -119,4 +119,10 @@ export default () => (
       </p>
     </Card>
   </PageLayout>
+);
+
+export default Page;
+
+export const Head: HeadFC = () => (
+  <SEO title="Anna's Journey with KVM" description="" lang="en" />
 );

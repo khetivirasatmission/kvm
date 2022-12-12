@@ -1,9 +1,11 @@
 import { Card } from "antd";
 import React from "react";
+import type { HeadFC, PageProps } from "gatsby";
 import PageLayout from "../components/layouts/PageLayout";
-import SEO from "../components/seo";
+import SEO from "../components/Seo";
 
-export default () => (
+const Page: React.FC<PageProps> = () => {
+  return (
   <PageLayout>
     <SEO title="FAQ" />
 
@@ -243,4 +245,9 @@ export default () => (
       </p>
     </Card>
   </PageLayout>
-);
+  );
+};
+
+export default Page;
+
+export const Head: HeadFC = () => <SEO title="Women Action for Ecology" />;

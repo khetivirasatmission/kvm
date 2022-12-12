@@ -1,7 +1,6 @@
 import { Link } from "gatsby";
 import React, { Component } from "react";
 import logo from "../../images/logo.svg";
-import "./Navbar.css";
 import RightMenu from "./RightMenu";
 
 class Navbar extends Component {

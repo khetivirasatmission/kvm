@@ -1,14 +1,13 @@
 import { Card, Col, Row } from "antd";
 import React from "react";
+import type { HeadFC, PageProps } from "gatsby";
 import PageLayout from "../../components/layouts/PageLayout";
+import SEO from "../../components/Seo";
 import Profile from "../../components/Profile";
-import SEO from "../../components/seo";
 import swarup from "../../images/swarup.jpg";
 
-export default () => (
+const Page: React.FC<PageProps> = () => (
   <PageLayout>
-    <SEO title="Swarup Datta: My first ‘scholarly’ visit to Punjab" />
-
     <h1>Swarup Datta: My first ‘scholarly’ visit to Punjab</h1>
 
     <Row gutter={18}>
@@ -141,4 +140,14 @@ export default () => (
       songs, and so on.
     </p>
   </PageLayout>
+);
+
+export default Page;
+
+export const Head: HeadFC = () => (
+  <SEO
+    title="Swarup Datta: My first ‘scholarly’ visit to Punjab"
+    description=""
+    lang="en"
+  />
 );

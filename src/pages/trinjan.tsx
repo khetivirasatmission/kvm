@@ -1,10 +1,11 @@
 import { Button, Card, Col, Row, Statistic } from "antd";
 import { Link } from "gatsby";
 import React from "react";
+import type { HeadFC, PageProps } from "gatsby";
 import PageLayout from "../components/layouts/PageLayout";
+import SEO from "../components/Seo";
 import DonateButton from "../components/DonateButton";
 import { ExpandableImage } from "../components/Profile";
-import SEO from "../components/seo";
 import { StoryList } from "../components/Story";
 import t1 from "../images/trinjan/1.png";
 import t2 from "../images/trinjan/2.png";
@@ -14,7 +15,9 @@ import t7 from "../images/trinjan/7.png";
 import start from "../images/trinjan/start.jpg";
 import premiere from "../images/trinjan/premiere-poster.jpeg";
 // import discussion from "../images/trinjan/panel-discussion.jpeg";
+
 import { Table } from "antd";
+
 import {
   FacebookProvider,
   EmbeddedPost,
@@ -127,21 +130,20 @@ const artisans = [
   },
 ];
 
-export default () => (
-  <PageLayout>
-    <SEO title="Trinjan" />
+const Page: React.FC<PageProps> = () => {
+  return (
+    <PageLayout>
+      <h1>
+        Trinjan
+        <DonateButton />
+      </h1>
 
-    <h1>
-      Trinjan
-      <DonateButton />
-    </h1>
-
-    <Card
-      title=" Trinjan - A Documentary Premiere on Reviving the Spinning Wheel in Punjab"
-      bordered={false}
-    >
-      <div className="video-responsive">
-        {/* <iframe
+      <Card
+        title=" Trinjan - A Documentary Premiere on Reviving the Spinning Wheel in Punjab"
+        bordered={false}
+      >
+        <div className="video-responsive">
+          {/* <iframe
           src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/AIDSeattle/videos/269883164380614/"
           width="1280"
           height="720"
@@ -149,17 +151,15 @@ export default () => (
           scrolling="no"
         ></iframe> */}
 
-        <iframe
-          width="1196"
-          height="673"
-          src="https://www.youtube.com/embed/Zf-f2KvkOIw"
-          style={{ border: "none" }}
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        ></iframe>
-      </div>
-    </Card>
+          <iframe
+            src="https://www.youtube.com/embed/Zf-f2KvkOIw"
+            style={{ border: "none", width: "100%", height: "673px" }}
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          ></iframe>
+        </div>
+      </Card>
 
-    {/* <Row>
+      {/* <Row>
       <Col xs={24} sm={24} md={12}>
         <FacebookProvider appId="195658071778073">
           <EmbeddedPost
@@ -180,146 +180,146 @@ export default () => (
       </Col>
     </Row> */}
 
-    <Card
-      title="Weaving the Social Fabric with Compassionate Warp and Dedicated Weft"
-      bordered={false}
-    >
-      <p>
-        Trinjan, in rural Punjab, was the space where women would traditionally
-        gather to spin on charkhas, weave, talk, counsel, learn from each other,
-        cook and eat together. In the assaults made by Green Revolution, this
-        culture of community gatherings in disguise of artistic activities was
-        lost.
-      </p>
-      <p>
-        KVM has revived this culture through its project TRINJAN. It is
-        providing women artisans a platform to re-explore their art, earn
-        livelihood and share their wisdom.
-      </p>
-    </Card>
+      <Card
+        title="Weaving the Social Fabric with Compassionate Warp and Dedicated Weft"
+        bordered={false}
+      >
+        <p>
+          Trinjan, in rural Punjab, was the space where women would
+          traditionally gather to spin on charkhas, weave, talk, counsel, learn
+          from each other, cook and eat together. In the assaults made by Green
+          Revolution, this culture of community gatherings in disguise of
+          artistic activities was lost.
+        </p>
+        <p>
+          KVM has revived this culture through its project TRINJAN. It is
+          providing women artisans a platform to re-explore their art, earn
+          livelihood and share their wisdom.
+        </p>
+      </Card>
 
-    <Card title="Project TRINJAN" bordered={false}>
-      <p>
-        TRINJAN is an extension of Kheti Virasat’s Mission for Rural Livelihood
-        through Traditional Skills. To revive the great knowledge of textile and
-        handicrafts that women had, TRINJAN started in 4 villages in 2017. The
-        self-reliance of cloth, aka 'Vastra Swavlambham’, which was once a part
-        and parcel of our culture, was lost long ago. Most of the spinners and
-        weavers were women. They were also actively involved in agriculture and
-        dairy activities. In the course of industrialisation and modernization,
-        most of them lost their patience and interest amid the flood of easily
-        accessible ready-made garments and limited themselves to household
-        chores. The charkhas were abandoned and the weavers were out of
-        practice. KVM identified these women artisans, most of them from poor
-        financial backgrounds, and encouraged them to restart their work
-        professionally, with KVM.
-      </p>
-      <p>
-        Under the umbrella of TRINJAN, we also organise festive gatherings known
-        as Trinjan Melas, exhibitions with live demonstrations, traditional food
-        festivals and cultural programmes.
-      </p>
-    </Card>
+      <Card title="Project TRINJAN" bordered={false}>
+        <p>
+          TRINJAN is an extension of Kheti Virasat’s Mission for Rural
+          Livelihood through Traditional Skills. To revive the great knowledge
+          of textile and handicrafts that women had, TRINJAN started in 4
+          villages in 2017. The self-reliance of cloth, aka 'Vastra
+          Swavlambham’, which was once a part and parcel of our culture, was
+          lost long ago. Most of the spinners and weavers were women. They were
+          also actively involved in agriculture and dairy activities. In the
+          course of industrialisation and modernization, most of them lost their
+          patience and interest amid the flood of easily accessible ready-made
+          garments and limited themselves to household chores. The charkhas were
+          abandoned and the weavers were out of practice. KVM identified these
+          women artisans, most of them from poor financial backgrounds, and
+          encouraged them to restart their work professionally, with KVM.
+        </p>
+        <p>
+          Under the umbrella of TRINJAN, we also organise festive gatherings
+          known as Trinjan Melas, exhibitions with live demonstrations,
+          traditional food festivals and cultural programmes.
+        </p>
+      </Card>
 
-    {/* <Row>
+      {/* <Row>
       <Col xs={24}>
         <ExpandableImage name="trinjan" image={start} />
       </Col>
     </Row> */}
 
-    <Card title="Value chain" bordered={false}>
-      <p>
-        Organic indigenous Cotton grown by the farmers, is procured by KVM at
-        premium prices, hand spun, naturally dyed and hand woven by the rural
-        artisans. Along with this, there are women artisans who do hand
-        embroidery, crochet, Knitting, make different grass crafts and other
-        decorative products.
-      </p>
-      <p>
-        We are constantly working on the quality of the yarn, fabric, designing,
-        productivity and marketing through regular trainings of women. For this,
-        we have a network of experts and various organisations across India,
-        which is constantly evolving.
-      </p>
+      <Card title="Value chain" bordered={false}>
+        <p>
+          Organic indigenous Cotton grown by the farmers, is procured by KVM at
+          premium prices, hand spun, naturally dyed and hand woven by the rural
+          artisans. Along with this, there are women artisans who do hand
+          embroidery, crochet, Knitting, make different grass crafts and other
+          decorative products.
+        </p>
+        <p>
+          We are constantly working on the quality of the yarn, fabric,
+          designing, productivity and marketing through regular trainings of
+          women. For this, we have a network of experts and various
+          organisations across India, which is constantly evolving.
+        </p>
 
-      <Table
-        rowClassName={(_, index) =>
-          index % 2 === 0 ? "table-row-light" : "table-row-dark"
-        }
-        columns={columns}
-        dataSource={data}
-        pagination={false}
-      />
-      <br />
-    </Card>
+        <Table
+          rowClassName={(_, index) =>
+            index % 2 === 0 ? "table-row-light" : "table-row-dark"
+          }
+          columns={columns}
+          dataSource={data}
+          pagination={false}
+        />
+        <br />
+      </Card>
 
-    <Card title="TRINJAN Family" bordered={false}>
-      <Row>
-        <Col xs={12} sm={12} lg={4}>
-          <div>
-            <Statistic title="Farmers" value={19} />
-          </div>
-        </Col>
-        <Col xs={12} sm={12} lg={4}>
-          <div>
-            <Statistic title="Spinners" value={137} />
-          </div>
-        </Col>
-        <Col xs={12} sm={12} lg={5}>
-          <div>
-            <Statistic title="Natural Dyers" value={10} />
-          </div>
-        </Col>
-        <Col xs={12} sm={12} lg={4}>
-          <div>
-            <Statistic title="Fabric Weavers" value={28} />
-          </div>
-        </Col>
-        <Col xs={12} sm={12} lg={5}>
-          <div>
-            <Statistic title="Hand Embroiders" value={13} />
-          </div>
-        </Col>
-        <Col xs={12} sm={12} lg={4}>
-          <div>
-            <Statistic title="Knitters" value={24} />
-          </div>
-        </Col>
-        <Col xs={12} sm={12} lg={4}>
-          <div>
-            <Statistic title="Darri Weavers" value={18} />
-          </div>
-        </Col>
-        <Col xs={12} sm={12} lg={5}>
-          <div>
-            <Statistic title="Crochet Workers" value={29} />
-          </div>
-        </Col>
-        <Col xs={12} sm={12} lg={4}>
-          <div>
-            <Statistic title="Tailors" value={7} />
-          </div>
-        </Col>
-        <Col xs={12} sm={12} lg={5}>
-          <div>
-            <Statistic title="Basket Weavers" value={11} />
-          </div>
-        </Col>
-      </Row>
-    </Card>
+      <Card title="TRINJAN Family" bordered={false}>
+        <Row>
+          <Col xs={12} sm={12} lg={4}>
+            <div>
+              <Statistic title="Farmers" value={19} />
+            </div>
+          </Col>
+          <Col xs={12} sm={12} lg={4}>
+            <div>
+              <Statistic title="Spinners" value={137} />
+            </div>
+          </Col>
+          <Col xs={12} sm={12} lg={5}>
+            <div>
+              <Statistic title="Natural Dyers" value={10} />
+            </div>
+          </Col>
+          <Col xs={12} sm={12} lg={4}>
+            <div>
+              <Statistic title="Fabric Weavers" value={28} />
+            </div>
+          </Col>
+          <Col xs={12} sm={12} lg={5}>
+            <div>
+              <Statistic title="Hand Embroiders" value={13} />
+            </div>
+          </Col>
+          <Col xs={12} sm={12} lg={4}>
+            <div>
+              <Statistic title="Knitters" value={24} />
+            </div>
+          </Col>
+          <Col xs={12} sm={12} lg={4}>
+            <div>
+              <Statistic title="Darri Weavers" value={18} />
+            </div>
+          </Col>
+          <Col xs={12} sm={12} lg={5}>
+            <div>
+              <Statistic title="Crochet Workers" value={29} />
+            </div>
+          </Col>
+          <Col xs={12} sm={12} lg={4}>
+            <div>
+              <Statistic title="Tailors" value={7} />
+            </div>
+          </Col>
+          <Col xs={12} sm={12} lg={5}>
+            <div>
+              <Statistic title="Basket Weavers" value={11} />
+            </div>
+          </Col>
+        </Row>
+      </Card>
 
-    <Card title="Our Products" bordered={false}>
-      <p>
-        These hardworking women make beautiful creative products including
-        bedsheets, khes (topsheet), towels, stolls, mufflers, fabric for
-        garments, darri, mats, rugs, woolen sweater, phulkaris, hand woven
-        baskets, crochet earrings, toran, coasters, wall hangings etc. These
-        products are than marketed by KVM on various public platforms.
-      </p>
-    </Card>
+      <Card title="Our Products" bordered={false}>
+        <p>
+          These hardworking women make beautiful creative products including
+          bedsheets, khes (topsheet), towels, stolls, mufflers, fabric for
+          garments, darri, mats, rugs, woolen sweater, phulkaris, hand woven
+          baskets, crochet earrings, toran, coasters, wall hangings etc. These
+          products are than marketed by KVM on various public platforms.
+        </p>
+      </Card>
 
-    <Card title="Meet our Artisans" bordered={false}>
-      {/* <Row gutter={18}>
+      <Card title="Meet our Artisans" bordered={false}>
+        {/* <Row gutter={18}>
         <Col xs={24} md={12} lg={8}>
           <Profile name="Rimpy Kaur" image={t1} />
           <Anchor>
@@ -366,31 +366,31 @@ export default () => (
           <Profile name="Gurjit Kaur" image={t12} />
         </Col> 
       </Row>*/}
-      <StoryList list={artisans} />
-    </Card>
+        <StoryList list={artisans} />
+      </Card>
 
-    <Card title="Work with TRINJAN" bordered={false}>
-      <strong>We are looking for volunteers!</strong>
-      <p>
-        If the traditional art, handicraft and culture linkages amuses you,{" "}
-        <Link to="/volunteer">
-          <strong>Join as a volunteer</strong>
-        </Link>{" "}
-        to help us further explore, document, expand and evolve TRINJAN.
-      </p>
-    </Card>
+      <Card title="Work with TRINJAN" bordered={false}>
+        <strong>We are looking for volunteers!</strong>
+        <p>
+          If the traditional art, handicraft and culture linkages amuses you,{" "}
+          <Link to="/volunteer">
+            <strong>Join as a volunteer</strong>
+          </Link>{" "}
+          to help us further explore, document, expand and evolve TRINJAN.
+        </p>
+      </Card>
 
-    <Card title="Donate for TRINJAN" bordered={false}>
-      <p>
-        This project is supported by donations.{"  "}
-        <Link to="/donate">
-          <strong>Donate here</strong>
-        </Link>{" "}
-        for a cause.
-      </p>
-    </Card>
+      <Card title="Donate for TRINJAN" bordered={false}>
+        <p>
+          This project is supported by donations.{"  "}
+          <Link to="/donate">
+            <strong>Donate here</strong>
+          </Link>{" "}
+          for a cause.
+        </p>
+      </Card>
 
-    {/* <Row gutter={18}>
+      {/* <Row gutter={18}>
       <Col xs={24} md={12} lg={6}>
         <div id="rimpykaur">
           <Profile
@@ -541,7 +541,7 @@ export default () => (
       </Col>
     </Row> */}
 
-    {/* <div>
+      {/* <div>
           <Profile name="M​anjit Kaur" image={t4} />
           <p>
             M​anjit Kaur is 60 years old from the village of Ramuana in the
@@ -563,9 +563,9 @@ export default () => (
             family and the broader community and planet.
           </p>
         </div> */}
-    {/* </Col> */}
+      {/* </Col> */}
 
-    {/* <Col xs={24} md={12} lg={12}>
+      {/* <Col xs={24} md={12} lg={12}>
         
 
         <div>
@@ -647,6 +647,11 @@ export default () => (
           </p>
         </div>
       </Col> */}
-    {/* </Row> */}
-  </PageLayout>
-);
+      {/* </Row> */}
+    </PageLayout>
+  );
+};
+
+export default Page;
+
+export const Head: HeadFC = () => <SEO title="Trinjan" />;

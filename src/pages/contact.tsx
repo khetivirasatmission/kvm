@@ -1,8 +1,9 @@
 import { Col, notification, Row } from "antd";
 import { navigate } from "gatsby-link";
 import React from "react";
+import type { HeadFC, PageProps } from "gatsby";
 import PageLayout from "../components/layouts/PageLayout";
-import SEO from "../components/seo";
+import SEO from "../components/Seo";
 
 function encode(data: any) {
   return Object.keys(data)
@@ -10,7 +11,7 @@ function encode(data: any) {
     .join("&");
 }
 
-export default class Contact extends React.Component {
+class ContactPage extends React.Component {
   constructor(props: any) {
     super(props);
     this.state = {};
@@ -54,8 +55,6 @@ export default class Contact extends React.Component {
   render() {
     return (
       <PageLayout>
-        <SEO title="Contact Us" />
-
         <div>
           <h1>Contact</h1>
 
@@ -64,8 +63,8 @@ export default class Contact extends React.Component {
               <iframe
                 style={{ border: "0", width: "100%" }}
                 src="https://docs.google.com/forms/d/e/1FAIpQLSecB-GKr9wnBLkxahPKKTJmbVbNDFLRzBc59oKwHj4mglR_Yg/viewform?embedded=true"
-                width="482"
-                height="900"
+                width="500"
+                height="1100"
               >
                 Loading...
               </iframe>
@@ -183,21 +182,23 @@ export default class Contact extends React.Component {
                 Kheti Virasat Mission, House Number-72, Street Number- 4, R V
                 Shanti Nagar, PO Box # 1, JAITU - 151202 Faridkot, Punjab{" "}
               </p>
-              <p>
+
+              <p className="mt-4">
                 <strong>Phone:</strong> +91 1635 503415, +91 9872682161
               </p>
-              <p>
+
+              <p className="mt-4">
                 <strong>Email:</strong> info@khetivirasatmission.org
               </p>
 
-              <div className="mapouter">
+              <div className="mapouter mt-10">
                 <div className="gmap_canvas">
                   <iframe
                     style={{ border: "0", width: "100%" }}
                     width="400"
                     height="400"
                     id="gmap_canvas"
-                    src="https://maps.google.com/maps?q=kheti%20virasat%20mission&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                    src="https://maps.google.com/maps?q=kheti%20virasat%20mission&t=&z=14&ie=UTF8&iwloc=&output=embed"
                   />
                 </div>
               </div>
@@ -210,3 +211,7 @@ export default class Contact extends React.Component {
     );
   }
 }
+
+export default ContactPage;
+
+export const Head: HeadFC = () => <SEO title="Contact Us" />;

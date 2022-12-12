@@ -1,8 +1,10 @@
 import { Card, Col, Row, Table } from "antd";
 import React from "react";
-import PageLayout from "../components/layouts/PageLayout";
+
 import Profile from "../components/Profile";
-import SEO from "../components/seo";
+import type { HeadFC, PageProps } from "gatsby";
+import PageLayout from "../components/layouts/PageLayout";
+import SEO from "../components/Seo";
 import kh1 from "../images/kh1.jpg";
 import kh2 from "../images/kh2.jpg";
 
@@ -32,7 +34,7 @@ const columns = [
     title: "Forum",
     dataIndex: "forum",
     width: 100,
-    render: text =>
+    render: (text) =>
       text !== "" ? <a href={text}>Kudrati Kisan Haat</a> : null,
   },
   {
@@ -161,71 +163,75 @@ const data = [
   },
 ];
 
-export default () => (
-  <PageLayout>
-    <SEO title="Organic Farmers' Market" />
-
-    <h1>Organic Farmers' Market</h1>
-
-    <Row gutter={18}>
-      <Col xs={24} md={12} lg={12}>
-        <Profile designation="" image={kh1} />
-      </Col>
-      <Col xs={24} md={12} lg={12}>
-        <Profile designation="" image={kh2} />
-      </Col>
-    </Row>
-
-    <Card
-      title="Buy Organic Products Direct from Farmers
-"
-      bordered={false}
-    >
-      <p>
-        <strong>Kudrati Kisaan Haat</strong> is weekly market mainly organised
-        on Sunday for 2 to 3 hours
-      </p>
-      <p>
-        <strong>Kudrati Kisaan Hut</strong> is a permanent setup where customers
-        can buy products daily basis
-      </p>
+const Page: React.FC<PageProps> = () => {
+  return (
+    <PageLayout>
+      <h1>Organic Farmers' Market</h1>
 
       <Row gutter={18}>
-        <Col xs={24} md={12} lg={4}>
-          <Profile designation="" image={kap1} />
+        <Col xs={24} md={12} lg={12}>
+          <Profile designation="" image={kh1} />
         </Col>
-        <Col xs={24} md={12} lg={4}>
-          <Profile designation="" image={kap2} />
-        </Col>
-        <Col xs={24} md={12} lg={4}>
-          <Profile designation="" image={kap3} />
-        </Col>
-        <Col xs={24} md={12} lg={4}>
-          <Profile designation="" image={kap4} />
-        </Col>
-        <Col xs={24} md={12} lg={4}>
-          <Profile designation="" image={kap5} />
-        </Col>
-        <Col xs={24} md={12} lg={4}>
-          <Profile designation="" image={kap6} />
+        <Col xs={24} md={12} lg={12}>
+          <Profile designation="" image={kh2} />
         </Col>
       </Row>
-    </Card>
 
-    <Card title="Organic Farmers' Market Venues in Punjab" bordered={false}>
-      <Table
-        columns={columns}
-        dataSource={data}
-        pagination={false}
-        bordered={true}
-        size="middle"
-      />
-      <p>
-        <br />
-        For ordering these products, you can call at our office-
-        01635-503415,503414 or Whatsapp 7087107163 or you can mail us at{" "}
-        <a href="mailto:info@khetivirasatmission.org"> KVM </a>
-      </p>
-    </Card>
-  </PageLayout>
-);
+      <Card
+        title="Buy Organic Products Direct from Farmers
+"
+        bordered={false}
+      >
+        <p>
+          <strong>Kudrati Kisaan Haat</strong> is weekly market mainly organised
+          on Sunday for 2 to 3 hours
+        </p>
+        <p>
+          <strong>Kudrati Kisaan Hut</strong> is a permanent setup where
+          customers can buy products daily basis
+        </p>
+
+        <Row gutter={18}>
+          <Col xs={24} md={12} lg={4}>
+            <Profile designation="" image={kap1} />
+          </Col>
+          <Col xs={24} md={12} lg={4}>
+            <Profile designation="" image={kap2} />
+          </Col>
+          <Col xs={24} md={12} lg={4}>
+            <Profile designation="" image={kap3} />
+          </Col>
+          <Col xs={24} md={12} lg={4}>
+            <Profile designation="" image={kap4} />
+          </Col>
+          <Col xs={24} md={12} lg={4}>
+            <Profile designation="" image={kap5} />
+          </Col>
+          <Col xs={24} md={12} lg={4}>
+            <Profile designation="" image={kap6} />
+          </Col>
+        </Row>
+      </Card>
+
+      <Card title="Organic Farmers' Market Venues in Punjab" bordered={false}>
+        <Table
+          columns={columns}
+          dataSource={data}
+          pagination={false}
+          bordered={true}
+          size="middle"
+        />
+        <p>
+          <br />
+          For ordering these products, you can call at our office-
+          01635-503415,503414 or Whatsapp 7087107163 or you can mail us at{" "}
+          <a href="mailto:info@khetivirasatmission.org"> KVM </a>
+        </p>
+      </Card>
+    </PageLayout>
+  );
+};
+
+export default Page;
+
+export const Head: HeadFC = () => <SEO title="Organic Farmers' Market" />;

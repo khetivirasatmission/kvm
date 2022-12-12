@@ -1,8 +1,10 @@
 import { Col, Row } from "antd";
 import React from "react";
+import type { HeadFC, PageProps } from "gatsby";
 import PageLayout from "../components/layouts/PageLayout";
 import Profile from "../components/Profile";
-import SEO from "../components/seo";
+import SEO from "../components/Seo";
+
 import bebe_di_rasoi from "../images/books/bebe_di_rasoi.png";
 import ghrelu_bagichi from "../images/books/ghrelu_bagichi.png";
 import gian_di_potli from "../images/books/gian_di_potli.jpg";
@@ -22,7 +24,7 @@ import sd13 from "../images/magazines/sd13.jpg";
 import so12 from "../images/magazines/so12.svg";
 import so14 from "../images/magazines/so14.jpg";
 
-export default () => (
+const PublicationsPage: React.FC<PageProps> = () => (
   <PageLayout>
     <SEO title="Publications" />
 
@@ -207,6 +209,7 @@ export default () => (
         </a>
       </li>
     </ul>
+
     <h3>Audio magazine</h3>
     <iframe
       style={{ border: "0" }}
@@ -273,4 +276,10 @@ export default () => (
       </li>
     </ul>
   </PageLayout>
+);
+
+export default PublicationsPage;
+
+export const Head: HeadFC = () => (
+  <SEO title="Publications" description="" lang="en" />
 );

@@ -52,7 +52,7 @@ export const StoryList = ({ list }: any) => {
     const temp = [...currentList];
     const index = temp.findIndex((item: any) => item.key === key);
     temp.push(...temp.splice(0, index));
-    temp.map(obj => {
+    temp.map((obj) => {
       obj.expanded = false;
       if (obj.key === key) {
         obj.expanded = true;

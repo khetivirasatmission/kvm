@@ -1,12 +1,11 @@
 import { Card } from "antd";
 import React from "react";
+import type { HeadFC, PageProps } from "gatsby";
 import PageLayout from "../components/layouts/PageLayout";
-import SEO from "../components/seo";
+import SEO from "../components/Seo";
 
-export default () => (
+const MissionPage: React.FC<PageProps> = () => (
   <PageLayout>
-    <SEO title="Mission" description="" lang="en" />
-
     <h1>About Us</h1>
 
     <Card title="Who we are" bordered={false}>
@@ -91,4 +90,10 @@ export default () => (
       </Col>
     </Row> */}
   </PageLayout>
+);
+
+export default MissionPage;
+
+export const Head: HeadFC = () => (
+  <SEO title="Mission" description="" lang="en" />
 );

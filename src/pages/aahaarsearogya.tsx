@@ -1,9 +1,11 @@
 import { Button, Card, Col, Row, Radio, Checkbox } from "antd";
 import React from "react";
+import type { HeadFC, PageProps } from "gatsby";
 import PageLayout from "../components/layouts/PageLayout";
-import Calendar from "../components/Calendar";
+
 import Profile from "../components/Profile";
-import SEO from "../components/seo";
+import SEO from "../components/Seo";
+
 import e1 from "../images/aaharseaarogya/khadar-vali-event-19-sep.jpeg";
 
 const registrationLink =
@@ -14,7 +16,7 @@ const registrationLink =
 
 // console.log(events);
 
-export default () => {
+const Page: React.FC<PageProps> = () => {
   // const [checkedDayOptions, setCheckedDayOptions] = React.useState(
   //   defaultCheckedDayOptions
   // );
@@ -30,7 +32,6 @@ export default () => {
 
   return (
     <PageLayout>
-      <SEO title="Aahaar Se Arogya" />
       <div>
         <h1>
           Aahaar Se Arogya
@@ -186,3 +187,7 @@ export default () => {
     </PageLayout>
   );
 };
+
+export default Page;
+
+export const Head: HeadFC = () => <SEO title="Aahaar Se Arogya" />;

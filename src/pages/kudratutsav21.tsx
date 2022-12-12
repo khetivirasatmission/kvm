@@ -1,9 +1,10 @@
 import { Button, Card, Col, Row, Radio, Checkbox } from "antd";
 import React from "react";
+import type { HeadFC, PageProps } from "gatsby";
 import PageLayout from "../components/layouts/PageLayout";
-import Calendar from "../components/Calendar";
+import Calendar from "../components/calendar";
 import Profile from "../components/Profile";
-import SEO from "../components/seo";
+import SEO from "../components/Seo";
 import e1 from "../images/kudratutsav/kudratutsav21.png";
 
 const registrationLink =
@@ -14,7 +15,7 @@ const registrationLink =
 
 // console.log(events);
 
-export default () => {
+const Page: React.FC<PageProps> = () => {
   // const [checkedDayOptions, setCheckedDayOptions] = React.useState(
   //   defaultCheckedDayOptions
   // );
@@ -30,8 +31,6 @@ export default () => {
 
   return (
     <PageLayout>
-      <SEO title="Kudrat Utsav 2021" />
-
       <div>
         <h1>
           Kudrat Utsav 2021
@@ -135,3 +134,7 @@ export default () => {
     </PageLayout>
   );
 };
+
+export default Page;
+
+export const Head: HeadFC = () => <SEO title="Kudrat Utsav 2021" />;

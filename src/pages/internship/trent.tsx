@@ -1,14 +1,13 @@
 import { Card, Col, Row } from "antd";
 import React from "react";
+import type { HeadFC, PageProps } from "gatsby";
 import PageLayout from "../../components/layouts/PageLayout";
+import SEO from "../../components/Seo";
 import Profile from "../../components/Profile";
-import SEO from "../../components/seo";
 import trent from "../../images/trent.jpg";
 
-export default () => (
+const Page: React.FC<PageProps> = () => (
   <PageLayout>
-    <SEO title="Conducting Research with KVM: A PhD Student’s Perspective" />
-
     <h1>Conducting Research with KVM: A PhD Student’s Perspective</h1>
 
     <Row gutter={18}>
@@ -126,4 +125,14 @@ export default () => (
       use to those in the frontlines of social transformation.
     </p>
   </PageLayout>
+);
+
+export default Page;
+
+export const Head: HeadFC = () => (
+  <SEO
+    title="Conducting Research with KVM: A PhD Student’s Perspective"
+    description=""
+    lang="en"
+  />
 );
