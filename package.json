@@ -23,6 +23,7 @@
     "prod": "npm run clean && npm run build && npm run git "
   },
   "dependencies": {
+    "@ant-design/icons": "^4.8.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "antd": "^5.0.5",
@@ -49,6 +50,7 @@
     "react-big-calendar": "^1.5.2",
     "react-dom": "^18.2.0",
     "react-facebook": "^9.0.12",
+    "react-vertical-timeline-component": "^3.6.0",
     "sass": "^1.56.2",
     "styled-components": "^5.3.6"
   },

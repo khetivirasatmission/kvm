@@ -6,6 +6,7 @@ import PageLayout from "../../components/layouts/PageLayout";
 import { StoryList } from "../../components/StoryOne";
 import SEO from "../../components/Seo";
 import Profile from "../../components/Profile";
+import { Timeline } from "../../components/Timeline";
 
 import foxtail from "../../images/millets/foxtail.png";
 import little from "../../images/millets/little.png";
@@ -99,6 +100,45 @@ const Page: React.FC<PageProps> = () => {
           nutri cereals’
         </em>
       </p>
+
+      <Card title="Introduction" bordered={false}>
+        <p>
+          It is an undeniable fact that the ecology of Punjab is showing the
+          results of decades of neglect and over exploitation of natural
+          resources. Monocropping, loss of biodiversity, decrease in the water
+          table are just a few scars out of many, which Punjab has to show for a
+          state which was chosen as the champion of the Green Revolution. Today,
+          we are looking at a dinner plate from which an entire spectrum of
+          grain was intentionally wiped out.
+        </p>
+        <p>
+          MILLETS (Kodra, Kangni, Ragi, Kutki, Hari Kangni, Swank, Bajra) Which
+          formed a major part of Punjab's diet, are now replaced with Wheat and
+          Rice. Not only high in ibre, iron and other trace minerals, Millets
+          were a de facto rain fed crop of Punjab until it was replaced with the
+          water guzzling paddy in the late 1960s.
+        </p>
+        <p>
+          Kheti Virasat Mission has been systematically trying to revive this
+          heritage grain for the past few years. We have recognized that this
+          revival not only brings back nutritional security to the consumers but
+          also addresses the issues of declining water table, loss of
+          biodiversity, soil health and rural unemployment. Kheti Virasat
+          Mission has taken up the challenge of building a value chain of
+          organically grown Millets ‘From Farm to Plate’.
+        </p>
+      </Card>
+
+      <p
+        style={{ color: "#72a230", fontSize: "20px", textAlign: "center" }}
+        className="font-bold"
+      >
+        <em>
+          ‘KVM Recognized as Best NGO for Promotion of Millets - Poshak Anaj
+          Awards by ICAR - IIMR’
+        </em>
+      </p>
+
       <Card title="Variety of Millets" bordered={false}>
         <Row gutter={18}>
           <Col xs={24} md={8}>
@@ -152,7 +192,26 @@ const Page: React.FC<PageProps> = () => {
       <Card title="Millets for Agriculture" bordered={false}>
         <p>Millets promote sustainable agriculture model as mentioned below:</p>
 
-        <ul className="list-disc">
+        <div className="block m-auto text-center">
+          <StaticImage
+            src="../../images/millets/punjab-water.png"
+            alt="Punjab Water Depletion logo"
+            placeholder="blurred"
+            width={400}
+            layout="constrained"
+            className="mr-4"
+          />
+          <StaticImage
+            src="../../images/millets/water-requirement.png"
+            alt="Water Requirement"
+            placeholder="blurred"
+            width={450}
+            layout="constrained"
+            className="ml-4"
+          />
+        </div>
+
+        <ul className="mt-4 list-disc">
           <li>Reduce farmers' dependence on one or two crops</li>
           <li>Mitigate the issue of paddy straw burning</li>
           <li>Millets and their residue are good animal fodder</li>
@@ -167,18 +226,27 @@ const Page: React.FC<PageProps> = () => {
       <Card title="Millets for Health" bordered={false}>
         <p>
           Millets are a rich source of proteins, carbohydrates, vitamins and
-          minerals
+          minerals. High iber content of all millets gives a very low Glycemic
+          Index (GI) to these miracle grains.A low GI means millet balances the
+          blood sugar which helps to eliminate/reduce diseases such as diabetes,
+          cardiac problems, cancer , arthritis and many more. Unlike Rice and
+          Wheat, where the sugar spike in bodies is a common occurrence. Millet
+          grains are also gluten free, which makes these an ideal diet for
+          patients with Celiac diseases.
         </p>
-
-        <p>Each type of millets is useful in its own way</p>
 
         <StoryList list={millets} />
       </Card>
 
       <Card title="Millets for Environment" bordered={false}>
         <p>
-          Growing Millets on a large scale will have a huge positive impact on
-          enviroment
+          Punjab has lost an entire spectrum of food grains. A heritage has been
+          lost. The ruthless mono-cropping and encouraging the cycle of Paddy
+          and Wheat, has resulted in immense damage to the Ecology. Soil health
+          is directly related to the vast number of microorganisms which thrive
+          inside. The more diverse crops we plant, the more diverse population
+          of these bacteria and fungi we invite in the soil. Growing Millets on
+          a large scale will have a huge positive impact on enviroment.
         </p>
 
         <ul className="list-disc">
@@ -201,74 +269,8 @@ const Page: React.FC<PageProps> = () => {
         </ul>
       </Card>
 
-      <Card title="Our endeavour for millet promotion" bordered={false}>
-        <ul className="list-disc">
-          <li>
-            2005- 2006: Promoted millets among farmers as readily grown organic
-            crops
-          </li>
-          <li>
-            2007: Started serving millets at the introductory level in workshops
-            and meetings.
-          </li>
-          <li>
-            2007- 08: Exposure visit to Millet Festival organised by DDS,
-            Hyderabad
-          </li>
-          <li>
-            2008: First village-level millet mini mela at Bhotna village,
-            Barnala district, followed by similar initiatives at China, Faridkot
-          </li>
-          <li>
-            2009: Started ‘Bebe Di Rasoi’, a kitchen led by rural women to serve
-            millet dishes at village and district-level workshops
-          </li>
-          <li>
-            2009: Organised ‘Bebe-Di-Rasoi’ food festival at Press Club,
-            Chandigarh, in collaboration with DDS, Hyderabad. Inaugurated by the
-            then Chief Minister of Punjab Mr Parkash Singh Badal
-          </li>
-          <li>
-            2009-15: Series of ‘Bebe Di Rasoi’ festivals organised at different
-            villages
-          </li>
-          <li>
-            2010-12: Kudrati Kheti Mela and ‘Bebe Di Rasoi’ organised at
-            Bathinda and Chandigarh
-          </li>
-          <li>
-            2015 : Millet Food Festival organised at National Organic Farmers’
-            Conference, Chandigarh
-          </li>
-          <li>
-            2017: Series of Mini Millet Melas at different towns and villages
-          </li>
-          <li>
-            2018-19: Series of cookery classes across Punjab by eminent millet
-            expert and chef Ram Babu from Hyderabad
-          </li>
-          <li>
-            2018-20: Series of awareness meetings on holistic health and
-            holistic food of millets by Dr Amar Singh Azad
-          </li>
-          <li>2019: Miracle Millet Utsav at Panjab University, Chandigarh</li>
-          <li>
-            2019-2020: Series of awareness meetings addressed by millet diet
-            expert Dr Khadar Wali from Mysore. Also, organised series of
-            meetings between millet farmers and consumers
-          </li>
-          <li>
-            2020: ‘Millet Langar’ at Sultanpur Lodhi to celebrate 550th Year of
-            Guru Nanak Dev ji
-          </li>
-          <li>
-            2020-21 : Online classes and workshops on health, nutrition, natural
-            immunity and holistic food
-          </li>
-          <li>
-            2022 : Kudrat Utsav Millet festival at Chandigarh and Faridkot
-          </li>
-        </ul>
+      <Card title="KVM's endeavour for millet promotion" bordered={false}>
+        <Timeline />
       </Card>
 
       <Card title="How can KVM  help you promote millets ?" bordered={false}>

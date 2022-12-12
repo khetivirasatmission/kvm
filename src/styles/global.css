@@ -76,6 +76,10 @@ blockquote p {
   display: inline;
 }
 
+li{
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
 /* navbar */
 .menu {
   padding: 0 6px;
@@ -416,4 +420,19 @@ button.ant-btn-lg {
   font-size: 18px;
   height: 40px;
   padding: 4.9px 15px;
+}
+
+/* timeline */
+
+h3.vertical-timeline-element-title{
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: -25px;
+
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.vertical-timeline-element-content:after{
+  border: none;
+  box-shadow: none;
 }
