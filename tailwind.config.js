@@ -5,7 +5,22 @@ module.exports = {
     "./src/components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        brand: "#5a9935",
+      },
+      fontFamily: {
+        brand: [
+          "Raleway",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Roboto",
+          "sans-serif",
+        ]
+      },
+    },
   },
   plugins: [],
 }

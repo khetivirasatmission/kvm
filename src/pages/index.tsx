@@ -1,293 +1,447 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import { Button, Carousel, Col, Row } from "antd";
+import { Col, Row } from "antd";
 import { Link } from "gatsby";
 import { FacebookProvider, Page } from "react-facebook";
-import styled from "styled-components";
+import {
+  GlobalOutlined,
+  TeamOutlined,
+  CommentOutlined,
+  SmileOutlined,
+} from "@ant-design/icons";
 
 import SEO from "../components/Seo";
 import Layout from "../components/layouts/HomeLayout";
+import Slideshow from "../components/Slideshow";
+import Teaser from "../components/Teaser";
 
-import k4 from "../images/aaharseaarogya/ku6.png";
-
-const px2vw = (size, width = 1912) => `${(size / width) * 100}vw`;
-
-const SlideWrapper = styled<any>("div")`
-  background-position: center;
-  background-size: cover;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: ${px2vw(717, 1912)};
-  z-index: 1;
-  background-image: url(${(props) => props.image});
-`;
-
-const StatisticWrapper = styled.div`
-  padding: 70px;
-  text-align: center;
-`;
-
-const Slide = styled<any>("div")`
-  background-color: rgba(0, 0, 0, 0.65);
-  position: absolute;
-  padding: ${px2vw(40, 1912)};
-  bottom: ${px2vw(40, 1912)};
-  right: 0px;
-
-  h4 {
-    color: #fff;
-    font-weight: 400;
-    font-family: "Open Sans";
-    text-transform: uppercase;
-    font-size: ${px2vw(14, 1912)};
-    margin-bottom: 10px;
-    letter-spacing: 5px;
-  }
-
-  h1 {
-    font-size: ${px2vw(64, 1912)};
-    line-height: ${px2vw(70, 1912)};
-    font-family: Raleway;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-style: normal;
-    font-weight: 900;
-    color: white;
-    margin-top: -10px;
-    margin-bottom: 5px;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  img {
-    max-width: 100%;
-    overflow: hidden;
-  }
-
-  button {
-    background: none;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    height: ${px2vw(46, 1912)};
-    // padding: ${px2vw(5, 1912)} ${px2vw(15, 1912)};
-    //   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-
-    span {
-      color: white;
-      text-transform: uppercase;
-      font-size: ${px2vw(16, 1912)};
-      line-height: ${px2vw(40, 1912)};
-      font-weight: 400;
-      font-family: "Open Sans";
-      text-align: center;
-      vertical-align: middle;
-      display: block;
-    }
-
-    &:hover {
-      background: white;
-      span {
-        color: black;
-      }
-    }
-  }
-
-  @media (min-width: 320px) {
-    h4 {
-      font-size: ${px2vw(4, 320)};
-      letter-spacing: 3px;
-      font-weight: 900;
-    }
-
-    h1 {
-      font-size: ${px2vw(16, 320)};
-      line-height: ${px2vw(20, 320)};
-    }
-
-    button {
-      height: ${px2vw(16, 320)};
-
-      span {
-        font-size: ${px2vw(6, 320)};
-        line-height: ${px2vw(12, 320)};
-      }
-    }
-  }
-
-  @media (min-width: 768px) {
-    h4 {
-      font-size: ${px2vw(8, 768)};
-      font-weight: 400;
-    }
-
-    h1 {
-      font-size: ${px2vw(40, 768)};
-      line-height: ${px2vw(48, 768)};
-    }
-
-    button {
-      height: ${px2vw(32, 768)};
-
-      span {
-        font-size: ${px2vw(12, 768)};
-        line-height: ${px2vw(24, 768)};
-      }
-    }
-  }
-
-  @media (min-width: 1024px) {
-    h4 {
-      font-size: ${px2vw(10, 1024)};
-    }
-
-    h1 {
-      font-size: ${px2vw(48, 1024)};
-      line-height: ${px2vw(54, 1024)};
-    }
-
-    button {
-      height: ${px2vw(40, 1024)};
-
-      span {
-        font-size: ${px2vw(14, 1024)};
-        line-height: ${px2vw(32, 1024)};
-      }
-    }
-  }
-
-  @media (min-width: 1280px) {
-    h4 {
-      font-size: ${px2vw(12, 1280)};
-    }
-
-    h1 {
-      font-size: ${px2vw(54, 1280)};
-      line-height: ${px2vw(60, 1280)};
-    }
-
-    button {
-      height: ${px2vw(36, 1280)};
-
-      span {
-        font-size: ${px2vw(12, 1280)};
-        line-height: ${px2vw(32, 1280)};
-      }
-    }
-  }
-`;
+import {
+  ClocheCover,
+  HandHoldingSeedling,
+  HeartPlant,
+} from "@vectopus/atlas-icons-react";
+import { StaticImage } from "gatsby-plugin-image";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <Carousel effect="fade" autoplay={true} dots={false}>
-        <SlideWrapper image={k4}>
-          <Slide>
-            <h4>Starts 19 Sep, 2022</h4>
-            <h1>Aahaar Se Arogya</h1>
-            <Link to="/aahaarsearogya" style={{ marginRight: "10px" }}>
-              <Button>Know more</Button>
-            </Link>
-            {/* <Link to="/aarogyaseaahar">
-            <Button type="primary">Register now</Button>
-          </Link> */}
-          </Slide>
-        </SlideWrapper>
-      </Carousel>
-      <Row>
-        <Col xs={24} md={12} xl={6} className="colored col-colored-1">
-          <div>
-            <h1>Save the planet</h1>
-            <p>
-              Promote healthy food produced by organic farming and contribute to
-              the ecological balance
+      <Slideshow />
+
+      <div className="pt-12 bg-gray-50 sm:pt-16">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Get Involved
+            </h2>
+            <p className="mt-3 text-xl text-gray-500 sm:mt-4">
+              Collaborate with us to build a better world for everyone
             </p>
-            <Button>
-              <Link to="/education">Learn</Link>
-            </Button>
           </div>
-        </Col>
-        <Col xs={24} md={12} xl={6} className="colored col-colored-2">
-          <div>
-            <h1>Become a volunteer</h1>
-            <p>
-              Join the ecological movement by associating with KVM as Intern,
-              Supporter, Campaigner and Donor
+        </div>
+
+        <div className="pb-12 mt-10 bg-white sm:pb-16">
+          <div className="relative">
+            <div className="absolute inset-0 h-1/2 bg-gray-50"></div>
+            <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+              <ul
+                role="list"
+                className="grid grid-cols-1 mx-auto max-w-7xl gap-y-6 gap-x-6 sm:grid-cols-2 lg:grid-cols-4"
+              >
+                <li className="flex flex-col col-span-1 text-center divide-y divide-gray-200 rounded-lg shadow group hover:bg-yellow-400 bg-brand">
+                  <Link to="/education" className="flex flex-col flex-1 p-8">
+                    <GlobalOutlined
+                      className="mx-auto text-white text-7xl group-hover:text-black"
+                      alt=""
+                    />
+                    <h3 className="mt-6 text-lg font-bold text-green-200 uppercase group-hover:text-black">
+                      Save the planet
+                    </h3>
+                    <p className="text-green-100 text-md group-hover:text-black">
+                      Promote healthy food produced by organic farming and
+                      contribute to the ecological balance of the planet
+                    </p>
+                  </Link>
+                </li>
+
+                <li className="flex flex-col col-span-1 mx-auto text-center divide-y divide-gray-200 rounded-lg shadow group hover:bg-orange-400 bg-brand">
+                  <Link to="/volunteer" className="flex flex-col flex-1 p-8">
+                    <TeamOutlined
+                      className="mx-auto text-white text-7xl group-hover:text-black"
+                      alt=""
+                    />
+                    <h3 className="mt-6 text-lg font-bold text-green-200 uppercase group-hover:text-black">
+                      Become a volunteer
+                    </h3>
+                    <p className="text-green-100 text-md group-hover:text-black">
+                      Join the ecological movement by associating with KVM as
+                      Intern, Supporter, Campaigner and Donor
+                    </p>
+                  </Link>
+                </li>
+
+                <li className="flex flex-col col-span-1 mx-auto text-center divide-y divide-gray-200 rounded-lg shadow group hover:bg-blue-400 bg-brand">
+                  <Link to="/publications" className="flex flex-col flex-1 p-8">
+                    <CommentOutlined
+                      className="mx-auto text-white text-7xl group-hover:text-black"
+                      alt=""
+                    />
+                    <h3 className="mt-6 text-lg font-bold text-green-200 uppercase group-hover:text-black">
+                      Participate & Promote
+                    </h3>
+                    <p className="text-green-100 text-md group-hover:text-black">
+                      Learn more about organic farming from our publications and
+                      attend Kudrati Kisan Haats in your city
+                    </p>
+                  </Link>
+                </li>
+
+                <li className="flex flex-col col-span-1 mx-auto text-center divide-y divide-gray-200 rounded-lg shadow group hover:bg-pink-400 bg-brand">
+                  <Link to="/donate" className="flex flex-col flex-1 p-8">
+                    <SmileOutlined
+                      className="mx-auto text-white text-7xl group-hover:text-black"
+                      alt=""
+                    />
+                    <h3 className="mt-6 text-lg font-bold text-green-200 uppercase group-hover:text-black">
+                      Donate Now!
+                    </h3>
+                    <p className="text-green-100 text-md group-hover:text-black">
+                      Donate and contribute to a movement for ecological
+                      rejuvenation of Punjab and its agricultural heritage
+                    </p>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="pt-12 sm:pt-16">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              See us in action
+            </h2>
+            <p className="mt-3 text-xl text-gray-500 sm:mt-4">
+              The Pioneers of the ‘Organic Movement' in Punjab
             </p>
-            <Button>
-              <Link to="/volunteer">Join</Link>
-            </Button>
           </div>
-        </Col>
-        <Col xs={24} md={12} xl={6} className="colored col-colored-1">
-          <div>
-            <h1>Get Involved</h1>
-            <p>
-              Learn more about organic farming from our publications and attend
-              Kudrati Kisan Haats in your city
-            </p>
-            <Button>
-              <Link to="/publications">Publications</Link>
-            </Button>
+        </div>
+        <div className="grid grid-cols-1 pb-12 mx-auto mt-10 bg-white sm:pb-16 max-w-7xl gap-y-12 gap-x-12 sm:grid-cols-2 lg:grid-cols-2">
+          <div className="col-span-1 px-4 py-4 mx-auto sm:px-6 lg:px-8 md:py-0">
+            <h2 className="text-lg font-brand">Upcoming Events</h2>
+
+            <ul role="list">
+              <li>
+                <div className="relative pb-8">
+                  <span
+                    className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                    aria-hidden="true"
+                  ></span>
+                  <div className="relative flex space-x-3">
+                    <div>
+                      <span className="flex items-center justify-center w-8 h-8 bg-orange-500 rounded-full ring-8 ring-white">
+                        <ClocheCover size={24} className="w-5 h-5 text-white" />
+                      </span>
+                    </div>
+                    <div className="flex justify-between flex-1 min-w-0 space-x-4">
+                      <div>
+                        <p className="text-sm font-medium">
+                          Millets' Lunch for MLAs of Haryana and Administrative
+                          officials of Chandigarh
+                        </p>
+                        <p className="text-sm text-gray-500">
+                          Haryana Vidhan Sabha, Chandigarh
+                        </p>
+                      </div>
+                      <div className="text-sm text-right text-gray-500 whitespace-nowrap">
+                        <div>Dec 27, 2022</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div className="relative pb-8">
+                  <span
+                    className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                    aria-hidden="true"
+                  ></span>
+                  <div className="relative flex space-x-3">
+                    <div>
+                      <span className="flex items-center justify-center w-8 h-8 bg-orange-500 rounded-full ring-8 ring-white">
+                        <ClocheCover size={24} className="w-5 h-5 text-white" />
+                      </span>
+                    </div>
+                    <div className="flex justify-between flex-1 min-w-0 space-x-4">
+                      <div>
+                        <p className="text-sm font-medium">
+                          Millets' Lunch for 50 Senior Journalists (accredited
+                          by PIB, Government of India)
+                        </p>
+                        <p className="text-sm text-gray-500">New Delhi</p>
+                      </div>
+                      <div className="text-sm text-right text-gray-500 whitespace-nowrap">
+                        <div>Dec 28, 2022</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div className="relative pb-8">
+                  <span
+                    className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                    aria-hidden="true"
+                  ></span>
+                  <div className="relative flex space-x-3">
+                    <div>
+                      <span className="flex items-center justify-center w-8 h-8 bg-green-500 rounded-full ring-8 ring-white">
+                        <HandHoldingSeedling
+                          size={24}
+                          className="w-5 h-5 text-white"
+                        />
+                      </span>
+                    </div>
+                    <div className="flex justify-between flex-1 min-w-0 space-x-4">
+                      <div>
+                        <p className="text-sm font-medium">
+                          Inauguration of International Year of Millets 2023
+                          Festival by KVM team
+                        </p>
+                        <p className="text-sm text-gray-500">Jaitu, Faridkot</p>
+                      </div>
+                      <div className="text-sm text-right text-gray-500 whitespace-nowrap">
+                        <div>Jan 1, 2023</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div className="relative pb-8">
+                  <span
+                    className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                    aria-hidden="true"
+                  ></span>
+                  <div className="relative flex space-x-3">
+                    <div>
+                      <span className="flex items-center justify-center w-8 h-8 bg-pink-500 rounded-full ring-8 ring-white">
+                        <HeartPlant size={24} className="w-5 h-5 text-white" />
+                      </span>
+                    </div>
+                    <div className="flex justify-between flex-1 min-w-0 space-x-4">
+                      <div>
+                        <p className="text-sm font-medium">
+                          Inauguration of Millets' Mithai and Meals for about
+                          600 inmates
+                        </p>
+                        <p className="text-sm text-gray-500">
+                          Burail Jail, Chandigarh
+                        </p>
+                      </div>
+                      <div className="text-sm text-right text-gray-500 whitespace-nowrap">
+                        <div>Jan 1, 2023</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div className="relative pb-8">
+                  <div className="relative flex space-x-3">
+                    <div>
+                      <span className="flex items-center justify-center w-8 h-8 bg-orange-500 rounded-full ring-8 ring-white">
+                        <ClocheCover size={24} className="w-5 h-5 text-white" />
+                      </span>
+                    </div>
+                    <div className="flex justify-between flex-1 min-w-0 space-x-4">
+                      <div>
+                        <p className="text-sm font-medium">
+                          Millets' Lunch for Chandigarh Administration hosted by
+                          Hon’ble Governor Sh. Banwari Lal Purohit
+                        </p>
+                        <p className="text-sm text-gray-500">Chandigarh</p>
+                      </div>
+                      <div className="text-sm text-right text-gray-500 whitespace-nowrap">
+                        <div>Jan 2, 2023</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
-        </Col>
-        <Col xs={24} md={12} xl={6} className="colored col-colored-2">
-          <div>
-            <h1>Donate Now</h1>
-            <p>
-              Donate and contribute to a movement for ecological rejuvenation of
-              Punjab and its agricultural heritage
-            </p>
-            <Button>
-              <Link to="/donate">Donate</Link>
-            </Button>
-          </div>
-        </Col>
-      </Row>
-      <Row>
-        <Col xs={24} lg={8}>
-          <div className="">
-            <iframe
-              style={{ border: "0", padding: "10px" }}
-              width="100%"
-              height="465"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/238237196&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-            />
-          </div>
-        </Col>
-        <Col xs={24} lg={10}>
-          <div className="video-responsive">
-            <iframe
-              style={{
-                border: "none",
-                padding: "10px",
-                width: "100%",
-                height: "465px",
-              }}
-              width="800"
-              height="445"
-              src="https://www.youtube.com/embed/videoseries?list=PLKMOgZ4mfxOvPSj2bxCYxG752mfTvG1o-"
-              allow="autoplay; encrypted-media"
-              allowFullScreen={true}
-            />
-          </div>
-        </Col>
-        <Col xs={24} lg={6}>
-          <div className="">
+          <div className="col-span-1 py-4 md:py-0">
             <div style={{ border: "0", padding: "10px" }}>
               <FacebookProvider appId="195658071778073">
                 <Page
                   href="https://www.facebook.com/khetivirasatmissionjaitu"
                   tabs="timeline"
                   showFacepile={true}
-                  smallHeader={true}
+                  smallHeader={false}
                   adaptContainerWidth={true}
                   width={460}
-                  height={445}
+                  height={600}
                 />
               </FacebookProvider>
             </div>
           </div>
-        </Col>
-      </Row>
+        </div>
+      </div>
+
+      <div className="pt-12 bg-gray-50 sm:pt-16">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Our Community
+            </h2>
+            <p className="mt-3 text-xl text-gray-500 sm:mt-4">
+              We are a close-knit group with common goal of improving the state
+              of agriculture, health and environment in Punjab and India
+            </p>
+          </div>
+        </div>
+        <div className="pb-12 mt-10 bg-white sm:pb-16">
+          <div className="relative">
+            <div className="absolute inset-0 h-1/2 bg-gray-50"></div>
+            <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+              <div className="max-w-4xl mx-auto">
+                <dl className="bg-white rounded-lg shadow-lg sm:grid sm:grid-cols-3">
+                  <div className="flex flex-col p-6 text-center border-b border-gray-100 sm:border-0 sm:border-r">
+                    <dt className="order-2 mt-2 text-lg font-medium leading-6 text-gray-500">
+                      Organic Farmers
+                    </dt>
+                    <dd className="order-1 text-5xl font-bold tracking-tight text-green-600">
+                      500+
+                    </dd>
+                  </div>
+                  <div className="flex flex-col p-6 text-center border-t border-b border-gray-100 sm:border-0 sm:border-l sm:border-r">
+                    <dt className="order-2 mt-2 text-lg font-medium leading-6 text-gray-500">
+                      Women Farmers
+                    </dt>
+                    <dd className="order-1 text-5xl font-bold tracking-tight text-green-600">
+                      100+
+                    </dd>
+                  </div>
+                  <div className="flex flex-col p-6 text-center border-t border-gray-100 sm:border-0 sm:border-l">
+                    <dt className="order-2 mt-2 text-lg font-medium leading-6 text-gray-500">
+                      Villages Reached
+                    </dt>
+                    <dd className="order-1 text-5xl font-bold tracking-tight text-green-600">
+                      100+
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="pt-12 sm:pt-16">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Our Impact
+            </h2>
+            <p className="mt-3 text-xl text-gray-500 sm:mt-4">
+              Bridging the gap between farmers, consumers, experts by providing
+              a common platform to interact, guide and serve each other
+            </p>
+          </div>
+        </div>
+
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <Row className="pb-12 mt-10 bg-white sm:pb-16" gutter={12}>
+            <Col xs={24} md={12} className="py-4 lg:py-0">
+              <Teaser />
+            </Col>
+            <Col xs={24} md={12} className="py-4 lg:py-0">
+              <div className="max-w-full mx-auto video-responsive">
+                <iframe
+                  style={{
+                    border: "none",
+                    padding: "0px",
+                    width: "100%",
+                    height: "420px",
+                  }}
+                  width="700"
+                  height="420"
+                  src="https://www.youtube.com/embed/videoseries?list=PLKMOgZ4mfxOvPSj2bxCYxG752mfTvG1o-"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen={true}
+                />
+              </div>
+            </Col>
+          </Row>
+        </div>
+      </div>
+
+      <div className="pt-12 bg-gray-50 sm:pt-16">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Our Partners
+            </h2>
+            <p className="mt-3 text-xl text-gray-500 sm:mt-4">
+              Engaging collaboration with dynamic partners who believe in our
+              vision and empower us for action in saving farming ecosystem,
+              health, soil and the planet
+            </p>
+          </div>
+        </div>
+        <div className="pb-12 mt-10 bg-white sm:pb-16">
+          <div className="relative">
+            <div className="absolute inset-0 h-1/2 bg-gray-50"></div>
+            <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+              <div className="max-w-4xl mx-auto">
+                <div className="bg-white rounded-lg shadow-lg sm:grid sm:grid-cols-5">
+                  <div className="flex flex-col p-6 text-center border-b border-gray-100 sm:border-0 sm:border-r">
+                    <StaticImage
+                      src="../images/collaboration/asha.png"
+                      alt="Aasha Foundation"
+                      placeholder="blurred"
+                    />
+                  </div>
+                  <div className="flex flex-col p-6 text-center border-t border-b border-gray-100 sm:border-0 sm:border-l sm:border-r">
+                    <StaticImage
+                      src="../images/collaboration/ongc.png"
+                      alt="ONGC Foundation"
+                      placeholder="blurred"
+                    />
+                  </div>
+                  <div className="flex flex-col p-6 text-center border-t border-gray-100 sm:border-0 sm:border-l">
+                    <StaticImage
+                      src="../images/collaboration/reliance.png"
+                      alt="Reliance Foundation"
+                      placeholder="blurred"
+                    />
+                  </div>
+                  <div className="flex flex-col p-6 text-center border-t border-gray-100 sm:border-0 sm:border-l">
+                    <StaticImage
+                      src="../images/collaboration/azim.png"
+                      alt="Azim Premji Foundation"
+                      placeholder="blurred"
+                    />
+                  </div>
+                  <div className="flex flex-col p-6 text-center border-t border-gray-100 sm:border-0 sm:border-l">
+                    <StaticImage
+                      src="../images/collaboration/csa.png"
+                      alt="CSA Foundation"
+                      placeholder="blurred"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 };
