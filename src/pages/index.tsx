@@ -133,20 +133,20 @@ const IndexPage: React.FC<PageProps> = () => {
 
             <ul role="list">
               <li>
-                <div className="relative pb-8">
+                <div className="relative pb-4">
                   <span
                     className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
                     aria-hidden="true"
                   ></span>
                   <div className="relative flex space-x-3">
                     <div>
-                      <span className="flex items-center justify-center w-8 h-8 bg-orange-500 rounded-full ring-8 ring-white">
-                        <ClocheCover size={24} className="w-5 h-5 text-white" />
+                      <span className="flex items-center justify-center w-12 h-12 bg-orange-500 rounded-full ring-12 ring-white">
+                        <ClocheCover size={26} className="w-8 h-8 text-white" />
                       </span>
                     </div>
                     <div className="flex justify-between flex-1 min-w-0 space-x-4">
                       <div>
-                        <p className="text-sm font-medium">
+                        <p className="font-medium text-md">
                           Millets' Lunch for MLAs of Haryana and Administrative
                           officials of Chandigarh
                         </p>
@@ -163,7 +163,7 @@ const IndexPage: React.FC<PageProps> = () => {
               </li>
 
               <li>
-                <div className="relative pb-8">
+                <div className="relative pb-4">
                   <span
                     className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
                     aria-hidden="true"
@@ -176,7 +176,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     </div>
                     <div className="flex justify-between flex-1 min-w-0 space-x-4">
                       <div>
-                        <p className="text-sm font-medium">
+                        <p className="font-medium text-md">
                           Millets' Lunch for 50 Senior Journalists (accredited
                           by PIB, Government of India)
                         </p>
@@ -191,7 +191,7 @@ const IndexPage: React.FC<PageProps> = () => {
               </li>
 
               <li>
-                <div className="relative pb-8">
+                <div className="relative pb-4">
                   <span
                     className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
                     aria-hidden="true"
@@ -207,7 +207,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     </div>
                     <div className="flex justify-between flex-1 min-w-0 space-x-4">
                       <div>
-                        <p className="text-sm font-medium">
+                        <p className="font-medium text-md">
                           Inauguration of International Year of Millets 2023
                           Festival by KVM team
                         </p>
@@ -222,7 +222,7 @@ const IndexPage: React.FC<PageProps> = () => {
               </li>
 
               <li>
-                <div className="relative pb-8">
+                <div className="relative pb-4">
                   <span
                     className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
                     aria-hidden="true"
@@ -235,7 +235,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     </div>
                     <div className="flex justify-between flex-1 min-w-0 space-x-4">
                       <div>
-                        <p className="text-sm font-medium">
+                        <p className="font-medium text-md">
                           Inauguration of Millets' Mithai and Meals for about
                           600 inmates
                         </p>
@@ -252,7 +252,7 @@ const IndexPage: React.FC<PageProps> = () => {
               </li>
 
               <li>
-                <div className="relative pb-8">
+                <div className="relative">
                   <div className="relative flex space-x-3">
                     <div>
                       <span className="flex items-center justify-center w-8 h-8 bg-orange-500 rounded-full ring-8 ring-white">
@@ -261,7 +261,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     </div>
                     <div className="flex justify-between flex-1 min-w-0 space-x-4">
                       <div>
-                        <p className="text-sm font-medium">
+                        <p className="font-medium text-md">
                           Millets' Lunch for Chandigarh Administration hosted by
                           Hon’ble Governor Sh. Banwari Lal Purohit
                         </p>

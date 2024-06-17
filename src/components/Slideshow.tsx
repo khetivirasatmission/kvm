@@ -3,7 +3,9 @@ import styled from "styled-components";
 import { Button, Carousel, Col, Row } from "antd";
 import { Link } from "gatsby";
 
-import k4 from "../images/aaharseaarogya/ku6.png";
+import k1 from "../images/slides/1.png";
+import k2 from "../images/slides/2.png";
+import k3 from "../images/slides/3.png";
 
 const px2vw = (size, width = 1912) => `${(size / width) * 100}vw`;
 
@@ -39,6 +41,19 @@ const Slide = styled<any>("div")`
     line-height: ${px2vw(70, 1912)};
     font-family: Raleway;
     text-transform: uppercase;
+    letter-spacing: 3px;
+    font-style: normal;
+    font-weight: 900;
+    color: white;
+    margin-top: -10px;
+    margin-bottom: 5px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h2 {
+    font-size: ${px2vw(32, 1912)};
+    line-height: ${px2vw(40, 1912)};
+    font-family: Raleway;
     letter-spacing: 3px;
     font-style: normal;
     font-weight: 900;
@@ -166,16 +181,28 @@ const Slide = styled<any>("div")`
 
 const Slideshow = () => (
   <Carousel effect="fade" autoplay={true} dots={false}>
-    <SlideWrapper image={k4}>
+    <SlideWrapper image={k1}>
       <Slide>
-        <h4>Starts 19 Sep, 2022</h4>
-        <h1>Aahaar Se Arogya</h1>
-        <Link to="/aahaarsearogya" style={{ marginRight: "10px" }}>
+        <h2>Kheti Virasat: The Heartbeat of a Revived Punjab!</h2>
+        <Link to="/organicfarming/" style={{ marginRight: "10px" }}>
           <Button>Know more</Button>
         </Link>
-        {/* <Link to="/aarogyaseaahar">
-            <Button type="primary">Register now</Button>
-          </Link> */}
+      </Slide>
+    </SlideWrapper>
+    <SlideWrapper image={k2}>
+      <Slide>
+        <h2>Cultivating Knowledge, Growing a Greener Future!</h2>
+        <Link to="/certification/" style={{ marginRight: "10px" }}>
+          <Button>Know more</Button>
+        </Link>
+      </Slide>
+    </SlideWrapper>
+    <SlideWrapper image={k3}>
+      <Slide>
+        <h2>Where Tradition Meets Progress, Women Lead the Way!</h2>
+        <Link to="/trinjan/" style={{ marginRight: "10px" }}>
+          <Button>Know more</Button>
+        </Link>
       </Slide>
     </SlideWrapper>
   </Carousel>

@@ -79,6 +79,42 @@ class RightMenu extends Component<{
             <Menu.Item key="kudratutsav21">
               <Link to="/kudratutsav21">Kudrat Utsav</Link>
             </Menu.Item>
+
+            <Menu.Item key="iyom2023">
+              <Link to="/millets/international-year-of-millets-iyom-2023">
+                Millets IYOM 2023
+              </Link>
+            </Menu.Item>
+
+            <SubMenu title={<span>Types of Millets</span>}>
+              <Menu.Item key="foxtail">
+                <Link to="/millets/foxtail-millets">Foxtail Millets</Link>
+              </Menu.Item>
+              <Menu.Item key="barnyard">
+                <Link to="/millets/barnyard-millets">Barnyard Millets</Link>
+              </Menu.Item>
+              <Menu.Item key="browntop">
+                <Link to="/millets/browntop-millets">Browntop Millets</Link>
+              </Menu.Item>
+              <Menu.Item key="finger">
+                <Link to="/millets/finger-millets">Finger Millets</Link>
+              </Menu.Item>
+              <Menu.Item key="kodo">
+                <Link to="/millets/kodo-millets">Kodo Millets</Link>
+              </Menu.Item>
+              <Menu.Item key="little">
+                <Link to="/millets/little-millets">Little Millets</Link>
+              </Menu.Item>
+              <Menu.Item key="pearl">
+                <Link to="/millets/pearl-millets">Pearl Millets</Link>
+              </Menu.Item>
+              <Menu.Item key="proso">
+                <Link to="/millets/proso-millets">Proso Millets</Link>
+              </Menu.Item>
+              <Menu.Item key="sorghum">
+                <Link to="/millets/sorghum-millets">Sorghum Millets</Link>
+              </Menu.Item>
+            </SubMenu>
           </SubMenu>
 
           <SubMenu title={<span>Education</span>}>
@@ -114,49 +150,6 @@ class RightMenu extends Component<{
         <Menu.Item key="farmers">
           <Link to="/organicfarmers">Stories of Evolution</Link>
         </Menu.Item>
-
-        <SubMenu
-          title={
-            <span style={{ fontWeight: 700, color: "#72a230" }}>
-              Millets IYOM 2023{" "}
-            </span>
-          }
-        >
-          <Menu.Item key="millets">
-            <Link to="/millets/international-year-of-millets-iyom-2023">
-              International Year of Millets
-            </Link>
-          </Menu.Item>
-          <SubMenu title={<span>Types of Millets</span>}>
-            <Menu.Item key="foxtail">
-              <Link to="/millets/foxtail-millets">Foxtail Millets</Link>
-            </Menu.Item>
-            <Menu.Item key="barnyard">
-              <Link to="/millets/barnyard-millets">Barnyard Millets</Link>
-            </Menu.Item>
-            <Menu.Item key="browntop">
-              <Link to="/millets/browntop-millets">Browntop Millets</Link>
-            </Menu.Item>
-            <Menu.Item key="finger">
-              <Link to="/millets/finger-millets">Finger Millets</Link>
-            </Menu.Item>
-            <Menu.Item key="kodo">
-              <Link to="/millets/kodo-millets">Kodo Millets</Link>
-            </Menu.Item>
-            <Menu.Item key="little">
-              <Link to="/millets/little-millets">Little Millets</Link>
-            </Menu.Item>
-            <Menu.Item key="pearl">
-              <Link to="/millets/pearl-millets">Pearl Millets</Link>
-            </Menu.Item>
-            <Menu.Item key="proso">
-              <Link to="/millets/proso-millets">Proso Millets</Link>
-            </Menu.Item>
-            <Menu.Item key="sorghum">
-              <Link to="/millets/sorghum-millets">Sorghum Millets</Link>
-            </Menu.Item>
-          </SubMenu>
-        </SubMenu>
 
         <SubMenu title={<span>Get Involved</span>}>
           <Menu.Item key="internship">
